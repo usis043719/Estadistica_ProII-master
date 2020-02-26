@@ -48,6 +48,7 @@
             this.fi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xixfi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.x2ixfi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnarmonica = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstadistica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,11 +232,22 @@
             this.x2ixfi.MinimumWidth = 12;
             this.x2ixfi.Name = "x2ixfi";
             // 
+            // btnarmonica
+            // 
+            this.btnarmonica.Location = new System.Drawing.Point(503, 41);
+            this.btnarmonica.Name = "btnarmonica";
+            this.btnarmonica.Size = new System.Drawing.Size(75, 23);
+            this.btnarmonica.TabIndex = 22;
+            this.btnarmonica.Text = "Armonica";
+            this.btnarmonica.UseVisualStyleBackColor = true;
+            this.btnarmonica.Click += new System.EventHandler(this.btnarmonica_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 471);
+            this.Controls.Add(this.btnarmonica);
             this.Controls.Add(this.lbltipica);
             this.Controls.Add(this.lblestandar);
             this.Controls.Add(this.lblmedia);
@@ -282,6 +294,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fi;
         private System.Windows.Forms.DataGridViewTextBoxColumn xixfi;
         private System.Windows.Forms.DataGridViewTextBoxColumn x2ixfi;
+        private System.Windows.Forms.Button btnarmonica;
     }
 }
 

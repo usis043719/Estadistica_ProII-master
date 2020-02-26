@@ -83,5 +83,10 @@ namespace Estadistica_ProII
 
             }
         }
+
+        private void btnarmonica_Click(object sender, EventArgs e)
+        {
+            lblrespuesta_serie.Text = " armonica=" + objEstadisticas.tipica(txtserie.Text.Split(','));
+        }
     }
     }
