@@ -31,6 +31,7 @@ namespace Estadistica_ProII
         {
             return Math.Sqrt(estandar(serie));
 
+           //hola
         }
        
     }

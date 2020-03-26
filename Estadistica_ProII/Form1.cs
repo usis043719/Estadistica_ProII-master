@@ -40,6 +40,8 @@ namespace Estadistica_ProII
 
         private void btnmoda_Click(object sender, EventArgs e)
         {
+
+
             lblrespuesta_serie.Text = "moda=" + objEstadisticas.tipica(txtserie.Text.Split(','));
         }
 
