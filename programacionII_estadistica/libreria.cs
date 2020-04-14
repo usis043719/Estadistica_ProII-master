@@ -16,6 +16,33 @@ namespace programacionII_estadistica
         {
             InitializeComponent();
         }
+
+        private void btnbusquedaclientes_Click(object sender, EventArgs e)
+        {
+            clientes clientes = new clientes();
+
+            clientes.Show();
+        }
+
+        private void btnbusquedaempleados_Click(object sender, EventArgs e)
+        {
+            {
+                Productos productos = new Productos();
+
+                productos.Show();
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                Empleado empleado = new Empleado();
+
+                empleado.Show();
+
+            }
+        }
     }
 }
 //hola mundo.%
