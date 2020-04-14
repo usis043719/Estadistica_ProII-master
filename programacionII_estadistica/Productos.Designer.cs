@@ -114,7 +114,7 @@
             this.grbedicionproducto.Controls.Add(this.btnmodificarproducto);
             this.grbedicionproducto.Controls.Add(this.btnagregarproducto);
             this.grbedicionproducto.Controls.Add(this.btnguardarproducto);
-            this.grbedicionproducto.Location = new System.Drawing.Point(30, 213);
+            this.grbedicionproducto.Location = new System.Drawing.Point(30, 196);
             this.grbedicionproducto.Name = "grbedicionproducto";
             this.grbedicionproducto.Size = new System.Drawing.Size(357, 100);
             this.grbedicionproducto.TabIndex = 6;
