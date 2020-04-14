@@ -33,15 +33,17 @@ namespace programacionII_estadistica
 
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             {
                 Empleado empleado = new Empleado();
-
+           
                 empleado.Show();
-
             }
+        }
+        private void libreria_Load(object sender, EventArgs e)
+        {
+    
         }
     }
 }

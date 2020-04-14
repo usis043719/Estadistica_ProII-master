@@ -13,10 +13,10 @@ namespace programacionII_estadistica
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        { 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new libreria ());
+            Application.Run(new libreria());
         }
     }
 }

@@ -35,7 +35,7 @@
             // 
             // btnbusquedaclientes
             // 
-            this.btnbusquedaclientes.Location = new System.Drawing.Point(82, 51);
+            this.btnbusquedaclientes.Location = new System.Drawing.Point(82, 37);
             this.btnbusquedaclientes.Name = "btnbusquedaclientes";
             this.btnbusquedaclientes.Size = new System.Drawing.Size(133, 44);
             this.btnbusquedaclientes.TabIndex = 1;
@@ -45,7 +45,7 @@
             // 
             // btnbusquedaempleados
             // 
-            this.btnbusquedaempleados.Location = new System.Drawing.Point(82, 110);
+            this.btnbusquedaempleados.Location = new System.Drawing.Point(82, 113);
             this.btnbusquedaempleados.Name = "btnbusquedaempleados";
             this.btnbusquedaempleados.Size = new System.Drawing.Size(133, 42);
             this.btnbusquedaempleados.TabIndex = 2;
@@ -55,7 +55,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(82, 170);
+            this.button1.Location = new System.Drawing.Point(82, 193);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 41);
             this.button1.TabIndex = 3;
@@ -74,6 +74,7 @@
             this.Controls.Add(this.btnbusquedaclientes);
             this.Name = "libreria";
             this.Text = "libreria";
+            this.Load += new System.EventHandler(this.libreria_Load);
             this.ResumeLayout(false);
 
         }
