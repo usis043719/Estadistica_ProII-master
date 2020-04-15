@@ -14,36 +14,33 @@ namespace programacionII_estadistica
     {
         conexion objconexion = new conexion();
         int posicion = 0;
-        string accion = "agregar";
+        string accion = "nuevo";
         DataTable tbl = new DataTable();
         public Empleado()
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            actualizarDs();
-            mostrarDatos();
-        }
+       
         void actualizarDs()
         {
             tbl = objconexion.obtener_datos().Tables["Empleados"];
-            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idEmpleado"] };
+            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdEmpleado"] };
         }
         void mostrarDatos()
         {
             try
             {
-                txtidempleado.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                txtnombreempleado.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txtidempleado.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                txtnombreempleado.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+                txttelefono.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtdireccion.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                txttelefono.Text = tbl.Rows[posicion].ItemArray[4].ToString();
 
 
+                lblnempleado.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("No hay Datos que mostrar", "Registros de empleado",
+                MessageBox.Show("No hay Datos que mostrar", "Registro de empleado",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiar_cajas();
             }
@@ -51,34 +48,32 @@ namespace programacionII_estadistica
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if (btnagregar.Text == "Agregar")
+            if (btnagregar.Text == "Nuevo")
             {//boton de nuevo
-
                 btnagregar.Text = "Guardar";
                 btnmodificar.Text = "Cancelar";
-                accion = "agregar";
-
+                accion = "nuevo";
                 limpiar_cajas();
-                controles(true);
+                controles(false);
             }
             else
-            { //boton de guardar
+            { //boton de guardar 
                 String[] valores = {
-                    lblempleado.Text,
+
                     txtidempleado.Text,
                     txtnombreempleado.Text,
-                    txtdireccion.Text,
                     txttelefono.Text,
-
+                    txtdireccion.Text
                 };
-                objconexion.mantenmiento_datos(valores, accion);
+
+                objconexion.mantenimiento_datos_Empleado(valores, accion);
                 actualizarDs();
                 posicion = tbl.Rows.Count - 1;
                 mostrarDatos();
 
                 controles(true);
 
-                btnagregar.Text = "Agregar";
+                btnagregar.Text = "Nuevo";
                 btnmodificar.Text = "Modificar";
             }
         }
@@ -96,15 +91,23 @@ namespace programacionII_estadistica
                 btnagregar.Text = "Guardar";
                 btnmodificar.Text = "Cancelar";
             }
+            else
+            { //boton de cancelar
+                controles(true);
+                mostrarDatos();
+
+                btnagregar.Text = "Nuevo";
+                btnmodificar.Text = "Modificar";
+            }
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro de elimina a " + txtnombreempleado.Text, "Registro de empleado",
-  MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+             MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { lblempleado.Text };
-                objconexion.mantenmiento_datos(valores, "eliminar");
+                String[] valores = { txtidempleado.Text };
+                objconexion.mantenimiento_datos_Empleado(valores, "eliminar");
 
                 actualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
@@ -120,7 +123,7 @@ namespace programacionII_estadistica
         private void btnbuscar_Click(object sender, EventArgs e)
         {
             Busquedaempleado frmBusquedaempleado = new Busquedaempleado
-             ();
+              ();
             frmBusquedaempleado.ShowDialog();
 
             if (frmBusquedaempleado._IdEmpleado > 0)
@@ -152,10 +155,8 @@ namespace programacionII_estadistica
 
         private void Empleado_Load(object sender, EventArgs e)
         {
-            {
-                actualizarDs();
-                mostrarDatos();
-            }
+            actualizarDs();
+            mostrarDatos();
         }
 
 
@@ -166,7 +167,6 @@ namespace programacionII_estadistica
         }
         void limpiar_cajas()
         {
-            txtidempleado.Text = "";
             txtnombreempleado.Text = "";
             txttelefono.Text = "";
             txtdireccion.Text = "";
@@ -177,7 +177,7 @@ namespace programacionII_estadistica
             grbnavegacion.Enabled = valor;
             btneliminar.Enabled = valor;
             btnbuscar.Enabled = valor;
-            grbcliente.Enabled = !valor;
+            grbdatosEmpleado.Enabled = !valor;
         }
         private void btnsiguienteregistro_Click(object sender, EventArgs e)
         {
@@ -189,7 +189,7 @@ namespace programacionII_estadistica
             }
             else
             {
-                MessageBox.Show("Ultimo Registro...", "Registros de Empleado",
+                MessageBox.Show("Ultimo Registro...", "Registro de Empleado",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

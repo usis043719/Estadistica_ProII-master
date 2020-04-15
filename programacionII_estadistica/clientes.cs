@@ -13,7 +13,7 @@ namespace programacionII_estadistica
     public partial class clientes : Form
     {
         conexion objconexion = new conexion();
-        Int32 posicion = 0;
+        int  posicion = 0;
         string accion = "nuevo";
         DataTable tbl = new DataTable();
         public clientes()
@@ -28,17 +28,16 @@ namespace programacionII_estadistica
                 btnmodificar.Text = "Cancelar";
                 accion = "nuevo";
                 limpiar_cajas();
-                controles(true);
+                controles(false);
             }
             else
             { //boton de guardar 
                 String[] valores = {
-                    lblcliente.Text,
                     txtidcliente.Text,
                     txtnombrecliente.Text,
                     txtdireccion.Text,
                     txttelefono.Text,
-
+                    txtnfactura.Text
                 };
 
                 objconexion.mantenmiento_datos(valores, accion);
@@ -80,9 +79,10 @@ namespace programacionII_estadistica
         private void btneliminar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro de elimina a " + txtnombrecliente.Text, "Registro de Clientes",
-              MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { lblcliente.Text };
+                String[] valores = { txtidcliente.Text };
+
                 objconexion.mantenmiento_datos(valores, "eliminar");
 
                 actualizarDs();
@@ -130,18 +130,16 @@ namespace programacionII_estadistica
         }
         void limpiar_cajas()
         {
-            txtidcliente.Text = "";
             txtnombrecliente.Text = "";
             txtdireccion.Text = "";
             txttelefono.Text = "";
-
         }
         void controles(Boolean valor)
         {
             grbnavegacion.Enabled = valor;
             btneliminar.Enabled = valor;
             btnbuscar.Enabled = valor;
-            grbcliente.Enabled = !valor;
+            grbdatosClientes.Enabled = !valor;
         }
 
         private void btnsiguienteregistro_Click(object sender, EventArgs e)
@@ -178,11 +176,12 @@ namespace programacionII_estadistica
                 txtnombrecliente.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtdireccion.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txttelefono.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                lblcliente.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                txtnfactura.Text = tbl.Rows[posicion].ItemArray[4].ToString();
 
-                lblcliente.Text = (posicion + 1) + " de " + tbl.Rows.Count;
+                lblncliente.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
-            catch (Exception)
+
+            catch (Exception ex)
             {
                 MessageBox.Show("No hay Datos que mostrar", "Registros de Cliente",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

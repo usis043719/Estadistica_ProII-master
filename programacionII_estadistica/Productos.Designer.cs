@@ -28,51 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grbproducto = new System.Windows.Forms.GroupBox();
-            this.lblidproducto = new System.Windows.Forms.Label();
+            this.grbdatosProducto = new System.Windows.Forms.GroupBox();
+            this.txtiddescuento = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtdescripcionproducto = new System.Windows.Forms.TextBox();
             this.lbldescripcionproducto = new System.Windows.Forms.Label();
-            this.txtidproductoregistro = new System.Windows.Forms.TextBox();
+            this.txtidproducto = new System.Windows.Forms.TextBox();
             this.lblproducto = new System.Windows.Forms.Label();
             this.grbedicionproducto = new System.Windows.Forms.GroupBox();
             this.btnbuscarproducto = new System.Windows.Forms.Button();
             this.btneliminarproducto = new System.Windows.Forms.Button();
             this.btnmodificarproducto = new System.Windows.Forms.Button();
             this.btnagregarproducto = new System.Windows.Forms.Button();
-            this.btnguardarproducto = new System.Windows.Forms.Button();
             this.grbnavegacionproducto = new System.Windows.Forms.GroupBox();
+            this.lblnpruduto = new System.Windows.Forms.Label();
             this.btnultimoregistroproducto = new System.Windows.Forms.Button();
             this.btnregistrosiguienteproducto = new System.Windows.Forms.Button();
             this.btnregistroanteriorproducto = new System.Windows.Forms.Button();
             this.btn1registroproductos = new System.Windows.Forms.Button();
-            this.grbproducto.SuspendLayout();
+            this.grbdatosProducto.SuspendLayout();
             this.grbedicionproducto.SuspendLayout();
             this.grbnavegacionproducto.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grbproducto
+            // grbdatosProducto
             // 
-            this.grbproducto.Controls.Add(this.lblidproducto);
-            this.grbproducto.Controls.Add(this.txtdescripcionproducto);
-            this.grbproducto.Controls.Add(this.lbldescripcionproducto);
-            this.grbproducto.Controls.Add(this.txtidproductoregistro);
-            this.grbproducto.Controls.Add(this.lblproducto);
-            this.grbproducto.Enabled = false;
-            this.grbproducto.Location = new System.Drawing.Point(30, 38);
-            this.grbproducto.Name = "grbproducto";
-            this.grbproducto.Size = new System.Drawing.Size(357, 152);
-            this.grbproducto.TabIndex = 5;
-            this.grbproducto.TabStop = false;
-            this.grbproducto.Text = "Datos del producto";
+            this.grbdatosProducto.Controls.Add(this.txtiddescuento);
+            this.grbdatosProducto.Controls.Add(this.label1);
+            this.grbdatosProducto.Controls.Add(this.txtdescripcionproducto);
+            this.grbdatosProducto.Controls.Add(this.lbldescripcionproducto);
+            this.grbdatosProducto.Controls.Add(this.txtidproducto);
+            this.grbdatosProducto.Controls.Add(this.lblproducto);
+            this.grbdatosProducto.Enabled = false;
+            this.grbdatosProducto.Location = new System.Drawing.Point(30, 38);
+            this.grbdatosProducto.Name = "grbdatosProducto";
+            this.grbdatosProducto.Size = new System.Drawing.Size(357, 169);
+            this.grbdatosProducto.TabIndex = 5;
+            this.grbdatosProducto.TabStop = false;
+            this.grbdatosProducto.Text = "Datos del producto";
             // 
-            // lblidproducto
+            // txtiddescuento
             // 
-            this.lblidproducto.AutoSize = true;
-            this.lblidproducto.Location = new System.Drawing.Point(248, 35);
-            this.lblidproducto.Name = "lblidproducto";
-            this.lblidproducto.Size = new System.Drawing.Size(19, 13);
-            this.lblidproducto.TabIndex = 4;
-            this.lblidproducto.Text = "Id:";
+            this.txtiddescuento.Location = new System.Drawing.Point(120, 137);
+            this.txtiddescuento.Name = "txtiddescuento";
+            this.txtiddescuento.Size = new System.Drawing.Size(112, 20);
+            this.txtiddescuento.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(42, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Id descuento:";
             // 
             // txtdescripcionproducto
             // 
@@ -91,12 +100,12 @@
             this.lbldescripcionproducto.TabIndex = 2;
             this.lbldescripcionproducto.Text = "Descripcion:";
             // 
-            // txtidproductoregistro
+            // txtidproducto
             // 
-            this.txtidproductoregistro.Location = new System.Drawing.Point(119, 32);
-            this.txtidproductoregistro.Name = "txtidproductoregistro";
-            this.txtidproductoregistro.Size = new System.Drawing.Size(112, 20);
-            this.txtidproductoregistro.TabIndex = 1;
+            this.txtidproducto.Location = new System.Drawing.Point(119, 32);
+            this.txtidproducto.Name = "txtidproducto";
+            this.txtidproducto.Size = new System.Drawing.Size(112, 20);
+            this.txtidproducto.TabIndex = 1;
             // 
             // lblproducto
             // 
@@ -113,8 +122,7 @@
             this.grbedicionproducto.Controls.Add(this.btneliminarproducto);
             this.grbedicionproducto.Controls.Add(this.btnmodificarproducto);
             this.grbedicionproducto.Controls.Add(this.btnagregarproducto);
-            this.grbedicionproducto.Controls.Add(this.btnguardarproducto);
-            this.grbedicionproducto.Location = new System.Drawing.Point(30, 196);
+            this.grbedicionproducto.Location = new System.Drawing.Point(30, 213);
             this.grbedicionproducto.Name = "grbedicionproducto";
             this.grbedicionproducto.Size = new System.Drawing.Size(357, 100);
             this.grbedicionproducto.TabIndex = 6;
@@ -157,22 +165,13 @@
             this.btnagregarproducto.Name = "btnagregarproducto";
             this.btnagregarproducto.Size = new System.Drawing.Size(75, 35);
             this.btnagregarproducto.TabIndex = 6;
-            this.btnagregarproducto.Text = "Agregar";
+            this.btnagregarproducto.Text = "Nuevo";
             this.btnagregarproducto.UseVisualStyleBackColor = true;
             this.btnagregarproducto.Click += new System.EventHandler(this.btnagregarproducto_Click);
             // 
-            // btnguardarproducto
-            // 
-            this.btnguardarproducto.Location = new System.Drawing.Point(206, 59);
-            this.btnguardarproducto.Name = "btnguardarproducto";
-            this.btnguardarproducto.Size = new System.Drawing.Size(75, 35);
-            this.btnguardarproducto.TabIndex = 2;
-            this.btnguardarproducto.Text = "Guardar";
-            this.btnguardarproducto.UseVisualStyleBackColor = true;
-            this.btnguardarproducto.Click += new System.EventHandler(this.btnguardarproducto_Click);
-            // 
             // grbnavegacionproducto
             // 
+            this.grbnavegacionproducto.Controls.Add(this.lblnpruduto);
             this.grbnavegacionproducto.Controls.Add(this.btnultimoregistroproducto);
             this.grbnavegacionproducto.Controls.Add(this.btnregistrosiguienteproducto);
             this.grbnavegacionproducto.Controls.Add(this.btnregistroanteriorproducto);
@@ -183,6 +182,15 @@
             this.grbnavegacionproducto.TabIndex = 7;
             this.grbnavegacionproducto.TabStop = false;
             this.grbnavegacionproducto.Text = "Navegacion";
+            // 
+            // lblnpruduto
+            // 
+            this.lblnpruduto.AutoSize = true;
+            this.lblnpruduto.Location = new System.Drawing.Point(290, 16);
+            this.lblnpruduto.Name = "lblnpruduto";
+            this.lblnpruduto.Size = new System.Drawing.Size(10, 13);
+            this.lblnpruduto.TabIndex = 13;
+            this.lblnpruduto.Text = ":";
             // 
             // btnultimoregistroproducto
             // 
@@ -231,36 +239,38 @@
             this.ClientSize = new System.Drawing.Size(437, 466);
             this.Controls.Add(this.grbnavegacionproducto);
             this.Controls.Add(this.grbedicionproducto);
-            this.Controls.Add(this.grbproducto);
+            this.Controls.Add(this.grbdatosProducto);
             this.Name = "Productos";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
-            this.grbproducto.ResumeLayout(false);
-            this.grbproducto.PerformLayout();
+            this.grbdatosProducto.ResumeLayout(false);
+            this.grbdatosProducto.PerformLayout();
             this.grbedicionproducto.ResumeLayout(false);
             this.grbnavegacionproducto.ResumeLayout(false);
+            this.grbnavegacionproducto.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbproducto;
-        private System.Windows.Forms.Label lblidproducto;
+        private System.Windows.Forms.GroupBox grbdatosProducto;
         private System.Windows.Forms.TextBox txtdescripcionproducto;
         private System.Windows.Forms.Label lbldescripcionproducto;
-        private System.Windows.Forms.TextBox txtidproductoregistro;
+        private System.Windows.Forms.TextBox txtidproducto;
         private System.Windows.Forms.Label lblproducto;
         private System.Windows.Forms.GroupBox grbedicionproducto;
         private System.Windows.Forms.Button btnbuscarproducto;
         private System.Windows.Forms.Button btneliminarproducto;
         private System.Windows.Forms.Button btnmodificarproducto;
         private System.Windows.Forms.Button btnagregarproducto;
-        private System.Windows.Forms.Button btnguardarproducto;
         private System.Windows.Forms.GroupBox grbnavegacionproducto;
         private System.Windows.Forms.Button btnultimoregistroproducto;
         private System.Windows.Forms.Button btnregistrosiguienteproducto;
         private System.Windows.Forms.Button btnregistroanteriorproducto;
         private System.Windows.Forms.Button btn1registroproductos;
+        private System.Windows.Forms.TextBox txtiddescuento;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblnpruduto;
     }
 }

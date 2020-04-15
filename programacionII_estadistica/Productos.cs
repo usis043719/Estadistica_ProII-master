@@ -14,7 +14,7 @@ namespace programacionII_estadistica
     {
         conexion objconexion = new conexion();
         int posicion = 0;
-        string accion = "Agregar";
+        string accion = "nuevo";
         DataTable tbl = new DataTable();
         public Productos()
         {
@@ -22,30 +22,30 @@ namespace programacionII_estadistica
         }
         private void btnagregarproducto_Click(object sender, EventArgs e)
         {
-            if (btnagregarproducto.Text == "Agregar")
+            if (btnagregarproducto.Text == "Nuevo")
             {//boton de nuevo
                 btnagregarproducto.Text = "Guardar";
                 btnmodificarproducto.Text = "Cancelar";
-                accion = "agregar";
+                accion = "nuevo";
                 limpiar_cajas();
-                controles(true);
+                controles(false);
             }
             else
             { //boton de guardar 
                 String[] valores = {
-                    lblproducto.Text,
+                    txtidproducto.Text,
                     txtdescripcionproducto.Text,
-                    txtidproductoregistro.Text,
+                    txtiddescuento.Text
                 };
 
-                objconexion.mantenmiento_datos(valores, accion);
+                objconexion.mantenmiento_datos_Productos(valores, accion);
                 actualizarDs();
                 posicion = tbl.Rows.Count - 1;
                 mostrarDatos();
 
                 controles(true);
 
-                btnagregarproducto.Text = "Agregar";
+                btnagregarproducto.Text = "Nuevo";
                 btnmodificarproducto.Text = "Modificar";
             }
         }
@@ -62,16 +62,25 @@ namespace programacionII_estadistica
 
                 btnagregarproducto.Text = "Guardar";
                 btnmodificarproducto.Text = "Cancelar";
+
+            }
+            else
+            { //boton de cancelar
+                controles(true);
+                mostrarDatos();
+
+                btnagregarproducto.Text = "Nuevo";
+                btnmodificarproducto.Text = "Modificar";
             }
         }
 
         private void btneliminarproducto_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de elimina a " + txtidproductoregistro.Text, "Registro de Producto",
-         MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro de elimina a " + txtdescripcionproducto.Text, "Registro de Productos",
+             MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { lblproducto.Text };
-                objconexion.mantenmiento_datos(valores, "eliminar");
+                String[] valores = { txtidproducto.Text };
+                objconexion.mantenmiento_datos_Productos(valores, "eliminar");
 
                 actualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
@@ -98,8 +107,6 @@ namespace programacionII_estadistica
         void limpiar_cajas()
         {
             txtdescripcionproducto.Text = "";
-            txtidproductoregistro.Text = "";
-            lblidproducto.Text = "";
 
         }
         void controles(Boolean valor)
@@ -107,7 +114,7 @@ namespace programacionII_estadistica
             grbnavegacionproducto.Enabled = valor;
             btneliminarproducto.Enabled = valor;
             btnbuscarproducto.Enabled = valor;
-            grbproducto.Enabled = !valor;
+            grbdatosProducto.Enabled = !valor;
         }
 
         private void Productos_Load(object sender, EventArgs e)
@@ -118,9 +125,7 @@ namespace programacionII_estadistica
         void actualizarDs()
         {
             tbl = objconexion.obtener_datos().Tables["Productos"];
-            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idProductos"] };
-            //tbl = objconexion.obtener_datos().Tables["Clientes"];
-            //tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idCliente"] };
+            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdProductos"] };
         }
 
         void mostrarDatos()
@@ -128,14 +133,15 @@ namespace programacionII_estadistica
             try
             {
 
-                txtidproductoregistro.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                txtdescripcionproducto.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txtidproducto.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                txtdescripcionproducto.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+                txtiddescuento.Text = tbl.Rows[posicion].ItemArray[2].ToString();
 
-
+                lblnpruduto.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("No hay Datos que mostrar", "Registros de Productos",
+                MessageBox.Show("No hay Datos que mostrar", "Registro de Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiar_cajas();
             }
@@ -163,14 +169,14 @@ namespace programacionII_estadistica
 
         private void btnregistroanteriorproducto_Click(object sender, EventArgs e)
         {
-            if (posicion > 0)
+           if (posicion > 0)
             {
                 posicion--;
                 mostrarDatos();
             }
             else
             {
-                MessageBox.Show("Primer Registro...", "Registros de producto",
+                MessageBox.Show("Primer Registro...", "Registro de productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -191,7 +197,7 @@ namespace programacionII_estadistica
             }
             else
             {
-                MessageBox.Show("Ultimo Registro...", "Registros de Producto",
+                MessageBox.Show("Ultimo Registro...", "Registro de Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

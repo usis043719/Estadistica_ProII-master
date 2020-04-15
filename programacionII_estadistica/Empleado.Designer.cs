@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grbclientes = new System.Windows.Forms.GroupBox();
-            this.lblempleado = new System.Windows.Forms.Label();
+            this.grbdatosEmpleado = new System.Windows.Forms.GroupBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -42,45 +41,35 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
-            this.btnguardar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.grbnavegacion = new System.Windows.Forms.GroupBox();
             this.btnultimoregistro = new System.Windows.Forms.Button();
             this.btnregistroanterior = new System.Windows.Forms.Button();
             this.btnsiguienteregistro = new System.Windows.Forms.Button();
             this.registro1 = new System.Windows.Forms.Button();
-            this.grbclientes.SuspendLayout();
+            this.lblnempleado = new System.Windows.Forms.Label();
+            this.grbdatosEmpleado.SuspendLayout();
             this.grbcliente.SuspendLayout();
             this.grbnavegacion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grbclientes
+            // grbdatosEmpleado
             // 
-            this.grbclientes.Controls.Add(this.lblempleado);
-            this.grbclientes.Controls.Add(this.txttelefono);
-            this.grbclientes.Controls.Add(this.label1);
-            this.grbclientes.Controls.Add(this.txtdireccion);
-            this.grbclientes.Controls.Add(this.label2);
-            this.grbclientes.Controls.Add(this.txtnombreempleado);
-            this.grbclientes.Controls.Add(this.lbldescripcionproducto);
-            this.grbclientes.Controls.Add(this.txtidempleado);
-            this.grbclientes.Controls.Add(this.lblproducto);
-            this.grbclientes.Enabled = false;
-            this.grbclientes.Location = new System.Drawing.Point(29, 12);
-            this.grbclientes.Name = "grbclientes";
-            this.grbclientes.Size = new System.Drawing.Size(357, 199);
-            this.grbclientes.TabIndex = 11;
-            this.grbclientes.TabStop = false;
-            this.grbclientes.Text = "Datos del empleado";
-            // 
-            // lblempleado
-            // 
-            this.lblempleado.AutoSize = true;
-            this.lblempleado.Location = new System.Drawing.Point(238, 35);
-            this.lblempleado.Name = "lblempleado";
-            this.lblempleado.Size = new System.Drawing.Size(19, 13);
-            this.lblempleado.TabIndex = 8;
-            this.lblempleado.Text = "Id:";
+            this.grbdatosEmpleado.Controls.Add(this.txttelefono);
+            this.grbdatosEmpleado.Controls.Add(this.label1);
+            this.grbdatosEmpleado.Controls.Add(this.txtdireccion);
+            this.grbdatosEmpleado.Controls.Add(this.label2);
+            this.grbdatosEmpleado.Controls.Add(this.txtnombreempleado);
+            this.grbdatosEmpleado.Controls.Add(this.lbldescripcionproducto);
+            this.grbdatosEmpleado.Controls.Add(this.txtidempleado);
+            this.grbdatosEmpleado.Controls.Add(this.lblproducto);
+            this.grbdatosEmpleado.Enabled = false;
+            this.grbdatosEmpleado.Location = new System.Drawing.Point(29, 12);
+            this.grbdatosEmpleado.Name = "grbdatosEmpleado";
+            this.grbdatosEmpleado.Size = new System.Drawing.Size(357, 199);
+            this.grbdatosEmpleado.TabIndex = 11;
+            this.grbdatosEmpleado.TabStop = false;
+            this.grbdatosEmpleado.Text = "Datos del empleado";
             // 
             // txttelefono
             // 
@@ -151,7 +140,6 @@
             this.grbcliente.Controls.Add(this.btnbuscar);
             this.grbcliente.Controls.Add(this.btneliminar);
             this.grbcliente.Controls.Add(this.btnmodificar);
-            this.grbcliente.Controls.Add(this.btnguardar);
             this.grbcliente.Controls.Add(this.btnagregar);
             this.grbcliente.Location = new System.Drawing.Point(29, 227);
             this.grbcliente.Name = "grbcliente";
@@ -190,28 +178,19 @@
             this.btnmodificar.UseVisualStyleBackColor = true;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
-            // btnguardar
-            // 
-            this.btnguardar.Location = new System.Drawing.Point(206, 59);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(75, 35);
-            this.btnguardar.TabIndex = 2;
-            this.btnguardar.Text = "Guardar";
-            this.btnguardar.UseVisualStyleBackColor = true;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
-            // 
             // btnagregar
             // 
             this.btnagregar.Location = new System.Drawing.Point(9, 18);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(75, 35);
             this.btnagregar.TabIndex = 1;
-            this.btnagregar.Text = "Agregar";
+            this.btnagregar.Text = "Nuevo";
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // grbnavegacion
             // 
+            this.grbnavegacion.Controls.Add(this.lblnempleado);
             this.grbnavegacion.Controls.Add(this.btnultimoregistro);
             this.grbnavegacion.Controls.Add(this.btnregistroanterior);
             this.grbnavegacion.Controls.Add(this.btnsiguienteregistro);
@@ -263,6 +242,15 @@
             this.registro1.UseVisualStyleBackColor = true;
             this.registro1.Click += new System.EventHandler(this.registro1_Click);
             // 
+            // lblnempleado
+            // 
+            this.lblnempleado.AutoSize = true;
+            this.lblnempleado.Location = new System.Drawing.Point(280, 20);
+            this.lblnempleado.Name = "lblnempleado";
+            this.lblnempleado.Size = new System.Drawing.Size(10, 13);
+            this.lblnempleado.TabIndex = 9;
+            this.lblnempleado.Text = ":";
+            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,22 +258,22 @@
             this.ClientSize = new System.Drawing.Size(427, 473);
             this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.grbcliente);
-            this.Controls.Add(this.grbclientes);
+            this.Controls.Add(this.grbdatosEmpleado);
             this.Name = "Empleado";
             this.Text = "Empleado";
             this.Load += new System.EventHandler(this.Empleado_Load);
-            this.grbclientes.ResumeLayout(false);
-            this.grbclientes.PerformLayout();
+            this.grbdatosEmpleado.ResumeLayout(false);
+            this.grbdatosEmpleado.PerformLayout();
             this.grbcliente.ResumeLayout(false);
             this.grbnavegacion.ResumeLayout(false);
+            this.grbnavegacion.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbclientes;
-        private System.Windows.Forms.Label lblempleado;
+        private System.Windows.Forms.GroupBox grbdatosEmpleado;
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtdireccion;
@@ -298,12 +286,12 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;
-        private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.GroupBox grbnavegacion;
         private System.Windows.Forms.Button btnultimoregistro;
         private System.Windows.Forms.Button btnregistroanterior;
         private System.Windows.Forms.Button btnsiguienteregistro;
         private System.Windows.Forms.Button registro1;
+        private System.Windows.Forms.Label lblnempleado;
     }
 }

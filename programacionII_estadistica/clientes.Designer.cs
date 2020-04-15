@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grbclientes = new System.Windows.Forms.GroupBox();
-            this.lblcliente = new System.Windows.Forms.Label();
+            this.grbdatosClientes = new System.Windows.Forms.GroupBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -48,38 +47,33 @@
             this.btnregistroanterior = new System.Windows.Forms.Button();
             this.btnsiguienteregistro = new System.Windows.Forms.Button();
             this.Registro1 = new System.Windows.Forms.Button();
-            this.grbclientes.SuspendLayout();
+            this.txtnfactura = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblncliente = new System.Windows.Forms.Label();
+            this.grbdatosClientes.SuspendLayout();
             this.grbcliente.SuspendLayout();
             this.grbnavegacion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grbclientes
+            // grbdatosClientes
             // 
-            this.grbclientes.Controls.Add(this.lblcliente);
-            this.grbclientes.Controls.Add(this.txttelefono);
-            this.grbclientes.Controls.Add(this.label1);
-            this.grbclientes.Controls.Add(this.txtdireccion);
-            this.grbclientes.Controls.Add(this.label2);
-            this.grbclientes.Controls.Add(this.txtnombrecliente);
-            this.grbclientes.Controls.Add(this.lbldescripcionproducto);
-            this.grbclientes.Controls.Add(this.txtidcliente);
-            this.grbclientes.Controls.Add(this.lblproducto);
-            this.grbclientes.Enabled = false;
-            this.grbclientes.Location = new System.Drawing.Point(12, 12);
-            this.grbclientes.Name = "grbclientes";
-            this.grbclientes.Size = new System.Drawing.Size(366, 199);
-            this.grbclientes.TabIndex = 1;
-            this.grbclientes.TabStop = false;
-            this.grbclientes.Text = "Datos del cliente";
-            // 
-            // lblcliente
-            // 
-            this.lblcliente.AutoSize = true;
-            this.lblcliente.Location = new System.Drawing.Point(238, 35);
-            this.lblcliente.Name = "lblcliente";
-            this.lblcliente.Size = new System.Drawing.Size(19, 13);
-            this.lblcliente.TabIndex = 8;
-            this.lblcliente.Text = "Id:";
+            this.grbdatosClientes.Controls.Add(this.txtnfactura);
+            this.grbdatosClientes.Controls.Add(this.label3);
+            this.grbdatosClientes.Controls.Add(this.txttelefono);
+            this.grbdatosClientes.Controls.Add(this.label1);
+            this.grbdatosClientes.Controls.Add(this.txtdireccion);
+            this.grbdatosClientes.Controls.Add(this.label2);
+            this.grbdatosClientes.Controls.Add(this.txtnombrecliente);
+            this.grbdatosClientes.Controls.Add(this.lbldescripcionproducto);
+            this.grbdatosClientes.Controls.Add(this.txtidcliente);
+            this.grbdatosClientes.Controls.Add(this.lblproducto);
+            this.grbdatosClientes.Enabled = false;
+            this.grbdatosClientes.Location = new System.Drawing.Point(12, 12);
+            this.grbdatosClientes.Name = "grbdatosClientes";
+            this.grbdatosClientes.Size = new System.Drawing.Size(366, 221);
+            this.grbdatosClientes.TabIndex = 1;
+            this.grbdatosClientes.TabStop = false;
+            this.grbdatosClientes.Text = "Datos del cliente";
             // 
             // txttelefono
             // 
@@ -152,7 +146,7 @@
             this.grbcliente.Controls.Add(this.btneliminar);
             this.grbcliente.Controls.Add(this.btnmodificar);
             this.grbcliente.Controls.Add(this.btnnuevo);
-            this.grbcliente.Location = new System.Drawing.Point(21, 217);
+            this.grbcliente.Location = new System.Drawing.Point(21, 239);
             this.grbcliente.Name = "grbcliente";
             this.grbcliente.Size = new System.Drawing.Size(357, 100);
             this.grbcliente.TabIndex = 9;
@@ -201,6 +195,7 @@
             // 
             // grbnavegacion
             // 
+            this.grbnavegacion.Controls.Add(this.lblncliente);
             this.grbnavegacion.Controls.Add(this.btnultimoregistro);
             this.grbnavegacion.Controls.Add(this.btnregistroanterior);
             this.grbnavegacion.Controls.Add(this.btnsiguienteregistro);
@@ -252,6 +247,31 @@
             this.Registro1.UseVisualStyleBackColor = true;
             this.Registro1.Click += new System.EventHandler(this.Registro1_Click);
             // 
+            // txtnfactura
+            // 
+            this.txtnfactura.Location = new System.Drawing.Point(119, 191);
+            this.txtnfactura.Name = "txtnfactura";
+            this.txtnfactura.Size = new System.Drawing.Size(171, 20);
+            this.txtnfactura.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "N Factura:";
+            // 
+            // lblncliente
+            // 
+            this.lblncliente.AutoSize = true;
+            this.lblncliente.Location = new System.Drawing.Point(290, 20);
+            this.lblncliente.Name = "lblncliente";
+            this.lblncliente.Size = new System.Drawing.Size(10, 13);
+            this.lblncliente.TabIndex = 9;
+            this.lblncliente.Text = ":";
+            // 
             // clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,22 +279,22 @@
             this.ClientSize = new System.Drawing.Size(401, 457);
             this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.grbcliente);
-            this.Controls.Add(this.grbclientes);
+            this.Controls.Add(this.grbdatosClientes);
             this.Name = "clientes";
             this.Text = "clientes";
             this.Load += new System.EventHandler(this.clientes_Load);
-            this.grbclientes.ResumeLayout(false);
-            this.grbclientes.PerformLayout();
+            this.grbdatosClientes.ResumeLayout(false);
+            this.grbdatosClientes.PerformLayout();
             this.grbcliente.ResumeLayout(false);
             this.grbnavegacion.ResumeLayout(false);
+            this.grbnavegacion.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbclientes;
-        private System.Windows.Forms.Label lblcliente;
+        private System.Windows.Forms.GroupBox grbdatosClientes;
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtdireccion;
@@ -293,5 +313,8 @@
         private System.Windows.Forms.Button btnregistroanterior;
         private System.Windows.Forms.Button btnsiguienteregistro;
         private System.Windows.Forms.Button Registro1;
+        private System.Windows.Forms.TextBox txtnfactura;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblncliente;
     }
 }
