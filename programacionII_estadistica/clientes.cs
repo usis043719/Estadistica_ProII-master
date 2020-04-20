@@ -20,6 +20,31 @@ namespace programacionII_estadistica
         {
             InitializeComponent();
         }
+        void actualizarDs()
+        {
+            tbl = objconexion.obtener_datos().Tables["Clientes"];
+            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdCliente"] };
+        }
+        void mostrarDatos()
+        {
+            try
+            {
+
+                txtidcliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                txtnombrecliente.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+                txtdireccion.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txttelefono.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+
+                lblcliente.Text = (posicion + 1) + " de " + tbl.Rows.Count;
+            }
+
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Datos que mostrar", "Registros de Cliente",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiar_cajas();
+            }
+        }
         private void btnnuevo_Click(object sender, EventArgs e)
         {
             if (btnnuevo.Text == "Nuevo")
@@ -37,7 +62,6 @@ namespace programacionII_estadistica
                     txtnombrecliente.Text,
                     txtdireccion.Text,
                     txttelefono.Text,
-                    txtnfactura.Text
                 };
 
                 objconexion.mantenmiento_datos(valores, accion);
@@ -130,6 +154,7 @@ namespace programacionII_estadistica
         }
         void limpiar_cajas()
         {
+            txtidcliente.Text = "";
             txtnombrecliente.Text = "";
             txtdireccion.Text = "";
             txttelefono.Text = "";
@@ -162,32 +187,16 @@ namespace programacionII_estadistica
             actualizarDs();
             mostrarDatos();
         }
-        void actualizarDs()
+
+        private void Grbcliente_Enter(object sender, EventArgs e)
         {
-            tbl = objconexion.obtener_datos().Tables["Clientes"];
-            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdCliente"] };
+
         }
-        void mostrarDatos()
+
+        private void Grbnavegacion_Enter(object sender, EventArgs e)
         {
-            try
-            {
 
-                txtidcliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-                txtnombrecliente.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                txtdireccion.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-                txttelefono.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                txtnfactura.Text = tbl.Rows[posicion].ItemArray[4].ToString();
-
-                lblncliente.Text = (posicion + 1) + " de " + tbl.Rows.Count;
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("No hay Datos que mostrar", "Registros de Cliente",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpiar_cajas();
-            }
         }
     }
-    }
-
+        }
+    

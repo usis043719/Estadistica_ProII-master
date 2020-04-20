@@ -36,9 +36,9 @@ namespace programacionII_estadistica
                 txtdireccion.Text = tbl.Rows[posicion].ItemArray[3].ToString();
 
 
-                lblnempleado.Text = (posicion + 1) + " de " + tbl.Rows.Count;
+                lblempleado.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 MessageBox.Show("No hay Datos que mostrar", "Registro de empleado",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

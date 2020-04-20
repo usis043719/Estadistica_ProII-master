@@ -13,7 +13,7 @@ namespace programacionII_estadistica
     public partial class Busquedaproductos : Form
     {
         conexion objConexion = new conexion();
-        public int _idProductos;
+        public int _IdProductos;
         public Busquedaproductos()
         {
             InitializeComponent();
@@ -23,12 +23,12 @@ namespace programacionII_estadistica
         {
             if (grdBusquedaProductos.RowCount > 0)
             {
-                _idProductos = int.Parse(grdBusquedaProductos.CurrentRow.Cells[0].Value.ToString());
+                _IdProductos = int.Parse(grdBusquedaProductos.CurrentRow.Cells[0].Value.ToString());
                 Close();
             }
             else
             {
-                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Clientes",
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

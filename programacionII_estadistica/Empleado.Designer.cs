@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleado));
             this.grbdatosEmpleado = new System.Windows.Forms.GroupBox();
+            this.lblidempleado = new System.Windows.Forms.Label();
+            this.lblempleado = new System.Windows.Forms.Label();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -43,11 +46,11 @@
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.grbnavegacion = new System.Windows.Forms.GroupBox();
+            this.lblnempleado = new System.Windows.Forms.Label();
             this.btnultimoregistro = new System.Windows.Forms.Button();
             this.btnregistroanterior = new System.Windows.Forms.Button();
             this.btnsiguienteregistro = new System.Windows.Forms.Button();
             this.registro1 = new System.Windows.Forms.Button();
-            this.lblnempleado = new System.Windows.Forms.Label();
             this.grbdatosEmpleado.SuspendLayout();
             this.grbcliente.SuspendLayout();
             this.grbnavegacion.SuspendLayout();
@@ -55,6 +58,10 @@
             // 
             // grbdatosEmpleado
             // 
+            this.grbdatosEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grbdatosEmpleado.BackgroundImage")));
+            this.grbdatosEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grbdatosEmpleado.Controls.Add(this.lblidempleado);
+            this.grbdatosEmpleado.Controls.Add(this.lblempleado);
             this.grbdatosEmpleado.Controls.Add(this.txttelefono);
             this.grbdatosEmpleado.Controls.Add(this.label1);
             this.grbdatosEmpleado.Controls.Add(this.txtdireccion);
@@ -70,6 +77,24 @@
             this.grbdatosEmpleado.TabIndex = 11;
             this.grbdatosEmpleado.TabStop = false;
             this.grbdatosEmpleado.Text = "Datos del empleado";
+            // 
+            // lblidempleado
+            // 
+            this.lblidempleado.AutoSize = true;
+            this.lblidempleado.Location = new System.Drawing.Point(248, 35);
+            this.lblidempleado.Name = "lblidempleado";
+            this.lblidempleado.Size = new System.Drawing.Size(18, 13);
+            this.lblidempleado.TabIndex = 15;
+            this.lblidempleado.Text = "ID";
+            // 
+            // lblempleado
+            // 
+            this.lblempleado.AutoSize = true;
+            this.lblempleado.Location = new System.Drawing.Point(272, 35);
+            this.lblempleado.Name = "lblempleado";
+            this.lblempleado.Size = new System.Drawing.Size(10, 13);
+            this.lblempleado.TabIndex = 14;
+            this.lblempleado.Text = ":";
             // 
             // txttelefono
             // 
@@ -137,6 +162,8 @@
             // 
             // grbcliente
             // 
+            this.grbcliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grbcliente.BackgroundImage")));
+            this.grbcliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grbcliente.Controls.Add(this.btnbuscar);
             this.grbcliente.Controls.Add(this.btneliminar);
             this.grbcliente.Controls.Add(this.btnmodificar);
@@ -150,6 +177,8 @@
             // 
             // btnbuscar
             // 
+            this.btnbuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnbuscar.BackgroundImage")));
+            this.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnbuscar.Location = new System.Drawing.Point(276, 18);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(75, 35);
@@ -160,6 +189,8 @@
             // 
             // btneliminar
             // 
+            this.btneliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btneliminar.BackgroundImage")));
+            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btneliminar.Location = new System.Drawing.Point(142, 19);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(75, 35);
@@ -170,6 +201,8 @@
             // 
             // btnmodificar
             // 
+            this.btnmodificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmodificar.BackgroundImage")));
+            this.btnmodificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmodificar.Location = new System.Drawing.Point(74, 60);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(75, 35);
@@ -180,6 +213,8 @@
             // 
             // btnagregar
             // 
+            this.btnagregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnagregar.BackgroundImage")));
+            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnagregar.Location = new System.Drawing.Point(9, 18);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(75, 35);
@@ -190,6 +225,8 @@
             // 
             // grbnavegacion
             // 
+            this.grbnavegacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grbnavegacion.BackgroundImage")));
+            this.grbnavegacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grbnavegacion.Controls.Add(this.lblnempleado);
             this.grbnavegacion.Controls.Add(this.btnultimoregistro);
             this.grbnavegacion.Controls.Add(this.btnregistroanterior);
@@ -202,8 +239,19 @@
             this.grbnavegacion.TabStop = false;
             this.grbnavegacion.Text = "Navegacion";
             // 
+            // lblnempleado
+            // 
+            this.lblnempleado.AutoSize = true;
+            this.lblnempleado.Location = new System.Drawing.Point(280, 20);
+            this.lblnempleado.Name = "lblnempleado";
+            this.lblnempleado.Size = new System.Drawing.Size(10, 13);
+            this.lblnempleado.TabIndex = 9;
+            this.lblnempleado.Text = ":";
+            // 
             // btnultimoregistro
             // 
+            this.btnultimoregistro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnultimoregistro.BackgroundImage")));
+            this.btnultimoregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnultimoregistro.Location = new System.Drawing.Point(144, 20);
             this.btnultimoregistro.Name = "btnultimoregistro";
             this.btnultimoregistro.Size = new System.Drawing.Size(75, 35);
@@ -214,6 +262,8 @@
             // 
             // btnregistroanterior
             // 
+            this.btnregistroanterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnregistroanterior.BackgroundImage")));
+            this.btnregistroanterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnregistroanterior.Location = new System.Drawing.Point(76, 61);
             this.btnregistroanterior.Name = "btnregistroanterior";
             this.btnregistroanterior.Size = new System.Drawing.Size(75, 35);
@@ -224,6 +274,8 @@
             // 
             // btnsiguienteregistro
             // 
+            this.btnsiguienteregistro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsiguienteregistro.BackgroundImage")));
+            this.btnsiguienteregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsiguienteregistro.Location = new System.Drawing.Point(208, 60);
             this.btnsiguienteregistro.Name = "btnsiguienteregistro";
             this.btnsiguienteregistro.Size = new System.Drawing.Size(75, 35);
@@ -234,6 +286,8 @@
             // 
             // registro1
             // 
+            this.registro1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("registro1.BackgroundImage")));
+            this.registro1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.registro1.Location = new System.Drawing.Point(8, 20);
             this.registro1.Name = "registro1";
             this.registro1.Size = new System.Drawing.Size(75, 35);
@@ -242,19 +296,11 @@
             this.registro1.UseVisualStyleBackColor = true;
             this.registro1.Click += new System.EventHandler(this.registro1_Click);
             // 
-            // lblnempleado
-            // 
-            this.lblnempleado.AutoSize = true;
-            this.lblnempleado.Location = new System.Drawing.Point(280, 20);
-            this.lblnempleado.Name = "lblnempleado";
-            this.lblnempleado.Size = new System.Drawing.Size(10, 13);
-            this.lblnempleado.TabIndex = 9;
-            this.lblnempleado.Text = ":";
-            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::programacionII_estadistica.Properties.Resources.degrado;
             this.ClientSize = new System.Drawing.Size(427, 473);
             this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.grbcliente);
@@ -293,5 +339,7 @@
         private System.Windows.Forms.Button btnsiguienteregistro;
         private System.Windows.Forms.Button registro1;
         private System.Windows.Forms.Label lblnempleado;
+        private System.Windows.Forms.Label lblidempleado;
+        private System.Windows.Forms.Label lblempleado;
     }
 }

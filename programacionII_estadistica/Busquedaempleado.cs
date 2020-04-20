@@ -35,8 +35,11 @@ namespace programacionII_estadistica
         {
                 BindingSource bs = new BindingSource();
                 bs.DataSource = grdBusquedaEmpleados.DataSource;
-                bs.Filter = "Nombre_empleado like '%" + valor + "%'";
-                grdBusquedaEmpleados.DataSource = bs;
+            bs.Filter = "Nombre_empleado like '%" + valor + "%'";
+            bs.Filter = "Direccion like '%" + valor + "%'";
+            bs.Filter = "Telefono like '%" + valor + "%'";
+
+            grdBusquedaEmpleados.DataSource = bs;
             }
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
         {

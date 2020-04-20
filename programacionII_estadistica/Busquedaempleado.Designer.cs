@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busquedaempleado));
             this.grdBusquedaEmpleados = new System.Windows.Forms.DataGridView();
             this.btncancelarempleado = new System.Windows.Forms.Button();
             this.btnseleccionar = new System.Windows.Forms.Button();
@@ -46,6 +47,8 @@
             // 
             // btncancelarempleado
             // 
+            this.btncancelarempleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncancelarempleado.BackgroundImage")));
+            this.btncancelarempleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btncancelarempleado.Location = new System.Drawing.Point(537, 43);
             this.btncancelarempleado.Margin = new System.Windows.Forms.Padding(1);
             this.btncancelarempleado.Name = "btncancelarempleado";
@@ -57,6 +60,8 @@
             // 
             // btnseleccionar
             // 
+            this.btnseleccionar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnseleccionar.BackgroundImage")));
+            this.btnseleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnseleccionar.Location = new System.Drawing.Point(441, 43);
             this.btnseleccionar.Margin = new System.Windows.Forms.Padding(1);
             this.btnseleccionar.Name = "btnseleccionar";
@@ -77,9 +82,11 @@
             // lblbusqueda
             // 
             this.lblbusqueda.AutoSize = true;
+            this.lblbusqueda.BackColor = System.Drawing.Color.Transparent;
+            this.lblbusqueda.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbusqueda.Location = new System.Drawing.Point(76, 52);
             this.lblbusqueda.Name = "lblbusqueda";
-            this.lblbusqueda.Size = new System.Drawing.Size(40, 13);
+            this.lblbusqueda.Size = new System.Drawing.Size(52, 18);
             this.lblbusqueda.TabIndex = 19;
             this.lblbusqueda.Text = "Buscar";
             // 
@@ -87,6 +94,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::programacionII_estadistica.Properties.Resources.degrado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(675, 407);
             this.Controls.Add(this.grdBusquedaEmpleados);
             this.Controls.Add(this.btncancelarempleado);

@@ -34,8 +34,14 @@ namespace programacionII_estadistica
             { //boton de guardar 
                 String[] valores = {
                     txtidproducto.Text,
+
                     txtdescripcionproducto.Text,
-                    txtiddescuento.Text
+                    txtiddescuentoproducto.Text,
+                    txtidnumordenproducto.Text,
+                    cboCategoriaProductos.SelectedValue.ToString(),
+
+                    txtmarcaproducto.Text
+
                 };
 
                 objconexion.mantenmiento_datos_Productos(valores, accion);
@@ -98,24 +104,13 @@ namespace programacionII_estadistica
             Busquedaproductos frmBusquedaproducto = new Busquedaproductos();
             frmBusquedaproducto.ShowDialog();
 
-            if (frmBusquedaproducto._idProductos > 0)
+            if (frmBusquedaproducto._IdProductos > 0)
             {
-                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusquedaproducto._idProductos));
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusquedaproducto._IdProductos));
                 mostrarDatos();
             }
         }
-        void limpiar_cajas()
-        {
-            txtdescripcionproducto.Text = "";
-
-        }
-        void controles(Boolean valor)
-        {
-            grbnavegacionproducto.Enabled = valor;
-            btneliminarproducto.Enabled = valor;
-            btnbuscarproducto.Enabled = valor;
-            grbdatosProducto.Enabled = !valor;
-        }
+        
 
         private void Productos_Load(object sender, EventArgs e)
         {
@@ -132,14 +127,20 @@ namespace programacionII_estadistica
         {
             try
             {
+                cboCategoriaProductos.DataSource = objconexion.obtener_datos().Tables["Categoria"];
+                cboCategoriaProductos.DisplayMember = "Categoria";
+                cboCategoriaProductos.ValueMember = "Categoria.IdCategoria";
+                cboCategoriaProductos.SelectedValue = tbl.Rows[posicion].ItemArray[4].ToString();
 
                 txtidproducto.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 txtdescripcionproducto.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                txtiddescuento.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txtiddescuentoproducto.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txtidnumordenproducto.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+                txtmarcaproducto.Text = tbl.Rows[posicion].ItemArray[5].ToString();
 
                 lblnpruduto.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 MessageBox.Show("No hay Datos que mostrar", "Registro de Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -186,6 +187,23 @@ namespace programacionII_estadistica
             posicion = tbl.Rows.Count - 1;
             mostrarDatos();
         }
+        void limpiar_cajas()
+        {
+            txtdescripcionproducto.Text = "";
+            // txtiddescuentoproducto.Text = "";
+            // txtidnumordenproducto.Text = "";
+            txtmarcaproducto.Text = "";
+
+
+
+        }
+        void controles(Boolean valor)
+        {
+            grbnavegacionproducto.Enabled = valor;
+            btneliminarproducto.Enabled = valor;
+            btnbuscarproducto.Enabled = valor;
+            grbdatosProducto.Enabled = !valor;
+        }
 
         private void btnregistrosiguienteproducto_Click(object sender, EventArgs e)
         {
@@ -200,6 +218,21 @@ namespace programacionII_estadistica
                 MessageBox.Show("Ultimo Registro...", "Registro de Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCategoriaProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmarcaproducto_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
