@@ -45,6 +45,50 @@ namespace programacionII_estadistica
         {
     
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            {
+                Proveedor Proveedor = new Proveedor();
+
+                Proveedor.Show();
+            }
+        }
+
+        private void btninventario_Click(object sender, EventArgs e)
+        {
+            Inventario Inventario = new Inventario();
+
+            Inventario.Show();
+        }
+
+       
+
+        private void btndesc_Click(object sender, EventArgs e)
+        {
+            Descuento Descuento = new Descuento();
+
+            Descuento.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Categoria Categoria = new Categoria();
+
+            Categoria.Show();
+        }
+
+        private void btncargo_Click(object sender, EventArgs e)
+        {
+            Cargo Cargo = new Cargo();
+
+            Cargo.Show();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 //hola mundo.%

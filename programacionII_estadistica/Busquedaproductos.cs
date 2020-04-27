@@ -13,7 +13,7 @@ namespace programacionII_estadistica
     public partial class Busquedaproductos : Form
     {
         conexion objConexion = new conexion();
-        public int _idProductos;
+        public int _IdProductos;
         public Busquedaproductos()
         {
             InitializeComponent();
@@ -23,12 +23,12 @@ namespace programacionII_estadistica
         {
             if (grdBusquedaProductos.RowCount > 0)
             {
-                _idProductos = int.Parse(grdBusquedaProductos.CurrentRow.Cells[0].Value.ToString());
+                _IdProductos = int.Parse(grdBusquedaProductos.CurrentRow.Cells["IdProductos"].Value.ToString());
                 Close();
             }
             else
             {
-                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Clientes",
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -40,7 +40,8 @@ namespace programacionII_estadistica
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = grdBusquedaProductos.DataSource;
-            bs.Filter = "Descripcion like '%" + valor + "%'";
+            bs.Filter = "Descripcion like '%" + valor + "%' or Marca like '%" + valor +
+                 "%' or Categoria like '%" + valor + "%'";
             grdBusquedaProductos.DataSource = bs;
         }
 
@@ -51,7 +52,7 @@ namespace programacionII_estadistica
         private void Busquedaproductos_Load(object sender, EventArgs e)
         {
             grdBusquedaProductos.DataSource =
-              objConexion.obtener_datos().Tables["Productos"].DefaultView;
+              objConexion.obtener_datos().Tables["Productos_Categoria"].DefaultView;
         }
     }
 }

@@ -41,7 +41,8 @@ namespace programacionII_estadistica
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = grdBusquedaClientes.DataSource;
-            bs.Filter = "Nombre_cliente like '%" + valor + "%'";
+            bs.Filter = "Nombre_cliente like '%" + valor + "%' or Direccion like '%" + valor + "%' or Telefono like '%" + valor + "%'";
+
             grdBusquedaClientes.DataSource = bs;
 
         }

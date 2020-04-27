@@ -20,31 +20,6 @@ namespace programacionII_estadistica
         {
             InitializeComponent();
         }
-       
-        void actualizarDs()
-        {
-            tbl = objconexion.obtener_datos().Tables["Empleados"];
-            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdEmpleado"] };
-        }
-        void mostrarDatos()
-        {
-            try
-            {
-                txtidempleado.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-                txtnombreempleado.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                txttelefono.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-                txtdireccion.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-
-
-                lblnempleado.Text = (posicion + 1) + " de " + tbl.Rows.Count;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No hay Datos que mostrar", "Registro de empleado",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpiar_cajas();
-            }
-        }
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
@@ -63,7 +38,8 @@ namespace programacionII_estadistica
                     txtidempleado.Text,
                     txtnombreempleado.Text,
                     txttelefono.Text,
-                    txtdireccion.Text
+                    txtdireccion.Text,
+                    cboCargoEmpleado.SelectedValue.ToString(),
                 };
 
                 objconexion.mantenimiento_datos_Empleado(valores, accion);
@@ -103,7 +79,7 @@ namespace programacionII_estadistica
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de elimina a " + txtnombreempleado.Text, "Registro de empleado",
+            if (MessageBox.Show("Esta seguro de elimina a " + txtnombreempleado.Text, "Registro de Empleados",
              MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { txtidempleado.Text };
@@ -148,7 +124,7 @@ namespace programacionII_estadistica
             }
             else
             {
-                MessageBox.Show("Primer Registro...", "Registros de empleado",
+                MessageBox.Show("Primer Registro...", "Registros de Empleados",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -158,6 +134,40 @@ namespace programacionII_estadistica
             actualizarDs();
             mostrarDatos();
         }
+        void actualizarDs()
+        {
+            tbl = objconexion.obtener_datos().Tables["Empleados"];
+            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdEmpleado"] };
+
+            cboCargoEmpleado.DataSource = objconexion.obtener_datos().Tables["Cargo"];
+            cboCargoEmpleado.DisplayMember = "Cargo";
+            cboCargoEmpleado.ValueMember = "Cargo.IdCargo";
+
+        }
+        void mostrarDatos()
+        {
+            try
+            {
+                cboCargoEmpleado.SelectedValue = tbl.Rows[posicion].ItemArray[4].ToString();
+
+                txtidempleado.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                txtnombreempleado.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+                txttelefono.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txtdireccion.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+
+
+                lblempleado.Text = (posicion + 1) + " de " + tbl.Rows.Count;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Datos que mostrar", "Registro de Empleados",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiar_cajas();
+            }
+        }
+
+
+
 
 
         private void btnultimoregistro_Click(object sender, EventArgs e)
@@ -178,7 +188,9 @@ namespace programacionII_estadistica
             btneliminar.Enabled = valor;
             btnbuscar.Enabled = valor;
             grbdatosEmpleado.Enabled = !valor;
+
         }
+
         private void btnsiguienteregistro_Click(object sender, EventArgs e)
         {
             if (posicion < tbl.Rows.Count - 1)
@@ -189,8 +201,19 @@ namespace programacionII_estadistica
             }
             else
             {
-                MessageBox.Show("Ultimo Registro...", "Registro de Empleado",
+                MessageBox.Show("Ultimo Registro...", "Registro de Empleados",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnBuscarCargoEmpleados_Click(object sender, EventArgs e)
+        {
+            BusquedaCargo frmbusquedacargo = new BusquedaCargo();
+            frmbusquedacargo.ShowDialog();
+
+            if (frmbusquedacargo._IdCargo > 0)
+            {
+               cboCargoEmpleado.SelectedValue = frmbusquedacargo._IdCargo;
             }
         }
     }

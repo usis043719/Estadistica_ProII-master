@@ -22,12 +22,12 @@ namespace programacionII_estadistica
         {
             if (grdBusquedaEmpleados.RowCount > 0)
             {
-                _IdEmpleado = int.Parse(grdBusquedaEmpleados.CurrentRow.Cells[0].Value.ToString());
+                _IdEmpleado = int.Parse(grdBusquedaEmpleados.CurrentRow.Cells["IdEmpleado"].Value.ToString());
                 Close();
             }
             else
             {
-                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Empleado ",
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Empleados",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -35,8 +35,11 @@ namespace programacionII_estadistica
         {
                 BindingSource bs = new BindingSource();
                 bs.DataSource = grdBusquedaEmpleados.DataSource;
-                bs.Filter = "Nombre_empleado like '%" + valor + "%'";
-                grdBusquedaEmpleados.DataSource = bs;
+            bs.Filter = "Nombre_empleado like '%" + valor + "%' or Telefono like '%" + valor + "%' or Direccion like '%" + valor +
+                 "%' or Cargo like '%" + valor + "%'";
+
+
+            grdBusquedaEmpleados.DataSource = bs;
             }
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
         {
@@ -46,7 +49,7 @@ namespace programacionII_estadistica
         private void Busquedaempleado_Load(object sender, EventArgs e)
         {
             grdBusquedaEmpleados.DataSource =
-             objConexion.obtener_datos().Tables["Empleados"].DefaultView;
+             objConexion.obtener_datos().Tables["Empleados_Cargo"].DefaultView;
         }
 
         private void btncancelarempleado_Click(object sender, EventArgs e)

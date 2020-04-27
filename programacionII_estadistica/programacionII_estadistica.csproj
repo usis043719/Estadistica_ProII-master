@@ -61,6 +61,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscadorDescuento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscadorDescuento.Designer.cs">
+      <DependentUpon>BuscadorDescuento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaCargo.Designer.cs">
+      <DependentUpon>BusquedaCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedacategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedacategoria.Designer.cs">
+      <DependentUpon>Busquedacategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busquedacliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +91,35 @@
     <Compile Include="Busquedaempleado.Designer.cs">
       <DependentUpon>Busquedaempleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusquedaInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaInventario.Designer.cs">
+      <DependentUpon>BusquedaInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busquedaproductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Busquedaproductos.Designer.cs">
       <DependentUpon>Busquedaproductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaProveedor.Designer.cs">
+      <DependentUpon>BusquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargo.Designer.cs">
+      <DependentUpon>Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoria.Designer.cs">
+      <DependentUpon>Categoria.cs</DependentUpon>
     </Compile>
     <Compile Include="clientes.cs">
       <SubType>Form</SubType>
@@ -86,11 +128,23 @@
       <DependentUpon>clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="conexion.cs" />
+    <Compile Include="Descuento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Descuento.Designer.cs">
+      <DependentUpon>Descuento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Empleado.Designer.cs">
       <DependentUpon>Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="libreria.cs">
       <SubType>Form</SubType>
@@ -106,26 +160,53 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="prueba.cs">
+    <Compile Include="Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="prueba.Designer.cs">
-      <DependentUpon>prueba.cs</DependentUpon>
+    <Compile Include="Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BuscadorDescuento.resx">
+      <DependentUpon>BuscadorDescuento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaCargo.resx">
+      <DependentUpon>BusquedaCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedacategoria.resx">
+      <DependentUpon>Busquedacategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busquedacliente.resx">
       <DependentUpon>Busquedacliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedaempleado.resx">
       <DependentUpon>Busquedaempleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaInventario.resx">
+      <DependentUpon>BusquedaInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busquedaproductos.resx">
       <DependentUpon>Busquedaproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaProveedor.resx">
+      <DependentUpon>BusquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cargo.resx">
+      <DependentUpon>Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categoria.resx">
+      <DependentUpon>Categoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Descuento.resx">
+      <DependentUpon>Descuento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="libreria.resx">
       <DependentUpon>libreria.cs</DependentUpon>
@@ -141,7 +222,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,6 +241,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logito.jpg" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\degrado.jpg" />
+    <None Include="Resources\degradado.jpg" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\ede3c552c60d4305ff106a8c4328aa6a %282%29.gif" />
+    <None Include="Resources\imagenes-gif-de-libros-3.gif" />
     <Content Include="Sistema.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
