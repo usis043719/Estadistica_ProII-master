@@ -70,7 +70,7 @@
             // 
             // btnbusquedaempleados
             // 
-            this.btnbusquedaempleados.Location = new System.Drawing.Point(662, 115);
+            this.btnbusquedaempleados.Location = new System.Drawing.Point(657, 114);
             this.btnbusquedaempleados.Name = "btnbusquedaempleados";
             this.btnbusquedaempleados.Size = new System.Drawing.Size(96, 41);
             this.btnbusquedaempleados.TabIndex = 2;
