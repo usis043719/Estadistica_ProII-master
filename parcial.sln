@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "programacionII_estadistica", "programacionII_estadistica\programacionII_estadistica.csproj", "{9DD1CB02-3B8A-45F3-8553-0B6535372392}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parcial", "programacionII_estadistica\parcial.csproj", "{9DD1CB02-3B8A-45F3-8553-0B6535372392}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
