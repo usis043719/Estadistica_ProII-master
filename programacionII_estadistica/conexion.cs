@@ -36,6 +36,12 @@ namespace programacionII_estadistica
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "peliculas");
 
+            micomando.Connection = miconeccion;
+            micomando.CommandText = "Select * from alquiler";
+            miadaptador.SelectCommand = micomando;
+            miadaptador.Fill(ds, "alquiler");
+
+
             return ds;
         }
 
@@ -70,6 +76,81 @@ namespace programacionII_estadistica
         }
 
         void procesarSQL(String sql)
+        {
+            micomando.Connection = miconeccion;
+            micomando.CommandText = sql;
+            micomando.ExecuteNonQuery();
+        }
+        //datos de peliculas
+        public void mantenmiento_datos_peliculas(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+                sql = "INSERT INTO peliculas (descripcion,sinopsis,genero,duracion) VALUES(" +
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'" +
+                         ")";
+            }
+            else if (accion == "modificar")
+            {
+                sql = "UPDATE peliculas SET " +
+                      "descripcion            = '" + datos[1] + "'," +
+                      "sinopsis               = '" + datos[2] + "'," +
+                      "genero                 = '" + datos[3] + "'," +
+                      "duracion               = '" + datos[4] + "'" +
+                      "WHERE IdPelicula       = '" + datos[0] + "'";
+            }
+
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE peliculas FROM peliculas WHERE IdPelicula='" + datos[0] + "'";
+            }
+            procesarpeliSQL(sql);
+        }
+
+        void procesarpeliSQL(String sql)
+        {
+            micomando.Connection = miconeccion;
+            micomando.CommandText = sql;
+            micomando.ExecuteNonQuery();
+        }
+        //datos de Alquiler
+        public void mantenmiento_datos_alquiler(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+                sql = "INSERT INTO alquiler (IdCliente,IdPelicula,FechaPrestamo,FechaDevolucion,valor) VALUES(" +
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'," +
+
+                    "'" + datos[5] + "'" +
+                         ")";
+            }
+            else if (accion == "modificar")
+            {
+                sql = "UPDATE alquiler SET " +
+                      "IdCliente           = '" + datos[1] + "'," +
+                      "IdPelicula          = '" + datos[2] + "'," +
+                      "FechaPrestamo       = '" + datos[3] + "'," +
+                      "FechaDevolucion     = '" + datos[4] + "'," +
+                      "valor               = '" + datos[5] + "'" +
+                      "WHERE IdAlquiler    = '" + datos[0] + "'";
+            }
+
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE alquiler FROM alquiler WHERE IdAlquiler='" + datos[0] + "'";
+            }
+            procesaralqSQL(sql);
+        }
+
+        void procesaralqSQL(String sql)
         {
             micomando.Connection = miconeccion;
             micomando.CommandText = sql;
