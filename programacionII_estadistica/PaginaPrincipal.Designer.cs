@@ -73,6 +73,7 @@
             this.Controls.Add(this.btnclientes);
             this.Name = "PaginaPrincipal";
             this.Text = "PaginaPrincipal";
+            this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             this.ResumeLayout(false);
 
         }

@@ -37,5 +37,10 @@ namespace programacionII_estadistica
 
             Alquiler.Show();
         }
+
+        private void PaginaPrincipal_Load(object sender, EventArgs e)
+        {
+            //sincronizacion del original
+        }
     }
 }
