@@ -61,11 +61,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alquiler.Designer.cs">
+      <DependentUpon>Alquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaAlquiler.Designer.cs">
+      <DependentUpon>BusquedaAlquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busquedacliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Busquedacliente.Designer.cs">
       <DependentUpon>Busquedacliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaPeliculas.Designer.cs">
+      <DependentUpon>BusquedaPeliculas.cs</DependentUpon>
     </Compile>
     <Compile Include="clientes.cs">
       <SubType>Form</SubType>
@@ -74,13 +92,40 @@
       <DependentUpon>clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="conexion.cs" />
+    <Compile Include="PaginaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaginaPrincipal.Designer.cs">
+      <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Peliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Peliculas.Designer.cs">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Alquiler.resx">
+      <DependentUpon>Alquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaAlquiler.resx">
+      <DependentUpon>BusquedaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busquedacliente.resx">
       <DependentUpon>Busquedacliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaPeliculas.resx">
+      <DependentUpon>BusquedaPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaginaPrincipal.resx">
+      <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Peliculas.resx">
+      <DependentUpon>Peliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
