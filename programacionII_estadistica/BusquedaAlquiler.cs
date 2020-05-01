@@ -54,7 +54,7 @@ namespace programacionII_estadistica
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = grdBusquedaAlquiler.DataSource;
-            bs.Filter = "valor like '%" + valor + "%'";
+            bs.Filter = "valor like '%" + valor + "%' or FechaPrestamo like '%" + valor + "%' or FechaDevolucion like '%" + valor + "%'";
             grdBusquedaAlquiler.DataSource = bs;
         }
     }
