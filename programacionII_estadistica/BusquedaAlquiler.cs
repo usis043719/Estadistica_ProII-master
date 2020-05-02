@@ -28,7 +28,7 @@ namespace programacionII_estadistica
             grdBusquedaAlquiler.DataSource =
             objConexion.obtener_datos().Tables["alquiler_peliculas"].DefaultView;
 
-        }///
+        }///desple
 
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
         {
