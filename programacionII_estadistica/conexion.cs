@@ -56,7 +56,7 @@ namespace programacionII_estadistica
             return ds;
         }
 
-        //datos de los clientes
+        
         public void mantenmiento_datos(String[] datos, String accion)
         {
             String sql = "";
