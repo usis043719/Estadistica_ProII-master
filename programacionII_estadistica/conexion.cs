@@ -31,10 +31,21 @@ namespace programacionII_estadistica
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "clientes");
 
+            micomando.CommandText = "select clientes.nombre, alquiler.IdAlquiler,alquiler.FechaPrestamo, alquiler.FechaDevolucion," +
+               " alquiler.IdCliente from alquiler inner join clientes on(clientes.IdCliente=alquiler.IdCliente)";
+            miadaptador.SelectCommand = micomando;
+            miadaptador.Fill(ds, "alquiler_clientes");
+
             micomando.Connection = miconeccion;
             micomando.CommandText = "Select * from peliculas";
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "peliculas");
+
+            micomando.CommandText = "select peliculas.descripcion, alquiler.IdAlquiler,alquiler.FechaPrestamo, alquiler.FechaDevolucion," +
+                " alquiler.IdPelicula from alquiler inner join peliculas on(peliculas.IdPelicula=alquiler.IdPelicula)";
+            miadaptador.SelectCommand = micomando;
+            miadaptador.Fill(ds, "alquiler_peliculas");
+
 
             micomando.Connection = miconeccion;
             micomando.CommandText = "Select * from alquiler";

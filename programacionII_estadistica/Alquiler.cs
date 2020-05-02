@@ -30,15 +30,26 @@ namespace programacionII_estadistica
         {
             tbl = objconexion.obtener_datos().Tables["alquiler"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdAlquiler"] };
+
+            cboclientesalquiler.DataSource = objconexion.obtener_datos().Tables["clientes"];
+            cboclientesalquiler.DisplayMember = "nombre";
+            cboclientesalquiler.ValueMember = "clientes.IdCliente";
+
+            cbopeliculasalquiler.DataSource = objconexion.obtener_datos().Tables["peliculas"];
+            cbopeliculasalquiler.DisplayMember = "descripcion";
+            cbopeliculasalquiler.ValueMember = "peliculas.IdPelicula";
+
+
         }
         void mostrarDatos()
         {
             try
             {
 
+                cboclientesalquiler.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
+                cbopeliculasalquiler.SelectedValue = tbl.Rows[posicion].ItemArray[2].ToString();
+
                 txtidalquiler.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-                txtidcliente.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                txtidpelicula.Text = tbl.Rows[posicion].ItemArray[2].ToString();
 
                 txtfechaprestamo.Text = tbl.Rows[posicion].ItemArray[3].ToString();
                 txtfechadevolucion.Text = tbl.Rows[posicion].ItemArray[4].ToString();
@@ -100,8 +111,8 @@ namespace programacionII_estadistica
         void limpiar_cajas()
         {
             txtidalquiler.Text = "";
-            txtidcliente.Text = "";
-            txtidpelicula.Text = "";
+          
+
             txtfechaprestamo.Text = "";
             txtfechadevolucion.Text = "";
             txtvalor.Text = "";
@@ -130,8 +141,11 @@ namespace programacionII_estadistica
             { //boton de guardar 
                 String[] valores = {
                     txtidalquiler.Text,
-                    txtidcliente.Text,
-                    txtidpelicula.Text,
+                  
+
+                    cboclientesalquiler.SelectedValue.ToString(),
+
+                    cbopeliculasalquiler.SelectedValue.ToString(),
 
                     txtfechaprestamo.Text,
                     txtfechadevolucion.Text,                
@@ -176,7 +190,7 @@ namespace programacionII_estadistica
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de elimina a " + txtidcliente.Text, "Registro de alquiler",
+            if (MessageBox.Show("Esta seguro de elimina a " + cboclientesalquiler.Text, "Registro de alquiler",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { txtidalquiler.Text };
@@ -200,5 +214,26 @@ namespace programacionII_estadistica
                 mostrarDatos();
             }
         }
+        private void btnBuscarpeliculaalquiler_Click(object sender, EventArgs e)
+        {
+        BusquedaPeliculas frmBusquedapeliculas = new BusquedaPeliculas();
+        frmBusquedapeliculas.ShowDialog();
+
+        if (frmBusquedapeliculas._IdPelicula > 0)
+        {
+            cbopeliculasalquiler.SelectedValue = frmBusquedapeliculas._IdPelicula;
+        }
+        }
+
+        private void btbbuscarcliente_Click(object sender, EventArgs e)
+        {
+            Busquedacliente frmBusquedaclientes = new Busquedacliente();
+            frmBusquedaclientes.ShowDialog();
+
+            if (frmBusquedaclientes._IdCliente > 0)
+            {
+                cboclientesalquiler.SelectedValue = frmBusquedaclientes._IdCliente;
+            }
     }
-    }
+}
+}

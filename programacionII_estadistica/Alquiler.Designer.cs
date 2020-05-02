@@ -41,6 +41,10 @@
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.grbdatosAlquiler = new System.Windows.Forms.GroupBox();
+            this.btnBuscarpeliculaalquiler = new System.Windows.Forms.Button();
+            this.btbbuscarcliente = new System.Windows.Forms.Button();
+            this.cboclientesalquiler = new System.Windows.Forms.ComboBox();
+            this.cbopeliculasalquiler = new System.Windows.Forms.ComboBox();
             this.txtvalor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtfechadevolucion = new System.Windows.Forms.TextBox();
@@ -49,9 +53,7 @@
             this.lblidalquiler = new System.Windows.Forms.Label();
             this.txtfechaprestamo = new System.Windows.Forms.TextBox();
             this.lblTelfono = new System.Windows.Forms.Label();
-            this.txtidpelicula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtidcliente = new System.Windows.Forms.TextBox();
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.txtidalquiler = new System.Windows.Forms.TextBox();
             this.lblClienteID = new System.Windows.Forms.Label();
@@ -68,7 +70,7 @@
             this.grbnavegacion.Controls.Add(this.btnregistroanterior);
             this.grbnavegacion.Controls.Add(this.btnsiguienteregistro);
             this.grbnavegacion.Controls.Add(this.Registro1);
-            this.grbnavegacion.Location = new System.Drawing.Point(250, 335);
+            this.grbnavegacion.Location = new System.Drawing.Point(250, 367);
             this.grbnavegacion.Name = "grbnavegacion";
             this.grbnavegacion.Size = new System.Drawing.Size(173, 153);
             this.grbnavegacion.TabIndex = 14;
@@ -139,7 +141,7 @@
             this.grbalquiler.Controls.Add(this.btneliminar);
             this.grbalquiler.Controls.Add(this.btnmodificar);
             this.grbalquiler.Controls.Add(this.btnnuevo);
-            this.grbalquiler.Location = new System.Drawing.Point(21, 305);
+            this.grbalquiler.Location = new System.Drawing.Point(21, 337);
             this.grbalquiler.Name = "grbalquiler";
             this.grbalquiler.Size = new System.Drawing.Size(222, 194);
             this.grbalquiler.TabIndex = 13;
@@ -197,6 +199,10 @@
             // grbdatosAlquiler
             // 
             this.grbdatosAlquiler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grbdatosAlquiler.Controls.Add(this.btnBuscarpeliculaalquiler);
+            this.grbdatosAlquiler.Controls.Add(this.btbbuscarcliente);
+            this.grbdatosAlquiler.Controls.Add(this.cboclientesalquiler);
+            this.grbdatosAlquiler.Controls.Add(this.cbopeliculasalquiler);
             this.grbdatosAlquiler.Controls.Add(this.txtvalor);
             this.grbdatosAlquiler.Controls.Add(this.label3);
             this.grbdatosAlquiler.Controls.Add(this.txtfechadevolucion);
@@ -205,23 +211,63 @@
             this.grbdatosAlquiler.Controls.Add(this.lblidalquiler);
             this.grbdatosAlquiler.Controls.Add(this.txtfechaprestamo);
             this.grbdatosAlquiler.Controls.Add(this.lblTelfono);
-            this.grbdatosAlquiler.Controls.Add(this.txtidpelicula);
             this.grbdatosAlquiler.Controls.Add(this.label2);
-            this.grbdatosAlquiler.Controls.Add(this.txtidcliente);
             this.grbdatosAlquiler.Controls.Add(this.lblNombreCliente);
             this.grbdatosAlquiler.Controls.Add(this.txtidalquiler);
             this.grbdatosAlquiler.Controls.Add(this.lblClienteID);
             this.grbdatosAlquiler.Enabled = false;
             this.grbdatosAlquiler.Location = new System.Drawing.Point(12, 21);
             this.grbdatosAlquiler.Name = "grbdatosAlquiler";
-            this.grbdatosAlquiler.Size = new System.Drawing.Size(309, 278);
+            this.grbdatosAlquiler.Size = new System.Drawing.Size(402, 310);
             this.grbdatosAlquiler.TabIndex = 12;
             this.grbdatosAlquiler.TabStop = false;
             this.grbdatosAlquiler.Text = "Datos de Alquiler";
             // 
+            // btnBuscarpeliculaalquiler
+            // 
+            this.btnBuscarpeliculaalquiler.Location = new System.Drawing.Point(292, 160);
+            this.btnBuscarpeliculaalquiler.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBuscarpeliculaalquiler.Name = "btnBuscarpeliculaalquiler";
+            this.btnBuscarpeliculaalquiler.Size = new System.Drawing.Size(91, 21);
+            this.btnBuscarpeliculaalquiler.TabIndex = 22;
+            this.btnBuscarpeliculaalquiler.Text = "Buscar Pelicula";
+            this.btnBuscarpeliculaalquiler.UseVisualStyleBackColor = true;
+            this.btnBuscarpeliculaalquiler.Click += new System.EventHandler(this.btnBuscarpeliculaalquiler_Click);
+            // 
+            // btbbuscarcliente
+            // 
+            this.btbbuscarcliente.Location = new System.Drawing.Point(292, 91);
+            this.btbbuscarcliente.Margin = new System.Windows.Forms.Padding(1);
+            this.btbbuscarcliente.Name = "btbbuscarcliente";
+            this.btbbuscarcliente.Size = new System.Drawing.Size(91, 21);
+            this.btbbuscarcliente.TabIndex = 22;
+            this.btbbuscarcliente.Text = "Buscar Cliente";
+            this.btbbuscarcliente.UseVisualStyleBackColor = true;
+            this.btbbuscarcliente.Click += new System.EventHandler(this.btbbuscarcliente_Click);
+            // 
+            // cboclientesalquiler
+            // 
+            this.cboclientesalquiler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboclientesalquiler.FormattingEnabled = true;
+            this.cboclientesalquiler.Location = new System.Drawing.Point(119, 91);
+            this.cboclientesalquiler.Margin = new System.Windows.Forms.Padding(1);
+            this.cboclientesalquiler.Name = "cboclientesalquiler";
+            this.cboclientesalquiler.Size = new System.Drawing.Size(171, 21);
+            this.cboclientesalquiler.TabIndex = 21;
+            // 
+            // cbopeliculasalquiler
+            // 
+            this.cbopeliculasalquiler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbopeliculasalquiler.FormattingEnabled = true;
+            this.cbopeliculasalquiler.Location = new System.Drawing.Point(119, 160);
+            this.cbopeliculasalquiler.Margin = new System.Windows.Forms.Padding(1);
+            this.cbopeliculasalquiler.Name = "cbopeliculasalquiler";
+            this.cbopeliculasalquiler.Size = new System.Drawing.Size(171, 21);
+            this.cbopeliculasalquiler.TabIndex = 20;
+            // 
             // txtvalor
             // 
-            this.txtvalor.Location = new System.Drawing.Point(122, 236);
+            this.txtvalor.Location = new System.Drawing.Point(122, 280);
             this.txtvalor.Name = "txtvalor";
             this.txtvalor.Size = new System.Drawing.Size(171, 20);
             this.txtvalor.TabIndex = 19;
@@ -229,7 +275,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 239);
+            this.label3.Location = new System.Drawing.Point(71, 283);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 18;
@@ -237,7 +283,7 @@
             // 
             // txtfechadevolucion
             // 
-            this.txtfechadevolucion.Location = new System.Drawing.Point(122, 190);
+            this.txtfechadevolucion.Location = new System.Drawing.Point(122, 234);
             this.txtfechadevolucion.Name = "txtfechadevolucion";
             this.txtfechadevolucion.Size = new System.Drawing.Size(171, 20);
             this.txtfechadevolucion.TabIndex = 17;
@@ -245,7 +291,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 193);
+            this.label1.Location = new System.Drawing.Point(12, 237);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 13);
             this.label1.TabIndex = 16;
@@ -271,7 +317,7 @@
             // 
             // txtfechaprestamo
             // 
-            this.txtfechaprestamo.Location = new System.Drawing.Point(119, 156);
+            this.txtfechaprestamo.Location = new System.Drawing.Point(119, 200);
             this.txtfechaprestamo.Name = "txtfechaprestamo";
             this.txtfechaprestamo.Size = new System.Drawing.Size(171, 20);
             this.txtfechaprestamo.TabIndex = 7;
@@ -279,44 +325,29 @@
             // lblTelfono
             // 
             this.lblTelfono.AutoSize = true;
-            this.lblTelfono.Location = new System.Drawing.Point(18, 159);
+            this.lblTelfono.Location = new System.Drawing.Point(18, 203);
             this.lblTelfono.Name = "lblTelfono";
             this.lblTelfono.Size = new System.Drawing.Size(101, 13);
             this.lblTelfono.TabIndex = 6;
             this.lblTelfono.Text = "Fecha de prestamo:";
             // 
-            // txtidpelicula
-            // 
-            this.txtidpelicula.Location = new System.Drawing.Point(119, 112);
-            this.txtidpelicula.Multiline = true;
-            this.txtidpelicula.Name = "txtidpelicula";
-            this.txtidpelicula.Size = new System.Drawing.Size(171, 20);
-            this.txtidpelicula.TabIndex = 5;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 119);
+            this.label2.Location = new System.Drawing.Point(18, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Id Pelicula:";
-            // 
-            // txtidcliente
-            // 
-            this.txtidcliente.Location = new System.Drawing.Point(119, 76);
-            this.txtidcliente.Name = "txtidcliente";
-            this.txtidcliente.Size = new System.Drawing.Size(171, 20);
-            this.txtidcliente.TabIndex = 3;
+            this.label2.Text = "Nombre Pelicula:";
             // 
             // lblNombreCliente
             // 
             this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(18, 79);
+            this.lblNombreCliente.Location = new System.Drawing.Point(18, 91);
             this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(54, 13);
+            this.lblNombreCliente.Size = new System.Drawing.Size(82, 13);
             this.lblNombreCliente.TabIndex = 2;
-            this.lblNombreCliente.Text = "Id Cliente:";
+            this.lblNombreCliente.Text = "Nombre Cliente:";
             // 
             // txtidalquiler
             // 
@@ -338,7 +369,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 511);
+            this.ClientSize = new System.Drawing.Size(437, 534);
             this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.grbalquiler);
             this.Controls.Add(this.grbdatosAlquiler);
@@ -376,11 +407,13 @@
         private System.Windows.Forms.Label lblidalquiler;
         private System.Windows.Forms.TextBox txtfechaprestamo;
         private System.Windows.Forms.Label lblTelfono;
-        private System.Windows.Forms.TextBox txtidpelicula;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtidcliente;
         private System.Windows.Forms.Label lblNombreCliente;
         private System.Windows.Forms.TextBox txtidalquiler;
         private System.Windows.Forms.Label lblClienteID;
+        private System.Windows.Forms.ComboBox cbopeliculasalquiler;
+        private System.Windows.Forms.ComboBox cboclientesalquiler;
+        private System.Windows.Forms.Button btbbuscarcliente;
+        private System.Windows.Forms.Button btnBuscarpeliculaalquiler;
     }
 }

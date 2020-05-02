@@ -21,8 +21,13 @@ namespace programacionII_estadistica
 
         private void BusquedaAlquiler_Load(object sender, EventArgs e)
         {
+           
+                grdBusquedaAlquiler.DataSource =
+             objConexion.obtener_datos().Tables["alquiler_clientes"].DefaultView;
+
             grdBusquedaAlquiler.DataSource =
-             objConexion.obtener_datos().Tables["alquiler"].DefaultView;
+            objConexion.obtener_datos().Tables["alquiler_peliculas"].DefaultView;
+
         }
 
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
@@ -35,27 +40,30 @@ namespace programacionII_estadistica
         {
             if (grdBusquedaAlquiler.RowCount > 0)
             {
-                _IdAlquiler = int.Parse(grdBusquedaAlquiler.CurrentRow.Cells[0].Value.ToString());
+                _IdAlquiler = int.Parse(grdBusquedaAlquiler.CurrentRow.Cells["IdAlquiler"].Value.ToString());
+
                 Close();
             }
             else
             {
-                MessageBox.Show("NO hay datos que seleccionar", "Busquedaalquiler",
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de alquiler",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
     }
-
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-
-        }
         void filtrar_datos(String valor)
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = grdBusquedaAlquiler.DataSource;
-            bs.Filter = "valor like '%" + valor + "%' or FechaPrestamo like '%" + valor + "%' or FechaDevolucion like '%" + valor + "%'";
-            grdBusquedaAlquiler.DataSource = bs;
+            bs.Filter = "nombre like '%" + valor + "%' or descripcion like '%" + valor + "%' or FechaPrestamo like '%" + valor +
+                 "%' or FechaDevolucion like '%" + valor + 
+            "%' or valor like '%" + valor + "%'";
+        }
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+
+       
+       
         }
     }
 }
