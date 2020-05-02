@@ -52,7 +52,7 @@ namespace programacionII_estadistica
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "alquiler");
 
-
+           //alquiles dos
             return ds;
         }
 
