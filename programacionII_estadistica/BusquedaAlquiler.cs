@@ -28,6 +28,9 @@ namespace programacionII_estadistica
             grdBusquedaAlquiler.DataSource =
             objConexion.obtener_datos().Tables["alquiler_peliculas"].DefaultView;
 
+
+
+
         }///desple
 
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
@@ -54,9 +57,11 @@ namespace programacionII_estadistica
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = grdBusquedaAlquiler.DataSource;
-            bs.Filter = "nombre like '%" + valor + "%' or descripcion like '%" + valor + "%' or FechaPrestamo like '%" + valor +
-                 "%' or FechaDevolucion like '%" + valor + 
-            "%' or valor like '%" + valor + "%'";
+            bs.Filter = " FechaPrestamo like '%" + valor + "%'" + valor + "%' or FechaDevolucion like '%" + valor + "%' or descripcion like '%" + valor + "%'" + valor + "%' or nombre like '%";
+            //prueba
+
+
+
         }
         private void btncancelar_Click(object sender, EventArgs e)
         {
