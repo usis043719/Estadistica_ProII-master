@@ -40,7 +40,7 @@ namespace programacionII_estadistica
 
         private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
-            //PRINCIPAL
+            
         }
     }
 }
