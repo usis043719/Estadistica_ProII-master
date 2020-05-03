@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clientes));
             this.grbdatosClientes = new System.Windows.Forms.GroupBox();
+            this.txtDui = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblidcliente = new System.Windows.Forms.Label();
             this.lblcliente = new System.Windows.Forms.Label();
             this.txttelefono = new System.Windows.Forms.TextBox();
@@ -40,8 +42,6 @@
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.txtidcliente = new System.Windows.Forms.TextBox();
             this.lblClienteID = new System.Windows.Forms.Label();
-            this.txtDui = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.grbcliente = new System.Windows.Forms.GroupBox();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
@@ -80,6 +80,22 @@
             this.grbdatosClientes.TabIndex = 2;
             this.grbdatosClientes.TabStop = false;
             this.grbdatosClientes.Text = "Datos del cliente";
+            // 
+            // txtDui
+            // 
+            this.txtDui.Location = new System.Drawing.Point(122, 190);
+            this.txtDui.Name = "txtDui";
+            this.txtDui.Size = new System.Drawing.Size(171, 20);
+            this.txtDui.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Dui:";
             // 
             // lblidcliente
             // 
@@ -163,22 +179,6 @@
             this.lblClienteID.Size = new System.Drawing.Size(70, 13);
             this.lblClienteID.TabIndex = 0;
             this.lblClienteID.Text = "Id del cliente:";
-            // 
-            // txtDui
-            // 
-            this.txtDui.Location = new System.Drawing.Point(122, 190);
-            this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(171, 20);
-            this.txtDui.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 193);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Dui:";
             // 
             // grbcliente
             // 
@@ -322,6 +322,7 @@
             this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.grbcliente);
             this.Controls.Add(this.grbdatosClientes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "clientes";
             this.Text = "clientes";
             this.Load += new System.EventHandler(this.clientes_Load);

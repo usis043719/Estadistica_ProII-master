@@ -373,6 +373,7 @@
             this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.grbalquiler);
             this.Controls.Add(this.grbdatosAlquiler);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Alquiler";
             this.Text = "Alquiler";
             this.Load += new System.EventHandler(this.Alquiler_Load);

@@ -322,6 +322,7 @@
             this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.grbcliente);
             this.Controls.Add(this.grbdatosPeliculas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Peliculas";
             this.Text = "Peliculas";
             this.Load += new System.EventHandler(this.Peliculas_Load);

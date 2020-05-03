@@ -103,6 +103,7 @@
             this.Controls.Add(this.btnseleccionar);
             this.Controls.Add(this.txtbusqueda);
             this.Controls.Add(this.lblbusqueda);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busquedacliente";
             this.Text = "Busquedacliente";
             this.Load += new System.EventHandler(this.Busquedacliente_Load);

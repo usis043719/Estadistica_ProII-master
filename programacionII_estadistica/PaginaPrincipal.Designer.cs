@@ -326,6 +326,7 @@
             this.Controls.Add(this.btnclientes);
             this.Controls.Add(this.pictureBox4);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PaginaPrincipal";
             this.Text = "PaginaPrincipal";
             this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
