@@ -22,14 +22,8 @@ namespace programacionII_estadistica
         private void BusquedaAlquiler_Load(object sender, EventArgs e)
         {
            
-                grdBusquedaAlquiler.DataSource =
-             objConexion.obtener_datos().Tables["alquiler_clientes"].DefaultView;
-
-            grdBusquedaAlquiler.DataSource =
-            objConexion.obtener_datos().Tables["alquiler_peliculas"].DefaultView;
-
-
-
+             grdBusquedaAlquiler.DataSource =
+             objConexion.obtener_datos().Tables["alquiler_clientes_peliculas"].DefaultView;
 
         }///desple
 
@@ -57,18 +51,17 @@ namespace programacionII_estadistica
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = grdBusquedaAlquiler.DataSource;
-            bs.Filter = " FechaPrestamo like '%" + valor + "%'" + valor + "%' or FechaDevolucion like '%" + valor + "%' or descripcion like '%" + valor + "%'" + valor + "%' or nombre like '%";
+            bs.Filter = " nombre like '%" + valor +
+                "%' or descripcion like '%" + valor +
+                "%' or FechaPrestamo like '%" + valor +
+                "%' or FechaDevolucion like '%" + valor +
+
+                "%' or valor like '%" + valor + "%'"; 
             //prueba
-
-
-
         }
         private void btncancelar_Click(object sender, EventArgs e)
         {
             Close();
-
-       
-       
         }
     }
 }

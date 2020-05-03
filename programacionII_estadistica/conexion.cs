@@ -26,12 +26,12 @@ namespace programacionII_estadistica
             //sera por cada tabla
             ds.Clear();
             micomando.Connection = miconeccion;
-
             micomando.CommandText = "Select * from clientes";
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "clientes");
 
-            micomando.CommandText = "select clientes.nombre, alquiler.IdAlquiler,alquiler.FechaPrestamo, alquiler.FechaDevolucion," +
+            micomando.Connection = miconeccion;
+            micomando.CommandText = "select clientes.nombre, FechaPrestamo, alquiler.FechaDevolucion,  alquiler.valor," +
                " alquiler.IdCliente from alquiler inner join clientes on(clientes.IdCliente=alquiler.IdCliente)";
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "alquiler_clientes");
@@ -41,18 +41,25 @@ namespace programacionII_estadistica
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "peliculas");
 
-            micomando.CommandText = "select peliculas.descripcion, alquiler.IdAlquiler,alquiler.FechaPrestamo, alquiler.FechaDevolucion," +
+            micomando.Connection = miconeccion;
+            micomando.CommandText = "select peliculas.descripcion, alquiler.FechaPrestamo, alquiler.FechaDevolucion,  alquiler.valor," +
                 " alquiler.IdPelicula from alquiler inner join peliculas on(peliculas.IdPelicula=alquiler.IdPelicula)";
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "alquiler_peliculas");
-
 
             micomando.Connection = miconeccion;
             micomando.CommandText = "Select * from alquiler";
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "alquiler");
 
-           //alquiles desplegables
+            micomando.Connection = miconeccion;
+            micomando.CommandText = "select clientes.nombre, alquiler.FechaPrestamo, alquiler.FechaDevolucion,  alquiler.valor," +
+           " peliculas.descripcion " + " from alquiler " +" inner join clientes on(clientes.IdCliente = alquiler.IdCliente)" +
+           " inner join peliculas on(peliculas.IdPelicula = alquiler.IdPelicula)";
+            miadaptador.SelectCommand = micomando;
+            miadaptador.Fill(ds, "alquiler_clientes_peliculas");
+
+            //alquiles desplegables
             return ds;
         }
 
