@@ -192,5 +192,10 @@ namespace programacionII_estadistica
                 mostrarDatos();
             }
         }
+
+        private void grbcliente_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

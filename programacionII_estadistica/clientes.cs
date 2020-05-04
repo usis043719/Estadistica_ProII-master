@@ -191,6 +191,11 @@ namespace programacionII_estadistica
             btnbuscar.Enabled = valor;
             grbdatosClientes.Enabled = !valor;
         }
+
+        private void grbnavegacion_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
   }
