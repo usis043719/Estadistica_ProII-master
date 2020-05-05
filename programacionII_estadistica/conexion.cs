@@ -19,8 +19,10 @@ namespace programacionII_estadistica
         {
             string cadena = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_sistema_peliculas.mdf;Integrated Security=True";
             miconeccion.ConnectionString = cadena;
-            miconeccion.Open();
+            miconeccion.Open();//
+
         }
+
         public DataSet obtener_datos()
         {
             //sera por cada tabla
