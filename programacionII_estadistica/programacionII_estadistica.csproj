@@ -61,12 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuscadorDescuento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuscadorDescuento.Designer.cs">
-      <DependentUpon>BuscadorDescuento.cs</DependentUpon>
-    </Compile>
     <Compile Include="BusquedaCargo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +84,6 @@
     </Compile>
     <Compile Include="Busquedaempleado.Designer.cs">
       <DependentUpon>Busquedaempleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BusquedaInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BusquedaInventario.Designer.cs">
-      <DependentUpon>BusquedaInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Busquedaproductos.cs">
       <SubType>Form</SubType>
@@ -128,23 +116,11 @@
       <DependentUpon>clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="conexion.cs" />
-    <Compile Include="Descuento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Descuento.Designer.cs">
-      <DependentUpon>Descuento.cs</DependentUpon>
-    </Compile>
     <Compile Include="Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Empleado.Designer.cs">
       <DependentUpon>Empleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventario.Designer.cs">
-      <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="libreria.cs">
       <SubType>Form</SubType>
@@ -166,9 +142,6 @@
     <Compile Include="Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BuscadorDescuento.resx">
-      <DependentUpon>BuscadorDescuento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BusquedaCargo.resx">
       <DependentUpon>BusquedaCargo.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedaempleado.resx">
       <DependentUpon>Busquedaempleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BusquedaInventario.resx">
-      <DependentUpon>BusquedaInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedaproductos.resx">
       <DependentUpon>Busquedaproductos.cs</DependentUpon>
@@ -199,14 +169,8 @@
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Descuento.resx">
-      <DependentUpon>Descuento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventario.resx">
-      <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="libreria.resx">
       <DependentUpon>libreria.cs</DependentUpon>

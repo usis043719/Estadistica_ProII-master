@@ -15,22 +15,40 @@ namespace programacionII_estadistica
         SqlDataAdapter miadaptador = new SqlDataAdapter();
 
         DataSet ds = new DataSet();
-        //caro aqui hay algo
-        //public conexion(SqlConnection miconeccion, SqlCommand micomando, SqlDataAdapter miadaptador, DataSet ds)
-        //{
-        //  this.miconeccion = miconeccion;
-        // this.micomando = micomando;
-        // this.miadaptador = miadaptador;
-        //this.ds = ds;
-        // }
+       
 
         public conexion()
         {
             string cadena = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Sistema.mdf;Integrated Security=True";
             miconeccion.ConnectionString = cadena;
             miconeccion.Open();
-        }
+        
+        //inicializar los parametros que se van en las consultas
+        parametrizacion();
+    }
+    private void parametrizacion()
+    {
+        micomando.Parameters.Add("@Id", SqlDbType.Int).Value = 0;
+        micomando.Parameters.Add("@IdC", SqlDbType.Int).Value = 0;
+        micomando.Parameters.Add("@IdI", SqlDbType.Int).Value = 0;
+        micomando.Parameters.Add("@IdD", SqlDbType.Int).Value = 0;
+        micomando.Parameters.Add("@IdN", SqlDbType.Int).Value = 0;
 
+        micomando.Parameters.Add("@Nom", SqlDbType.Char).Value = "";
+        micomando.Parameters.Add("@Dir", SqlDbType.Char).Value = "";
+        micomando.Parameters.Add("@Tel", SqlDbType.Char).Value = "";
+
+        micomando.Parameters.Add("@Des", SqlDbType.Char).Value = "";
+     
+        micomando.Parameters.Add("@Mar", SqlDbType.Char).Value = "";
+
+        micomando.Parameters.Add("@Emp", SqlDbType.Char).Value = "";
+
+        micomando.Parameters.Add("@Car", SqlDbType.Char).Value = "";
+
+        micomando.Parameters.Add("@Cat", SqlDbType.Char).Value = "";
+
+        }
         public DataSet obtener_datos()
         {
             //sera por cada tabla
@@ -47,14 +65,12 @@ namespace programacionII_estadistica
             miadaptador.Fill(ds, "Productos");
 
             micomando.CommandText = "select Categoria.Categoria, Productos.IdProductos,Productos.Descripcion, Productos.Marca," +
-                " Productos.IdCategoria from Productos inner join Categoria on(Categoria.IdCategoria=Productos.IdCategoria)";
+            " Productos.IdCategoria from Productos inner join Categoria on(Categoria.IdCategoria=Productos.IdCategoria)";
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "Productos_Categoria");
 
-           
-
             micomando.CommandText = "Select Cargo.Cargo, Empleados.IdEmpleado,Empleados.Nombre_empleado, Empleados.Telefono, Empleados.Direccion," +
-                " Empleados.IdCargo from Empleados inner join Cargo on(Cargo.IdCargo=Empleados.IdCargo)";
+            " Empleados.IdCargo from Empleados inner join Cargo on(Cargo.IdCargo=Empleados.IdCargo)";
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "Empleados_Cargo");
 
@@ -78,7 +94,6 @@ namespace programacionII_estadistica
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "Categoria");
 
-
             micomando.Connection = miconeccion;
             micomando.CommandText = "select * from Cargo";
             miadaptador.SelectCommand = micomando;
@@ -94,14 +109,10 @@ namespace programacionII_estadistica
             miadaptador.SelectCommand = micomando;
             miadaptador.Fill(ds, "Descuento");
 
-
             return ds;
         }
 
-
         //DATOS DE CLIENTES
-
-
         public void mantenmiento_datos(String[] datos, String accion)
         {
             String sql = "";
@@ -127,16 +138,9 @@ namespace programacionII_estadistica
                 sql = "DELETE Clientes FROM Clientes WHERE IdCliente='" + datos[0] + "'";
             }
             procesarSQL(sql);
+        
         }
-
-        void procesarSQL(String sql)
-        {
-            micomando.Connection = miconeccion;
-            micomando.CommandText = sql;
-            micomando.ExecuteNonQuery();
-        }
-
-
+       
         //DATOS DE EMPLEADOS
 
         public void mantenimiento_datos_Empleado(String[] datos, String accion)
@@ -144,35 +148,33 @@ namespace programacionII_estadistica
             String sql = "";
             if (accion == "nuevo")
             {
-                sql = "INSERT INTO Empleados (Nombre_empleado,Telefono,Direccion,IdCargo) VALUES(" +
-                         "'" + datos[1] + "'," +
-                         "'" + datos[2] + "'," +
-                         "'" + datos[3] + "'," +
-                         "'" + datos[4] + "'" +
-                         ")";
+                sql = "INSERT INTO Empleados (Nombre_empleado,Telefono,Direccion,IdCargo) VALUES(@Nom,@Tel,@Dir,@IdC)";
             }
             else if (accion == "modificar")
             {
                 sql = "UPDATE Empleados SET " +
-                        "Nombre_empleado   = '" + datos[1] + "'," +
-                        "Telefono          = '" + datos[2] + "'," +
-                        "Direccion         = '" + datos[3] + "'," +
-                         "IdCargo      = '" + datos[4] + "'" +
-                        "WHERE IdEmpleado  = '" + datos[0] + "'";
+
+                    "Nombre_empleado      = @Nom," +
+                    "Telefono             = @Tel," +
+                    "Direccion            = @Dir," +
+                    "IdCargo              = @IdC " +
+                    "WHERE IdEmpleado = @Id";
             }
             else if (accion == "eliminar")
             {
-                sql = "DELETE Empleados FROM Empleados WHERE IdEmpleado ='" + datos[0] + "'";
+                sql = "DELETE Empleados FROM Empleados WHERE IdEmpleado=@Id";
             }
-            procesSQL(sql);
+            micomando.Parameters["@Id"].Value = datos[0];
+            if (accion != "eliminar")
+            {
+                micomando.Parameters["@Nom"].Value = datos[1];
+                micomando.Parameters["@Tel"].Value = datos[2];
+                micomando.Parameters["@Dir"].Value = datos[3];
+                micomando.Parameters["@IdC"].Value = datos[4];
+            }
+            procesarSQL(sql);
         }
-
-        void procesSQL(String sql)
-        {
-            micomando.Connection = miconeccion;
-            micomando.CommandText = sql;
-            micomando.ExecuteNonQuery();
-        }
+       
 
         //DATOS DE PRODUCTOS
 
@@ -181,40 +183,35 @@ namespace programacionII_estadistica
             String sql = "";
             if (accion == "nuevo")
             {
-                sql = "INSERT INTO Productos (Descripcion, IdDcProductos, IdNum_orden, IdCategoria, Marca) VALUES(" +
-
-                         "'" + datos[1] + "'," +
-                         "'" + datos[2] + "'," +
-                         "'" + datos[3] + "'," +
-                         "'" + datos[4] + "'," +
-                         "'" + datos[5] + "'" +
-                         ")";
+                sql = "INSERT INTO Productos (Descripcion, IdDcProductos, IdNum_orden, IdCategoria, Marca) VALUES(@Des,@IdD,@IdN,@IdC,@Mar)";
             }
             else if (accion == "modificar")
             {
                 sql = "UPDATE Productos SET " +
-                        "Descripcion          = '" + datos[1] + "'," +
-                        "IdDcProductos         = '" + datos[2] + "'," +
-                        "IdNum_orden          = '" + datos[3] + "'," +
-                        "IdCategoria          = '" + datos[4] + "'," +
-                        "Marca                = '" + datos[5] + "'" +
-                        "WHERE IdProductos    = '" + datos[0] + "'";
+
+                    "Descripcion          = @Des," +
+                    "IdDcProductos        = @IdD," +
+                    "IdNum_orden          = @IdN," +
+                    "IdCategoria          = @IdC," +
+                    "Marca                = @Mar " +
+                    "WHERE IdProductos = @Id";
             }
             else if (accion == "eliminar")
             {
-                sql = "DELETE Productos FROM Productos WHERE IdProductos ='" + datos[0] + "'";
+                sql = "DELETE Productos FROM Productos WHERE IdProductos=@Id";
             }
-            procesamientoSQL(sql);
+            micomando.Parameters["@Id"].Value = datos[0];
+            if (accion != "eliminar")
+            {
+                micomando.Parameters["@Des"].Value = datos[1];
+                micomando.Parameters["@IdD"].Value = datos[2];
+                micomando.Parameters["@IdN"].Value = datos[3];
+                micomando.Parameters["@IdC"].Value = datos[4];
+                micomando.Parameters["@Mar"].Value = datos[5];
+
+            }
+            procesarSQL(sql);
         }
-
-        void procesamientoSQL(String sql)
-        {
-            micomando.Connection = miconeccion;
-            micomando.CommandText = sql;
-            micomando.ExecuteNonQuery();
-        }
-
-
 
         //DATOS DE PROVEEDORES
 
@@ -246,103 +243,10 @@ namespace programacionII_estadistica
             {
                 sql = "DELETE Proveedor FROM Proveedor WHERE IdProveedor ='" + datos[0] + "'";
             }
-            proSQL(sql);
-        }
-
-        void proSQL(String sql)
-        {
-            micomando.Connection = miconeccion;
-            micomando.CommandText = sql;
-            micomando.ExecuteNonQuery();
+            procesarSQL(sql);
         }
 
 
-        //DATOS DE INVENTARIO
-
-
-        public void mantenmiento_datos_Inventario(String[] datos, String accion)
-        {
-            String sql = "";
-            if (accion == "nuevo")
-            {
-
-                sql = "INSERT INTO Inventario (Unidades, Idproductos, Descripcion) VALUES(" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'" +
-
-                          ")";
-            }
-
-            else if (accion == "modificar")
-            {
-                sql = "UPDATE Inventario SET " +
-                      "Unidades            = '" + datos[1] + "'," +
-                      "Idproductos         = '" + datos[2] + "'," +
-                      "Descripcion         = '" + datos[3] + "'" +
-                      "WHERE IdInventario  = '" + datos[0] + "'";
-            }
-
-            else if (accion == "eliminar")
-            {
-                sql = "DELETE Inventario FROM Inventario WHERE IdInventario='" + datos[0] + "'";
-            }
-            procesarinSQL(sql);
-        }
-
-        void procesarinSQL(String sql)
-        {
-            micomando.Connection = miconeccion;
-            micomando.CommandText = sql;
-            micomando.ExecuteNonQuery();
-        }
-
-
-       
-        //DATOS DE DESCUENTOO
-
-
-        public void mantenmiento_datos_descuento(String[] datos, String accion)
-        {
-            String sql = "";
-            if (accion == "nuevo")
-            {
-                sql = "INSERT INTO Descuento (Descripcion, Unidades, Descuento, Precio_total, IdProductosDv) VALUES(" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-
-                    "'" + datos[5] + "'" +
-                         ")";
-            }
-            else if (accion == "modificar")
-            {
-                sql = "UPDATE Descuento SET " +
-                      "Descripcion           = '" + datos[1] + "'," +
-                      "Unidades              = '" + datos[2] + "'," +
-                      "Descuento             = '" + datos[3] + "'," +
-                      "Precio_total             = '" + datos[4] + "'," +
-
-                      "IdProductosDv          = '" + datos[5] + "'" +
-                      "WHERE IdDcProductos   = '" + datos[0] + "'";
-            }
-
-            else if (accion == "eliminar")
-            {
-                sql = "DELETE Descuento FROM Descuento WHERE IdDcProductos='" + datos[0] + "'";
-            }
-            procesarDescuentoSQL(sql);
-        }
-
-        void procesarDescuentoSQL(String sql)
-        {
-            micomando.Connection = miconeccion;
-            micomando.CommandText = sql;
-            micomando.ExecuteNonQuery();
-        }
-
-        
         //DATOS DE CARGO
 
         public void mantenimiento_datos_cargo(String[] datos, String accion)
@@ -365,14 +269,9 @@ namespace programacionII_estadistica
             {
                 sql = "DELETE Cargo FROM Cargo WHERE IdCargo='" + datos[0] + "'";
             }
-            procesamientocargoSQL(sql);
+            procesarSQL(sql);
         }
-        void procesamientocargoSQL(String sql)
-        {
-            micomando.Connection = miconeccion;
-            micomando.CommandText = sql;
-            micomando.ExecuteNonQuery();
-        }
+       
         //DATOS DE CATEGORIA
 
         public void mantenimiento_datos_Categoria(String[] datos, String accion)
@@ -396,9 +295,9 @@ namespace programacionII_estadistica
             {
                 sql = "DELETE Categoria FROM Categoria WHERE IdCategoria ='" + datos[0] + "'";
             }
-            procesamientocategoriaSQL(sql);
+            procesarSQL(sql);
         }
-        void procesamientocategoriaSQL(String sql)
+        void procesarSQL(String sql)
         {
             micomando.Connection = miconeccion;
             micomando.CommandText = sql;
@@ -406,5 +305,6 @@ namespace programacionII_estadistica
         }
     }
 }
+
 
 

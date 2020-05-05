@@ -55,21 +55,7 @@ namespace programacionII_estadistica
             }
         }
 
-        private void btninventario_Click(object sender, EventArgs e)
-        {
-            Inventario Inventario = new Inventario();
-
-            Inventario.Show();
-        }
-
        
-
-        private void btndesc_Click(object sender, EventArgs e)
-        {
-            Descuento Descuento = new Descuento();
-
-            Descuento.Show();
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
