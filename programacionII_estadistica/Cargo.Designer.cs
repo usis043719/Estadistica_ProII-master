@@ -53,74 +53,76 @@
             // 
             // grbnavegacioncargo
             // 
+            this.grbnavegacioncargo.BackColor = System.Drawing.Color.Transparent;
             this.grbnavegacioncargo.Controls.Add(this.btnultimoregistroc);
             this.grbnavegacioncargo.Controls.Add(this.btnregistrosiguientec);
             this.grbnavegacioncargo.Controls.Add(this.btnregistroanterior);
             this.grbnavegacioncargo.Controls.Add(this.btn1registroc);
             this.grbnavegacioncargo.Location = new System.Drawing.Point(12, 178);
             this.grbnavegacioncargo.Name = "grbnavegacioncargo";
-            this.grbnavegacioncargo.Size = new System.Drawing.Size(517, 64);
+            this.grbnavegacioncargo.Size = new System.Drawing.Size(312, 76);
             this.grbnavegacioncargo.TabIndex = 13;
             this.grbnavegacioncargo.TabStop = false;
             this.grbnavegacioncargo.Text = "Navegacion";
             // 
             // btnultimoregistroc
             // 
+            this.btnultimoregistroc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnultimoregistroc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnultimoregistroc.BackgroundImage")));
             this.btnultimoregistroc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnultimoregistroc.Location = new System.Drawing.Point(270, 20);
+            this.btnultimoregistroc.Location = new System.Drawing.Point(241, 18);
             this.btnultimoregistroc.Name = "btnultimoregistroc";
-            this.btnultimoregistroc.Size = new System.Drawing.Size(75, 35);
+            this.btnultimoregistroc.Size = new System.Drawing.Size(65, 51);
             this.btnultimoregistroc.TabIndex = 12;
-            this.btnultimoregistroc.Text = "Ultimo registro";
-            this.btnultimoregistroc.UseVisualStyleBackColor = true;
+            this.btnultimoregistroc.UseVisualStyleBackColor = false;
             this.btnultimoregistroc.Click += new System.EventHandler(this.btnultimoregistroc_Click);
             // 
             // btnregistrosiguientec
             // 
+            this.btnregistrosiguientec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnregistrosiguientec.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnregistrosiguientec.BackgroundImage")));
             this.btnregistrosiguientec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnregistrosiguientec.Location = new System.Drawing.Point(87, 20);
+            this.btnregistrosiguientec.Location = new System.Drawing.Point(72, 19);
             this.btnregistrosiguientec.Name = "btnregistrosiguientec";
-            this.btnregistrosiguientec.Size = new System.Drawing.Size(75, 35);
+            this.btnregistrosiguientec.Size = new System.Drawing.Size(57, 50);
             this.btnregistrosiguientec.TabIndex = 11;
-            this.btnregistrosiguientec.Text = "Siguiente registro";
-            this.btnregistrosiguientec.UseVisualStyleBackColor = true;
+            this.btnregistrosiguientec.UseVisualStyleBackColor = false;
             this.btnregistrosiguientec.Click += new System.EventHandler(this.btnregistrosiguientec_Click);
             // 
             // btnregistroanterior
             // 
+            this.btnregistroanterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnregistroanterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnregistroanterior.BackgroundImage")));
             this.btnregistroanterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnregistroanterior.Location = new System.Drawing.Point(189, 20);
+            this.btnregistroanterior.Location = new System.Drawing.Point(171, 19);
             this.btnregistroanterior.Name = "btnregistroanterior";
-            this.btnregistroanterior.Size = new System.Drawing.Size(75, 35);
+            this.btnregistroanterior.Size = new System.Drawing.Size(64, 50);
             this.btnregistroanterior.TabIndex = 10;
-            this.btnregistroanterior.Text = "Registro anterior";
-            this.btnregistroanterior.UseVisualStyleBackColor = true;
+            this.btnregistroanterior.UseVisualStyleBackColor = false;
             this.btnregistroanterior.Click += new System.EventHandler(this.btnregistroanterior_Click);
             // 
             // btn1registroc
             // 
+            this.btn1registroc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn1registroc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn1registroc.BackgroundImage")));
             this.btn1registroc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn1registroc.Location = new System.Drawing.Point(6, 20);
+            this.btn1registroc.Location = new System.Drawing.Point(7, 19);
             this.btn1registroc.Name = "btn1registroc";
-            this.btn1registroc.Size = new System.Drawing.Size(75, 35);
+            this.btn1registroc.Size = new System.Drawing.Size(59, 50);
             this.btn1registroc.TabIndex = 9;
-            this.btn1registroc.Text = "1° registro";
-            this.btn1registroc.UseVisualStyleBackColor = true;
+            this.btn1registroc.UseVisualStyleBackColor = false;
             this.btn1registroc.Click += new System.EventHandler(this.btn1registroc_Click);
             // 
             // grbedicioncargo
             // 
+            this.grbedicioncargo.BackColor = System.Drawing.Color.Transparent;
             this.grbedicioncargo.Controls.Add(this.btnbuscarc);
             this.grbedicioncargo.Controls.Add(this.btneliminarc);
             this.grbedicioncargo.Controls.Add(this.btnmodific);
             this.grbedicioncargo.Controls.Add(this.btnagregarc);
-            this.grbedicioncargo.Location = new System.Drawing.Point(318, 12);
+            this.grbedicioncargo.Location = new System.Drawing.Point(330, 12);
             this.grbedicioncargo.Name = "grbedicioncargo";
-            this.grbedicioncargo.Size = new System.Drawing.Size(211, 160);
+            this.grbedicioncargo.Size = new System.Drawing.Size(189, 242);
             this.grbedicioncargo.TabIndex = 12;
             this.grbedicioncargo.TabStop = false;
             this.grbedicioncargo.Text = "Edicion de Cargo";
@@ -129,9 +131,10 @@
             // 
             this.btnbuscarc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnbuscarc.BackgroundImage")));
             this.btnbuscarc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnbuscarc.Location = new System.Drawing.Point(6, 125);
+            this.btnbuscarc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscarc.Location = new System.Drawing.Point(9, 191);
             this.btnbuscarc.Name = "btnbuscarc";
-            this.btnbuscarc.Size = new System.Drawing.Size(196, 29);
+            this.btnbuscarc.Size = new System.Drawing.Size(168, 44);
             this.btnbuscarc.TabIndex = 9;
             this.btnbuscarc.Text = "Buscar";
             this.btnbuscarc.UseVisualStyleBackColor = true;
@@ -141,9 +144,10 @@
             // 
             this.btneliminarc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btneliminarc.BackgroundImage")));
             this.btneliminarc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btneliminarc.Location = new System.Drawing.Point(6, 88);
+            this.btneliminarc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminarc.Location = new System.Drawing.Point(9, 117);
             this.btneliminarc.Name = "btneliminarc";
-            this.btneliminarc.Size = new System.Drawing.Size(196, 31);
+            this.btneliminarc.Size = new System.Drawing.Size(168, 43);
             this.btneliminarc.TabIndex = 8;
             this.btneliminarc.Text = "Eliminar";
             this.btneliminarc.UseVisualStyleBackColor = true;
@@ -153,9 +157,10 @@
             // 
             this.btnmodific.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmodific.BackgroundImage")));
             this.btnmodific.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnmodific.Location = new System.Drawing.Point(6, 55);
+            this.btnmodific.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodific.Location = new System.Drawing.Point(9, 73);
             this.btnmodific.Name = "btnmodific";
-            this.btnmodific.Size = new System.Drawing.Size(196, 27);
+            this.btnmodific.Size = new System.Drawing.Size(168, 40);
             this.btnmodific.TabIndex = 7;
             this.btnmodific.Text = "Modificar";
             this.btnmodific.UseVisualStyleBackColor = true;
@@ -165,9 +170,10 @@
             // 
             this.btnagregarc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnagregarc.BackgroundImage")));
             this.btnagregarc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnagregarc.Location = new System.Drawing.Point(6, 19);
+            this.btnagregarc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregarc.Location = new System.Drawing.Point(9, 21);
             this.btnagregarc.Name = "btnagregarc";
-            this.btnagregarc.Size = new System.Drawing.Size(196, 30);
+            this.btnagregarc.Size = new System.Drawing.Size(168, 46);
             this.btnagregarc.TabIndex = 6;
             this.btnagregarc.Text = "Nuevo";
             this.btnagregarc.UseVisualStyleBackColor = true;
@@ -175,6 +181,7 @@
             // 
             // grbdatosCargo
             // 
+            this.grbdatosCargo.BackColor = System.Drawing.Color.Transparent;
             this.grbdatosCargo.Controls.Add(this.txtcargo);
             this.grbdatosCargo.Controls.Add(this.lblncargo);
             this.grbdatosCargo.Controls.Add(this.lblidproduc);
@@ -184,58 +191,65 @@
             this.grbdatosCargo.Enabled = false;
             this.grbdatosCargo.Location = new System.Drawing.Point(12, 12);
             this.grbdatosCargo.Name = "grbdatosCargo";
-            this.grbdatosCargo.Size = new System.Drawing.Size(300, 160);
+            this.grbdatosCargo.Size = new System.Drawing.Size(312, 160);
             this.grbdatosCargo.TabIndex = 11;
             this.grbdatosCargo.TabStop = false;
             this.grbdatosCargo.Text = "Cargos de empleados";
             // 
             // txtcargo
             // 
-            this.txtcargo.Location = new System.Drawing.Point(102, 102);
+            this.txtcargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcargo.Location = new System.Drawing.Point(105, 105);
             this.txtcargo.Name = "txtcargo";
-            this.txtcargo.Size = new System.Drawing.Size(181, 20);
+            this.txtcargo.Size = new System.Drawing.Size(189, 21);
             this.txtcargo.TabIndex = 18;
             // 
             // lblncargo
             // 
             this.lblncargo.AutoSize = true;
-            this.lblncargo.Location = new System.Drawing.Point(273, 58);
+            this.lblncargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblncargo.Location = new System.Drawing.Point(267, 49);
             this.lblncargo.Name = "lblncargo";
-            this.lblncargo.Size = new System.Drawing.Size(10, 13);
+            this.lblncargo.Size = new System.Drawing.Size(11, 15);
             this.lblncargo.TabIndex = 13;
             this.lblncargo.Text = ":";
             // 
             // lblidproduc
             // 
             this.lblidproduc.AutoSize = true;
-            this.lblidproduc.Location = new System.Drawing.Point(246, 58);
+            this.lblidproduc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidproduc.Location = new System.Drawing.Point(240, 49);
             this.lblidproduc.Name = "lblidproduc";
-            this.lblidproduc.Size = new System.Drawing.Size(18, 13);
+            this.lblidproduc.Size = new System.Drawing.Size(21, 15);
             this.lblidproduc.TabIndex = 17;
             this.lblidproduc.Text = "ID";
             // 
             // lblidcatego
             // 
             this.lblidcatego.AutoSize = true;
+            this.lblidcatego.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblidcatego.Location = new System.Drawing.Point(20, 105);
             this.lblidcatego.Name = "lblidcatego";
-            this.lblidcatego.Size = new System.Drawing.Size(35, 13);
+            this.lblidcatego.Size = new System.Drawing.Size(45, 15);
             this.lblidcatego.TabIndex = 11;
             this.lblidcatego.Text = "Cargo";
             // 
             // txtidcargo
             // 
-            this.txtidcargo.Location = new System.Drawing.Point(102, 55);
+            this.txtidcargo.Enabled = false;
+            this.txtidcargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidcargo.Location = new System.Drawing.Point(105, 46);
             this.txtidcargo.Name = "txtidcargo";
-            this.txtidcargo.Size = new System.Drawing.Size(129, 20);
+            this.txtidcargo.Size = new System.Drawing.Size(129, 21);
             this.txtidcargo.TabIndex = 1;
             // 
             // lblcategoria
             // 
             this.lblcategoria.AutoSize = true;
-            this.lblcategoria.Location = new System.Drawing.Point(17, 55);
+            this.lblcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcategoria.Location = new System.Drawing.Point(20, 46);
             this.lblcategoria.Name = "lblcategoria";
-            this.lblcategoria.Size = new System.Drawing.Size(64, 13);
+            this.lblcategoria.Size = new System.Drawing.Size(83, 15);
             this.lblcategoria.TabIndex = 0;
             this.lblcategoria.Text = "Id de cargo:";
             // 
@@ -244,7 +258,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrange;
-            this.ClientSize = new System.Drawing.Size(540, 255);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(533, 266);
             this.Controls.Add(this.grbnavegacioncargo);
             this.Controls.Add(this.grbedicioncargo);
             this.Controls.Add(this.grbdatosCargo);

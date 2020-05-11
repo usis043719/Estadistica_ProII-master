@@ -55,6 +55,11 @@ namespace programacionII_estadistica
         {
             filtrar_datos(txtbusqueda.Text);
         }
+
+        private void lblbusqueda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

@@ -30,6 +30,7 @@ namespace programacionII_estadistica
                 accion = "nuevo";
                 limpiar_cajas();
                 controles(false);
+                lblejemplo.Visible = true;
             }
             else
             { //boton de guardar 
@@ -148,6 +149,8 @@ namespace programacionII_estadistica
         {
             try
             {
+                lblejemplo.Visible = false;
+
                 cboCargoEmpleado.SelectedValue = tbl.Rows[posicion].ItemArray[4].ToString();
 
                 txtidempleado.Text = tbl.Rows[posicion].ItemArray[0].ToString();

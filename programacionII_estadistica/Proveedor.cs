@@ -35,10 +35,12 @@ namespace programacionII_estadistica
                 accion = "nuevo";
                 limpiar_cajas();
                 controles(false);
+                lblejemplo.Visible = true;
             }
             else
             { //boton de guardar 
                 String[] valores = {
+
                     txtidproveedor.Text,
                     txtdireccionproveedor.Text,
                     txttelpro.Text,
@@ -46,7 +48,7 @@ namespace programacionII_estadistica
                     txtnombreproveedor.Text,
                     txtempresa.Text,
 
-                };
+            };
 
                 objconexion.mantenimiento_datos_proveedor(valores, accion);
                 actualizarDs();
@@ -184,6 +186,8 @@ namespace programacionII_estadistica
         {
             try
             {
+                lblejemplo.Visible = false;
+
                 txtidproveedor.Text = tbl.Rows[posicion].ItemArray[0].ToString();
 
                 txtdireccionproveedor.Text = tbl.Rows[posicion].ItemArray[1].ToString();

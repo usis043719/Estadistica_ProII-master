@@ -55,7 +55,7 @@
             // 
             // txtbusqueda
             // 
-            this.txtbusqueda.Location = new System.Drawing.Point(95, 19);
+            this.txtbusqueda.Location = new System.Drawing.Point(93, 29);
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(270, 20);
             this.txtbusqueda.TabIndex = 38;
@@ -65,18 +65,19 @@
             // 
             this.lblbusqueda.AutoSize = true;
             this.lblbusqueda.BackColor = System.Drawing.Color.Transparent;
-            this.lblbusqueda.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbusqueda.Location = new System.Drawing.Point(37, 18);
+            this.lblbusqueda.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbusqueda.Location = new System.Drawing.Point(15, 25);
             this.lblbusqueda.Name = "lblbusqueda";
-            this.lblbusqueda.Size = new System.Drawing.Size(52, 18);
+            this.lblbusqueda.Size = new System.Drawing.Size(75, 22);
             this.lblbusqueda.TabIndex = 37;
             this.lblbusqueda.Text = "Buscar";
+            this.lblbusqueda.Click += new System.EventHandler(this.lblbusqueda_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::programacionII_estadistica.Properties.Resources.lupa;
-            this.pictureBox1.Location = new System.Drawing.Point(364, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(362, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,35 +86,39 @@
             // 
             // btncancelar
             // 
+            this.btncancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btncancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncancelar.BackgroundImage")));
             this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncancelar.Location = new System.Drawing.Point(494, 13);
+            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.Location = new System.Drawing.Point(515, 13);
             this.btncancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(77, 31);
+            this.btncancelar.Size = new System.Drawing.Size(115, 51);
             this.btncancelar.TabIndex = 40;
             this.btncancelar.Text = "CANCELAR";
-            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.UseVisualStyleBackColor = false;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnseleccionar
             // 
+            this.btnseleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnseleccionar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnseleccionar.BackgroundImage")));
             this.btnseleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnseleccionar.Location = new System.Drawing.Point(398, 13);
+            this.btnseleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnseleccionar.Location = new System.Drawing.Point(396, 13);
             this.btnseleccionar.Margin = new System.Windows.Forms.Padding(1);
             this.btnseleccionar.Name = "btnseleccionar";
-            this.btnseleccionar.Size = new System.Drawing.Size(94, 31);
+            this.btnseleccionar.Size = new System.Drawing.Size(117, 51);
             this.btnseleccionar.TabIndex = 39;
             this.btnseleccionar.Text = "SELECCIONAR";
-            this.btnseleccionar.UseVisualStyleBackColor = true;
+            this.btnseleccionar.UseVisualStyleBackColor = false;
             this.btnseleccionar.Click += new System.EventHandler(this.btnseleccionar_Click);
             // 
             // BusquedaCargo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::programacionII_estadistica.Properties.Resources.degrado;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(651, 450);
             this.Controls.Add(this.pictureBox1);

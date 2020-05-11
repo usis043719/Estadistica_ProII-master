@@ -40,6 +40,7 @@
             this.btnmodificarproveedor = new System.Windows.Forms.Button();
             this.btnnuevoproveedor = new System.Windows.Forms.Button();
             this.grbdatosProveedor = new System.Windows.Forms.GroupBox();
+            this.lblejemplo = new System.Windows.Forms.Label();
             this.txtempresa = new System.Windows.Forms.TextBox();
             this.lblcompañiaprovee = new System.Windows.Forms.Label();
             this.txtnombreproveedor = new System.Windows.Forms.TextBox();
@@ -61,70 +62,76 @@
             // 
             // grbnavegacion
             // 
+            this.grbnavegacion.BackColor = System.Drawing.Color.Transparent;
             this.grbnavegacion.Controls.Add(this.btnultimoregistropro);
             this.grbnavegacion.Controls.Add(this.btnregistroanteriorpro);
             this.grbnavegacion.Controls.Add(this.btnsiguienteregistropro);
             this.grbnavegacion.Controls.Add(this.Registro1pro);
-            this.grbnavegacion.Location = new System.Drawing.Point(12, 280);
+            this.grbnavegacion.Location = new System.Drawing.Point(12, 318);
             this.grbnavegacion.Name = "grbnavegacion";
-            this.grbnavegacion.Size = new System.Drawing.Size(534, 67);
+            this.grbnavegacion.Size = new System.Drawing.Size(345, 85);
             this.grbnavegacion.TabIndex = 16;
             this.grbnavegacion.TabStop = false;
             this.grbnavegacion.Text = "Navegacion";
             // 
             // btnultimoregistropro
             // 
+            this.btnultimoregistropro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnultimoregistropro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnultimoregistropro.BackgroundImage")));
-            this.btnultimoregistropro.Location = new System.Drawing.Point(274, 19);
+            this.btnultimoregistropro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnultimoregistropro.Location = new System.Drawing.Point(258, 19);
             this.btnultimoregistropro.Name = "btnultimoregistropro";
-            this.btnultimoregistropro.Size = new System.Drawing.Size(75, 35);
+            this.btnultimoregistropro.Size = new System.Drawing.Size(81, 60);
             this.btnultimoregistropro.TabIndex = 8;
-            this.btnultimoregistropro.Text = "Ultimo registro";
-            this.btnultimoregistropro.UseVisualStyleBackColor = true;
+            this.btnultimoregistropro.UseVisualStyleBackColor = false;
             this.btnultimoregistropro.Click += new System.EventHandler(this.btnultimoregistropro_Click);
             // 
             // btnregistroanteriorpro
             // 
+            this.btnregistroanteriorpro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnregistroanteriorpro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnregistroanteriorpro.BackgroundImage")));
-            this.btnregistroanteriorpro.Location = new System.Drawing.Point(190, 19);
+            this.btnregistroanteriorpro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnregistroanteriorpro.Location = new System.Drawing.Point(174, 19);
             this.btnregistroanteriorpro.Name = "btnregistroanteriorpro";
-            this.btnregistroanteriorpro.Size = new System.Drawing.Size(75, 35);
+            this.btnregistroanteriorpro.Size = new System.Drawing.Size(78, 60);
             this.btnregistroanteriorpro.TabIndex = 7;
-            this.btnregistroanteriorpro.Text = "Registro anterior";
-            this.btnregistroanteriorpro.UseVisualStyleBackColor = true;
+            this.btnregistroanteriorpro.UseVisualStyleBackColor = false;
             this.btnregistroanteriorpro.Click += new System.EventHandler(this.btnregistroanteriorpro_Click);
             // 
             // btnsiguienteregistropro
             // 
+            this.btnsiguienteregistropro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnsiguienteregistropro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsiguienteregistropro.BackgroundImage")));
+            this.btnsiguienteregistropro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsiguienteregistropro.Location = new System.Drawing.Point(89, 20);
             this.btnsiguienteregistropro.Name = "btnsiguienteregistropro";
-            this.btnsiguienteregistropro.Size = new System.Drawing.Size(75, 35);
+            this.btnsiguienteregistropro.Size = new System.Drawing.Size(77, 59);
             this.btnsiguienteregistropro.TabIndex = 6;
-            this.btnsiguienteregistropro.Text = "Siguiente registro";
-            this.btnsiguienteregistropro.UseVisualStyleBackColor = true;
+            this.btnsiguienteregistropro.UseVisualStyleBackColor = false;
             this.btnsiguienteregistropro.Click += new System.EventHandler(this.btnsiguienteregistropro_Click);
             // 
             // Registro1pro
             // 
+            this.Registro1pro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Registro1pro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Registro1pro.BackgroundImage")));
+            this.Registro1pro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Registro1pro.Location = new System.Drawing.Point(8, 20);
             this.Registro1pro.Name = "Registro1pro";
-            this.Registro1pro.Size = new System.Drawing.Size(75, 35);
+            this.Registro1pro.Size = new System.Drawing.Size(80, 59);
             this.Registro1pro.TabIndex = 5;
-            this.Registro1pro.Text = "1° registro";
-            this.Registro1pro.UseVisualStyleBackColor = true;
+            this.Registro1pro.UseVisualStyleBackColor = false;
             this.Registro1pro.Click += new System.EventHandler(this.Registro1pro_Click);
             // 
             // grbproveedor
             // 
+            this.grbproveedor.BackColor = System.Drawing.Color.Transparent;
             this.grbproveedor.Controls.Add(this.btnbuscarproveedor);
             this.grbproveedor.Controls.Add(this.btneliminarproveedor);
             this.grbproveedor.Controls.Add(this.btnmodificarproveedor);
             this.grbproveedor.Controls.Add(this.btnnuevoproveedor);
-            this.grbproveedor.Location = new System.Drawing.Point(327, 12);
+            this.grbproveedor.Location = new System.Drawing.Point(363, 12);
             this.grbproveedor.Name = "grbproveedor";
-            this.grbproveedor.Size = new System.Drawing.Size(219, 262);
+            this.grbproveedor.Size = new System.Drawing.Size(211, 391);
             this.grbproveedor.TabIndex = 15;
             this.grbproveedor.TabStop = false;
             this.grbproveedor.Text = "Edicion de Proveedor";
@@ -133,9 +140,11 @@
             // 
             this.btnbuscarproveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnbuscarproveedor.BackgroundImage")));
             this.btnbuscarproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnbuscarproveedor.Location = new System.Drawing.Point(6, 188);
+            this.btnbuscarproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscarproveedor.ForeColor = System.Drawing.Color.Black;
+            this.btnbuscarproveedor.Location = new System.Drawing.Point(10, 326);
             this.btnbuscarproveedor.Name = "btnbuscarproveedor";
-            this.btnbuscarproveedor.Size = new System.Drawing.Size(205, 35);
+            this.btnbuscarproveedor.Size = new System.Drawing.Size(195, 54);
             this.btnbuscarproveedor.TabIndex = 5;
             this.btnbuscarproveedor.Text = "Buscar";
             this.btnbuscarproveedor.UseVisualStyleBackColor = true;
@@ -145,9 +154,11 @@
             // 
             this.btneliminarproveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btneliminarproveedor.BackgroundImage")));
             this.btneliminarproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btneliminarproveedor.Location = new System.Drawing.Point(6, 141);
+            this.btneliminarproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminarproveedor.ForeColor = System.Drawing.Color.Black;
+            this.btneliminarproveedor.Location = new System.Drawing.Point(10, 162);
             this.btneliminarproveedor.Name = "btneliminarproveedor";
-            this.btneliminarproveedor.Size = new System.Drawing.Size(205, 35);
+            this.btneliminarproveedor.Size = new System.Drawing.Size(195, 61);
             this.btneliminarproveedor.TabIndex = 4;
             this.btneliminarproveedor.Text = "Eliminar";
             this.btneliminarproveedor.UseVisualStyleBackColor = true;
@@ -157,9 +168,11 @@
             // 
             this.btnmodificarproveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmodificarproveedor.BackgroundImage")));
             this.btnmodificarproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnmodificarproveedor.Location = new System.Drawing.Point(6, 97);
+            this.btnmodificarproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificarproveedor.ForeColor = System.Drawing.Color.Black;
+            this.btnmodificarproveedor.Location = new System.Drawing.Point(8, 101);
             this.btnmodificarproveedor.Name = "btnmodificarproveedor";
-            this.btnmodificarproveedor.Size = new System.Drawing.Size(205, 35);
+            this.btnmodificarproveedor.Size = new System.Drawing.Size(197, 55);
             this.btnmodificarproveedor.TabIndex = 3;
             this.btnmodificarproveedor.Text = "Modificar";
             this.btnmodificarproveedor.UseVisualStyleBackColor = true;
@@ -167,18 +180,23 @@
             // 
             // btnnuevoproveedor
             // 
+            this.btnnuevoproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnnuevoproveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnuevoproveedor.BackgroundImage")));
             this.btnnuevoproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnuevoproveedor.Location = new System.Drawing.Point(6, 54);
+            this.btnnuevoproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnuevoproveedor.ForeColor = System.Drawing.Color.Black;
+            this.btnnuevoproveedor.Location = new System.Drawing.Point(10, 39);
             this.btnnuevoproveedor.Name = "btnnuevoproveedor";
-            this.btnnuevoproveedor.Size = new System.Drawing.Size(205, 35);
+            this.btnnuevoproveedor.Size = new System.Drawing.Size(195, 56);
             this.btnnuevoproveedor.TabIndex = 2;
             this.btnnuevoproveedor.Text = "Nuevo";
-            this.btnnuevoproveedor.UseVisualStyleBackColor = true;
+            this.btnnuevoproveedor.UseVisualStyleBackColor = false;
             this.btnnuevoproveedor.Click += new System.EventHandler(this.btnnuevoproveedor_Click);
             // 
             // grbdatosProveedor
             // 
+            this.grbdatosProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.grbdatosProveedor.Controls.Add(this.lblejemplo);
             this.grbdatosProveedor.Controls.Add(this.txtempresa);
             this.grbdatosProveedor.Controls.Add(this.lblcompañiaprovee);
             this.grbdatosProveedor.Controls.Add(this.txtnombreproveedor);
@@ -196,124 +214,150 @@
             this.grbdatosProveedor.Enabled = false;
             this.grbdatosProveedor.Location = new System.Drawing.Point(12, 12);
             this.grbdatosProveedor.Name = "grbdatosProveedor";
-            this.grbdatosProveedor.Size = new System.Drawing.Size(309, 262);
+            this.grbdatosProveedor.Size = new System.Drawing.Size(345, 306);
             this.grbdatosProveedor.TabIndex = 14;
             this.grbdatosProveedor.TabStop = false;
             this.grbdatosProveedor.Text = "Datos del Proveedor:";
             // 
+            // lblejemplo
+            // 
+            this.lblejemplo.AutoSize = true;
+            this.lblejemplo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblejemplo.Location = new System.Drawing.Point(116, 142);
+            this.lblejemplo.Name = "lblejemplo";
+            this.lblejemplo.Size = new System.Drawing.Size(99, 16);
+            this.lblejemplo.TabIndex = 18;
+            this.lblejemplo.Text = "Ej. 0000-0000";
+            // 
             // txtempresa
             // 
-            this.txtempresa.Location = new System.Drawing.Point(119, 236);
+            this.txtempresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtempresa.Location = new System.Drawing.Point(119, 267);
             this.txtempresa.Name = "txtempresa";
-            this.txtempresa.Size = new System.Drawing.Size(171, 20);
+            this.txtempresa.Size = new System.Drawing.Size(209, 22);
             this.txtempresa.TabIndex = 17;
             // 
             // lblcompañiaprovee
             // 
             this.lblcompañiaprovee.AutoSize = true;
-            this.lblcompañiaprovee.Location = new System.Drawing.Point(18, 239);
+            this.lblcompañiaprovee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcompañiaprovee.Location = new System.Drawing.Point(18, 273);
             this.lblcompañiaprovee.Name = "lblcompañiaprovee";
-            this.lblcompañiaprovee.Size = new System.Drawing.Size(48, 13);
+            this.lblcompañiaprovee.Size = new System.Drawing.Size(70, 16);
             this.lblcompañiaprovee.TabIndex = 16;
             this.lblcompañiaprovee.Text = "Empresa";
             // 
             // txtnombreproveedor
             // 
-            this.txtnombreproveedor.Location = new System.Drawing.Point(119, 193);
+            this.txtnombreproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombreproveedor.Location = new System.Drawing.Point(119, 224);
             this.txtnombreproveedor.Name = "txtnombreproveedor";
-            this.txtnombreproveedor.Size = new System.Drawing.Size(171, 20);
+            this.txtnombreproveedor.Size = new System.Drawing.Size(209, 22);
             this.txtnombreproveedor.TabIndex = 15;
             // 
             // lblnomproveedor
             // 
             this.lblnomproveedor.AutoSize = true;
-            this.lblnomproveedor.Location = new System.Drawing.Point(18, 196);
+            this.lblnomproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnomproveedor.Location = new System.Drawing.Point(18, 221);
             this.lblnomproveedor.Name = "lblnomproveedor";
-            this.lblnomproveedor.Size = new System.Drawing.Size(96, 13);
+            this.lblnomproveedor.Size = new System.Drawing.Size(85, 32);
             this.lblnomproveedor.TabIndex = 14;
-            this.lblnomproveedor.Text = "Nombre Proveedor";
+            this.lblnomproveedor.Text = "Nombre de\r\nProveedor";
             // 
             // lblid
             // 
             this.lblid.AutoSize = true;
+            this.lblid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblid.Location = new System.Drawing.Point(247, 35);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(18, 13);
+            this.lblid.Size = new System.Drawing.Size(23, 16);
             this.lblid.TabIndex = 13;
             this.lblid.Text = "ID";
             // 
             // lblprovee
             // 
             this.lblprovee.AutoSize = true;
+            this.lblprovee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblprovee.Location = new System.Drawing.Point(271, 35);
             this.lblprovee.Name = "lblprovee";
-            this.lblprovee.Size = new System.Drawing.Size(10, 13);
+            this.lblprovee.Size = new System.Drawing.Size(12, 16);
             this.lblprovee.TabIndex = 12;
             this.lblprovee.Text = ":";
             // 
             // txtidinventarioprovee
             // 
-            this.txtidinventarioprovee.Location = new System.Drawing.Point(119, 152);
+            this.txtidinventarioprovee.Enabled = false;
+            this.txtidinventarioprovee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidinventarioprovee.Location = new System.Drawing.Point(119, 178);
             this.txtidinventarioprovee.Name = "txtidinventarioprovee";
-            this.txtidinventarioprovee.Size = new System.Drawing.Size(171, 20);
+            this.txtidinventarioprovee.Size = new System.Drawing.Size(209, 22);
             this.txtidinventarioprovee.TabIndex = 7;
             // 
             // lblidinventario
             // 
             this.lblidinventario.AutoSize = true;
-            this.lblidinventario.Location = new System.Drawing.Point(18, 159);
+            this.lblidinventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidinventario.Location = new System.Drawing.Point(18, 185);
             this.lblidinventario.Name = "lblidinventario";
-            this.lblidinventario.Size = new System.Drawing.Size(66, 13);
+            this.lblidinventario.Size = new System.Drawing.Size(93, 16);
             this.lblidinventario.TabIndex = 6;
             this.lblidinventario.Text = "Id Inventario";
             // 
             // txttelpro
             // 
-            this.txttelpro.Location = new System.Drawing.Point(119, 112);
+            this.txttelpro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttelpro.Location = new System.Drawing.Point(119, 119);
             this.txttelpro.Multiline = true;
             this.txttelpro.Name = "txttelpro";
-            this.txttelpro.Size = new System.Drawing.Size(171, 20);
+            this.txttelpro.Size = new System.Drawing.Size(209, 20);
             this.txttelpro.TabIndex = 5;
             // 
             // lbltelefonopro
             // 
             this.lbltelefonopro.AutoSize = true;
+            this.lbltelefonopro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltelefonopro.Location = new System.Drawing.Point(18, 119);
             this.lbltelefonopro.Name = "lbltelefonopro";
-            this.lbltelefonopro.Size = new System.Drawing.Size(49, 13);
+            this.lbltelefonopro.Size = new System.Drawing.Size(70, 16);
             this.lbltelefonopro.TabIndex = 4;
             this.lbltelefonopro.Text = "Telefono";
             this.lbltelefonopro.Click += new System.EventHandler(this.lbltelefonopro_Click);
             // 
             // txtdireccionproveedor
             // 
+            this.txtdireccionproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdireccionproveedor.Location = new System.Drawing.Point(119, 76);
             this.txtdireccionproveedor.Name = "txtdireccionproveedor";
-            this.txtdireccionproveedor.Size = new System.Drawing.Size(171, 20);
+            this.txtdireccionproveedor.Size = new System.Drawing.Size(209, 22);
             this.txtdireccionproveedor.TabIndex = 3;
             // 
             // lbldireccproveedor
             // 
             this.lbldireccproveedor.AutoSize = true;
+            this.lbldireccproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldireccproveedor.Location = new System.Drawing.Point(18, 79);
             this.lbldireccproveedor.Name = "lbldireccproveedor";
-            this.lbldireccproveedor.Size = new System.Drawing.Size(52, 13);
+            this.lbldireccproveedor.Size = new System.Drawing.Size(74, 16);
             this.lbldireccproveedor.TabIndex = 2;
             this.lbldireccproveedor.Text = "Direccion";
             // 
             // txtidproveedor
             // 
+            this.txtidproveedor.Enabled = false;
+            this.txtidproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtidproveedor.Location = new System.Drawing.Point(119, 32);
             this.txtidproveedor.Name = "txtidproveedor";
-            this.txtidproveedor.Size = new System.Drawing.Size(112, 20);
+            this.txtidproveedor.Size = new System.Drawing.Size(112, 22);
             this.txtidproveedor.TabIndex = 1;
             // 
             // lblproveedor
             // 
             this.lblproveedor.AutoSize = true;
+            this.lblproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblproveedor.Location = new System.Drawing.Point(18, 39);
             this.lblproveedor.Name = "lblproveedor";
-            this.lblproveedor.Size = new System.Drawing.Size(68, 13);
+            this.lblproveedor.Size = new System.Drawing.Size(98, 16);
             this.lblproveedor.TabIndex = 0;
             this.lblproveedor.Text = "Id Proveedor";
             // 
@@ -321,8 +365,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkOrange;
-            this.ClientSize = new System.Drawing.Size(565, 362);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(593, 415);
             this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.grbproveedor);
             this.Controls.Add(this.grbdatosProveedor);
@@ -364,5 +410,6 @@
         private System.Windows.Forms.Label lblproveedor;
         private System.Windows.Forms.TextBox txtempresa;
         private System.Windows.Forms.Label lblcompañiaprovee;
+        private System.Windows.Forms.Label lblejemplo;
     }
 }

@@ -29,6 +29,7 @@ namespace programacionII_estadistica
         {
             try
             {
+                lblejemplo.Visible = false;
 
                 txtidcliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 txtnombrecliente.Text = tbl.Rows[posicion].ItemArray[1].ToString();
@@ -54,6 +55,8 @@ namespace programacionII_estadistica
                 accion = "nuevo";
                 limpiar_cajas();
                 controles(false);
+                lblejemplo.Visible = true;
+
             }
             else
             { //boton de guardar 

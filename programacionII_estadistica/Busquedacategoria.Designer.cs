@@ -44,7 +44,7 @@
             this.grdbusquedacategoria.AllowUserToAddRows = false;
             this.grdbusquedacategoria.AllowUserToDeleteRows = false;
             this.grdbusquedacategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdbusquedacategoria.Location = new System.Drawing.Point(27, 82);
+            this.grdbusquedacategoria.Location = new System.Drawing.Point(10, 82);
             this.grdbusquedacategoria.Margin = new System.Windows.Forms.Padding(1);
             this.grdbusquedacategoria.Name = "grdbusquedacategoria";
             this.grdbusquedacategoria.ReadOnly = true;
@@ -55,7 +55,7 @@
             // 
             // txtbusqueda
             // 
-            this.txtbusqueda.Location = new System.Drawing.Point(103, 25);
+            this.txtbusqueda.Location = new System.Drawing.Point(89, 32);
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(270, 20);
             this.txtbusqueda.TabIndex = 32;
@@ -65,10 +65,10 @@
             // 
             this.lblbusqueda.AutoSize = true;
             this.lblbusqueda.BackColor = System.Drawing.Color.Transparent;
-            this.lblbusqueda.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbusqueda.Location = new System.Drawing.Point(45, 24);
+            this.lblbusqueda.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbusqueda.Location = new System.Drawing.Point(12, 28);
             this.lblbusqueda.Name = "lblbusqueda";
-            this.lblbusqueda.Size = new System.Drawing.Size(52, 18);
+            this.lblbusqueda.Size = new System.Drawing.Size(75, 22);
             this.lblbusqueda.TabIndex = 31;
             this.lblbusqueda.Text = "Buscar";
             // 
@@ -76,7 +76,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::programacionII_estadistica.Properties.Resources.lupa;
-            this.pictureBox1.Location = new System.Drawing.Point(372, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(358, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,37 +85,39 @@
             // 
             // btncancelar
             // 
+            this.btncancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btncancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncancelar.BackgroundImage")));
             this.btncancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncancelar.Location = new System.Drawing.Point(502, 19);
+            this.btncancelar.Location = new System.Drawing.Point(512, 14);
             this.btncancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(77, 31);
+            this.btncancelar.Size = new System.Drawing.Size(109, 54);
             this.btncancelar.TabIndex = 34;
             this.btncancelar.Text = "CANCELAR";
-            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.UseVisualStyleBackColor = false;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnseleccionar
             // 
+            this.btnseleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnseleccionar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnseleccionar.BackgroundImage")));
             this.btnseleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnseleccionar.Location = new System.Drawing.Point(406, 19);
+            this.btnseleccionar.Location = new System.Drawing.Point(392, 14);
             this.btnseleccionar.Margin = new System.Windows.Forms.Padding(1);
             this.btnseleccionar.Name = "btnseleccionar";
-            this.btnseleccionar.Size = new System.Drawing.Size(94, 31);
+            this.btnseleccionar.Size = new System.Drawing.Size(118, 54);
             this.btnseleccionar.TabIndex = 33;
             this.btnseleccionar.Text = "SELECCIONAR";
-            this.btnseleccionar.UseVisualStyleBackColor = true;
+            this.btnseleccionar.UseVisualStyleBackColor = false;
             this.btnseleccionar.Click += new System.EventHandler(this.btnseleccionar_Click);
             // 
             // Busquedacategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::programacionII_estadistica.Properties.Resources.degrado;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(661, 450);
+            this.ClientSize = new System.Drawing.Size(641, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grdbusquedacategoria);
             this.Controls.Add(this.btncancelar);

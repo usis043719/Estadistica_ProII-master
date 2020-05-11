@@ -252,5 +252,10 @@ namespace programacionII_estadistica
                 cboCategoriaProductos.SelectedValue = frmBusquedacategoria._IdCategoria;
             }
         }
+
+        private void grbdatosProducto_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

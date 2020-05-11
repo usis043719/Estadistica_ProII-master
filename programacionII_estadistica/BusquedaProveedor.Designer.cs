@@ -52,28 +52,32 @@
             // 
             // btncancelarpro
             // 
+            this.btncancelarpro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btncancelarpro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncancelarpro.BackgroundImage")));
             this.btncancelarpro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncancelarpro.Location = new System.Drawing.Point(519, 17);
+            this.btncancelarpro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelarpro.Location = new System.Drawing.Point(530, 17);
             this.btncancelarpro.Margin = new System.Windows.Forms.Padding(1);
             this.btncancelarpro.Name = "btncancelarpro";
-            this.btncancelarpro.Size = new System.Drawing.Size(77, 31);
+            this.btncancelarpro.Size = new System.Drawing.Size(104, 44);
             this.btncancelarpro.TabIndex = 27;
             this.btncancelarpro.Text = "CANCELAR";
-            this.btncancelarpro.UseVisualStyleBackColor = true;
+            this.btncancelarpro.UseVisualStyleBackColor = false;
             this.btncancelarpro.Click += new System.EventHandler(this.btncancelarpro_Click);
             // 
             // btnseleccionarproveedor
             // 
+            this.btnseleccionarproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnseleccionarproveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnseleccionarproveedor.BackgroundImage")));
             this.btnseleccionarproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnseleccionarproveedor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnseleccionarproveedor.Location = new System.Drawing.Point(412, 17);
             this.btnseleccionarproveedor.Margin = new System.Windows.Forms.Padding(1);
             this.btnseleccionarproveedor.Name = "btnseleccionarproveedor";
-            this.btnseleccionarproveedor.Size = new System.Drawing.Size(94, 31);
+            this.btnseleccionarproveedor.Size = new System.Drawing.Size(116, 44);
             this.btnseleccionarproveedor.TabIndex = 26;
             this.btnseleccionarproveedor.Text = "SELECCIONAR";
-            this.btnseleccionarproveedor.UseVisualStyleBackColor = true;
+            this.btnseleccionarproveedor.UseVisualStyleBackColor = false;
             this.btnseleccionarproveedor.Click += new System.EventHandler(this.btnseleccionarproveedor_Click);
             // 
             // txtbusquedaproveedor
@@ -88,10 +92,10 @@
             // 
             this.lblbusquedapro.AutoSize = true;
             this.lblbusquedapro.BackColor = System.Drawing.Color.Transparent;
-            this.lblbusquedapro.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbusquedapro.Location = new System.Drawing.Point(58, 35);
+            this.lblbusquedapro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbusquedapro.Location = new System.Drawing.Point(38, 26);
             this.lblbusquedapro.Name = "lblbusquedapro";
-            this.lblbusquedapro.Size = new System.Drawing.Size(52, 18);
+            this.lblbusquedapro.Size = new System.Drawing.Size(75, 22);
             this.lblbusquedapro.TabIndex = 24;
             this.lblbusquedapro.Text = "Buscar";
             // 
@@ -110,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::programacionII_estadistica.Properties.Resources.degrado;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(660, 424);
             this.Controls.Add(this.pictureBox1);

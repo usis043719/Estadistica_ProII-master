@@ -83,16 +83,6 @@ namespace programacionII_estadistica.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ede3c552c60d4305ff106a8c4328aa6a__2_ {
-            get {
-                object obj = ResourceManager.GetObject("ede3c552c60d4305ff106a8c4328aa6a__2_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Image1 {
             get {
                 object obj = ResourceManager.GetObject("Image1", resourceCulture);
