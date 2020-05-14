@@ -122,6 +122,12 @@
     <Compile Include="Empleado.Designer.cs">
       <DependentUpon>Empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="libreria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,14 @@
     </Compile>
     <Compile Include="Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaDataSet.cs">
+      <DependentUpon>SistemaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BusquedaCargo.resx">
       <DependentUpon>BusquedaCargo.cs</DependentUpon>
@@ -172,6 +186,9 @@
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="libreria.resx">
       <DependentUpon>libreria.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +217,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SistemaDataSet.xsc">
+      <DependentUpon>SistemaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaDataSet.xss">
+      <DependentUpon>SistemaDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
