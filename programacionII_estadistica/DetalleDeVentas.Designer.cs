@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleDeVentas));
             System.Windows.Forms.Label idVentaLabel;
             System.Windows.Forms.Label nfacturaLabel;
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label precio_totalLabel;
             System.Windows.Forms.Label idEmpleado_Label;
             System.Windows.Forms.Label idClienteLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleDeVentas));
             this.sistemaDataSet = new programacionII_estadistica.SistemaDataSet();
             this.ventaDiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventaDiaTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.VentaDiaTableAdapter();
             this.tableAdapterManager = new programacionII_estadistica.SistemaDataSetTableAdapters.TableAdapterManager();
-            this.detalleDeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.ClientesTableAdapter();
             this.detalleDeVentaTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DetalleDeVentaTableAdapter();
+            this.facturaTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.FacturaTableAdapter();
+            this.detalleDeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -56,20 +58,6 @@
             this.ventaDiaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.ventaDiaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.detalleDeVentaDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblsuma = new System.Windows.Forms.Label();
-            this.lbliva = new System.Windows.Forms.Label();
-            this.lbltotal = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.sistemaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.ClientesTableAdapter();
-            this.fKFacturaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facturaTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.FacturaTableAdapter();
-            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +68,18 @@
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbltotal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbliva = new System.Windows.Forms.Label();
+            this.lblsuma = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.sistemaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKFacturaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.idVentaTextBox = new System.Windows.Forms.TextBox();
             this.nfacturaTextBox = new System.Windows.Forms.TextBox();
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -113,6 +113,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
+            // idVentaLabel
+            // 
+            idVentaLabel.AutoSize = true;
+            idVentaLabel.Location = new System.Drawing.Point(549, 63);
+            idVentaLabel.Name = "idVentaLabel";
+            idVentaLabel.Size = new System.Drawing.Size(50, 13);
+            idVentaLabel.TabIndex = 30;
+            idVentaLabel.Text = "Id Venta:";
+            // 
+            // nfacturaLabel
+            // 
+            nfacturaLabel.AutoSize = true;
+            nfacturaLabel.Location = new System.Drawing.Point(549, 111);
+            nfacturaLabel.Name = "nfacturaLabel";
+            nfacturaLabel.Size = new System.Drawing.Size(49, 13);
+            nfacturaLabel.TabIndex = 32;
+            nfacturaLabel.Text = "nfactura:";
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Location = new System.Drawing.Point(33, 111);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(37, 13);
+            fechaLabel.TabIndex = 34;
+            fechaLabel.Text = "fecha:";
+            // 
+            // precio_totalLabel
+            // 
+            precio_totalLabel.AutoSize = true;
+            precio_totalLabel.Location = new System.Drawing.Point(342, 64);
+            precio_totalLabel.Name = "precio_totalLabel";
+            precio_totalLabel.Size = new System.Drawing.Size(62, 13);
+            precio_totalLabel.TabIndex = 36;
+            precio_totalLabel.Text = "precio total:";
+            // 
+            // idEmpleado_Label
+            // 
+            idEmpleado_Label.AutoSize = true;
+            idEmpleado_Label.Location = new System.Drawing.Point(342, 113);
+            idEmpleado_Label.Name = "idEmpleado_Label";
+            idEmpleado_Label.Size = new System.Drawing.Size(72, 13);
+            idEmpleado_Label.TabIndex = 38;
+            idEmpleado_Label.Text = "Id Empleado :";
+            // 
+            // idClienteLabel
+            // 
+            idClienteLabel.AutoSize = true;
+            idClienteLabel.Location = new System.Drawing.Point(33, 65);
+            idClienteLabel.Name = "idClienteLabel";
+            idClienteLabel.Size = new System.Drawing.Size(54, 13);
+            idClienteLabel.TabIndex = 40;
+            idClienteLabel.Text = "Id Cliente:";
+            // 
             // sistemaDataSet
             // 
             this.sistemaDataSet.DataSetName = "SistemaDataSet";
@@ -145,14 +199,22 @@
             this.tableAdapterManager.UpdateOrder = programacionII_estadistica.SistemaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VentaDiaTableAdapter = this.ventaDiaTableAdapter;
             // 
-            // detalleDeVentaBindingSource
+            // clientesTableAdapter
             // 
-            this.detalleDeVentaBindingSource.DataMember = "FK_DetalledeVenta_VentaDia";
-            this.detalleDeVentaBindingSource.DataSource = this.ventaDiaBindingSource;
+            this.clientesTableAdapter.ClearBeforeFill = true;
             // 
             // detalleDeVentaTableAdapter
             // 
             this.detalleDeVentaTableAdapter.ClearBeforeFill = true;
+            // 
+            // facturaTableAdapter
+            // 
+            this.facturaTableAdapter.ClearBeforeFill = true;
+            // 
+            // detalleDeVentaBindingSource
+            // 
+            this.detalleDeVentaBindingSource.DataMember = "FK_DetalledeVenta_VentaDia";
+            this.detalleDeVentaBindingSource.DataSource = this.ventaDiaBindingSource;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -299,107 +361,6 @@
             this.detalleDeVentaDataGridView1.Size = new System.Drawing.Size(746, 169);
             this.detalleDeVentaDataGridView1.TabIndex = 29;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lbltotal);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.lbliva);
-            this.panel1.Controls.Add(this.lblsuma);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(574, 326);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 30;
-            // 
-            // lblsuma
-            // 
-            this.lblsuma.AutoSize = true;
-            this.lblsuma.Location = new System.Drawing.Point(32, 21);
-            this.lblsuma.Name = "lblsuma";
-            this.lblsuma.Size = new System.Drawing.Size(37, 13);
-            this.lblsuma.TabIndex = 31;
-            this.lblsuma.Text = "Suma:";
-            this.lblsuma.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lbliva
-            // 
-            this.lbliva.AutoSize = true;
-            this.lbliva.Location = new System.Drawing.Point(32, 48);
-            this.lbliva.Name = "lbliva";
-            this.lbliva.Size = new System.Drawing.Size(24, 13);
-            this.lbliva.TabIndex = 32;
-            this.lbliva.Text = "IVA";
-            // 
-            // lbltotal
-            // 
-            this.lbltotal.AutoSize = true;
-            this.lbltotal.Location = new System.Drawing.Point(32, 73);
-            this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(31, 13);
-            this.lbltotal.TabIndex = 33;
-            this.lbltotal.Text = "Total";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(127, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "$ 0.00";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(127, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "$ 0.00";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(127, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "$ 0.00";
-            // 
-            // sistemaDataSetBindingSource
-            // 
-            this.sistemaDataSetBindingSource.DataSource = this.sistemaDataSet;
-            this.sistemaDataSetBindingSource.Position = 0;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "Clientes";
-            this.clientesBindingSource.DataSource = this.sistemaDataSetBindingSource;
-            // 
-            // clientesTableAdapter
-            // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKFacturaClientesBindingSource
-            // 
-            this.fKFacturaClientesBindingSource.DataMember = "FK_Factura_Clientes";
-            this.fKFacturaClientesBindingSource.DataSource = this.clientesBindingSource;
-            // 
-            // facturaTableAdapter
-            // 
-            this.facturaTableAdapter.ClearBeforeFill = true;
-            // 
-            // clientesBindingSource1
-            // 
-            this.clientesBindingSource1.DataMember = "Clientes";
-            this.clientesBindingSource1.DataSource = this.sistemaDataSetBindingSource;
-            // 
-            // clientesBindingSource2
-            // 
-            this.clientesBindingSource2.DataMember = "Clientes";
-            this.clientesBindingSource2.DataSource = this.sistemaDataSetBindingSource;
-            // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "IdDetalle";
@@ -464,14 +425,98 @@
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             this.dataGridViewTextBoxColumn20.Visible = false;
             // 
-            // idVentaLabel
+            // panel1
             // 
-            idVentaLabel.AutoSize = true;
-            idVentaLabel.Location = new System.Drawing.Point(549, 63);
-            idVentaLabel.Name = "idVentaLabel";
-            idVentaLabel.Size = new System.Drawing.Size(50, 13);
-            idVentaLabel.TabIndex = 30;
-            idVentaLabel.Text = "Id Venta:";
+            this.panel1.Controls.Add(this.lbltotal);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lbliva);
+            this.panel1.Controls.Add(this.lblsuma);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(574, 326);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 30;
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Location = new System.Drawing.Point(32, 73);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(31, 13);
+            this.lbltotal.TabIndex = 33;
+            this.lbltotal.Text = "Total";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(127, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "$ 0.00";
+            // 
+            // lbliva
+            // 
+            this.lbliva.AutoSize = true;
+            this.lbliva.Location = new System.Drawing.Point(32, 48);
+            this.lbliva.Name = "lbliva";
+            this.lbliva.Size = new System.Drawing.Size(24, 13);
+            this.lbliva.TabIndex = 32;
+            this.lbliva.Text = "IVA";
+            // 
+            // lblsuma
+            // 
+            this.lblsuma.AutoSize = true;
+            this.lblsuma.Location = new System.Drawing.Point(32, 21);
+            this.lblsuma.Name = "lblsuma";
+            this.lblsuma.Size = new System.Drawing.Size(37, 13);
+            this.lblsuma.TabIndex = 31;
+            this.lblsuma.Text = "Suma:";
+            this.lblsuma.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(127, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "$ 0.00";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(127, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "$ 0.00";
+            // 
+            // sistemaDataSetBindingSource
+            // 
+            this.sistemaDataSetBindingSource.DataSource = this.sistemaDataSet;
+            this.sistemaDataSetBindingSource.Position = 0;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "Clientes";
+            this.clientesBindingSource.DataSource = this.sistemaDataSetBindingSource;
+            // 
+            // fKFacturaClientesBindingSource
+            // 
+            this.fKFacturaClientesBindingSource.DataMember = "FK_Factura_Clientes";
+            this.fKFacturaClientesBindingSource.DataSource = this.clientesBindingSource;
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "Clientes";
+            this.clientesBindingSource1.DataSource = this.sistemaDataSetBindingSource;
+            // 
+            // clientesBindingSource2
+            // 
+            this.clientesBindingSource2.DataMember = "Clientes";
+            this.clientesBindingSource2.DataSource = this.sistemaDataSetBindingSource;
             // 
             // idVentaTextBox
             // 
@@ -481,15 +526,6 @@
             this.idVentaTextBox.Size = new System.Drawing.Size(90, 20);
             this.idVentaTextBox.TabIndex = 31;
             // 
-            // nfacturaLabel
-            // 
-            nfacturaLabel.AutoSize = true;
-            nfacturaLabel.Location = new System.Drawing.Point(549, 111);
-            nfacturaLabel.Name = "nfacturaLabel";
-            nfacturaLabel.Size = new System.Drawing.Size(49, 13);
-            nfacturaLabel.TabIndex = 32;
-            nfacturaLabel.Text = "nfactura:";
-            // 
             // nfacturaTextBox
             // 
             this.nfacturaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventaDiaBindingSource, "nfactura", true));
@@ -497,15 +533,6 @@
             this.nfacturaTextBox.Name = "nfacturaTextBox";
             this.nfacturaTextBox.Size = new System.Drawing.Size(90, 20);
             this.nfacturaTextBox.TabIndex = 33;
-            // 
-            // fechaLabel
-            // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(33, 111);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(37, 13);
-            fechaLabel.TabIndex = 34;
-            fechaLabel.Text = "fecha:";
             // 
             // fechaDateTimePicker
             // 
@@ -515,15 +542,6 @@
             this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechaDateTimePicker.TabIndex = 35;
             // 
-            // precio_totalLabel
-            // 
-            precio_totalLabel.AutoSize = true;
-            precio_totalLabel.Location = new System.Drawing.Point(342, 64);
-            precio_totalLabel.Name = "precio_totalLabel";
-            precio_totalLabel.Size = new System.Drawing.Size(62, 13);
-            precio_totalLabel.TabIndex = 36;
-            precio_totalLabel.Text = "precio total:";
-            // 
             // precio_totalTextBox
             // 
             this.precio_totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventaDiaBindingSource, "precio_total", true));
@@ -531,15 +549,6 @@
             this.precio_totalTextBox.Name = "precio_totalTextBox";
             this.precio_totalTextBox.Size = new System.Drawing.Size(90, 20);
             this.precio_totalTextBox.TabIndex = 37;
-            // 
-            // idEmpleado_Label
-            // 
-            idEmpleado_Label.AutoSize = true;
-            idEmpleado_Label.Location = new System.Drawing.Point(342, 113);
-            idEmpleado_Label.Name = "idEmpleado_Label";
-            idEmpleado_Label.Size = new System.Drawing.Size(72, 13);
-            idEmpleado_Label.TabIndex = 38;
-            idEmpleado_Label.Text = "Id Empleado :";
             // 
             // idEmpleado_ComboBox
             // 
@@ -549,15 +558,6 @@
             this.idEmpleado_ComboBox.Name = "idEmpleado_ComboBox";
             this.idEmpleado_ComboBox.Size = new System.Drawing.Size(90, 21);
             this.idEmpleado_ComboBox.TabIndex = 39;
-            // 
-            // idClienteLabel
-            // 
-            idClienteLabel.AutoSize = true;
-            idClienteLabel.Location = new System.Drawing.Point(33, 65);
-            idClienteLabel.Name = "idClienteLabel";
-            idClienteLabel.Size = new System.Drawing.Size(54, 13);
-            idClienteLabel.TabIndex = 40;
-            idClienteLabel.Text = "Id Cliente:";
             // 
             // idClienteComboBox
             // 
@@ -585,6 +585,7 @@
             this.lblnregistros.Name = "lblnregistros";
             this.lblnregistros.Size = new System.Drawing.Size(0, 13);
             this.lblnregistros.TabIndex = 46;
+            this.lblnregistros.Click += new System.EventHandler(this.Lblnregistros_Click);
             // 
             // btnultimo
             // 

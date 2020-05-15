@@ -63,5 +63,10 @@ namespace programacionII_estadistica
         {
             ventaDiaBindingSource.MoveNext();
         }
+
+        private void Lblnregistros_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
