@@ -441,6 +441,7 @@
             // nombre_del_proveedorComboBox
             // 
             this.nombre_del_proveedorComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Nombre_del_proveedor", true));
+            this.nombre_del_proveedorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nombre_del_proveedorComboBox.FormattingEnabled = true;
             this.nombre_del_proveedorComboBox.Location = new System.Drawing.Point(820, 66);
             this.nombre_del_proveedorComboBox.Name = "nombre_del_proveedorComboBox";
