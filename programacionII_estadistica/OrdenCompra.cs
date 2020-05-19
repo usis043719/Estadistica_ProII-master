@@ -17,23 +17,7 @@ namespace programacionII_estadistica
             InitializeComponent();
         }
 
-        private void InventarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.inventarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.sistemaDataSet);
-
-        }
-
-        private void InventarioBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.inventarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.sistemaDataSet);
-
-        }
-
-        private void OrdenesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void ordenesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.ordenesBindingSource.EndEdit();
@@ -43,49 +27,39 @@ namespace programacionII_estadistica
 
         private void OrdenCompra_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Inventario' Puede moverla o quitarla según sea necesario.
-            this.inventarioTableAdapter.Fill(this.sistemaDataSet.Inventario);
+            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.VentaDia' Puede moverla o quitarla según sea necesario.
+            this.ventaDiaTableAdapter.Fill(this.sistemaDataSet.VentaDia);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Proveedor' Puede moverla o quitarla según sea necesario.
             this.proveedorTableAdapter.Fill(this.sistemaDataSet.Proveedor);
-            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Productos' Puede moverla o quitarla según sea necesario.
-            this.productosTableAdapter.Fill(this.sistemaDataSet.Productos);
+            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Inventario' Puede moverla o quitarla según sea necesario.
+            this.inventarioTableAdapter.Fill(this.sistemaDataSet.Inventario);
+            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.OrdenesDatos' Puede moverla o quitarla según sea necesario.
+            this.ordenesDatosTableAdapter.FillOrdenes(this.sistemaDataSet.OrdenesDatos);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Ordenes' Puede moverla o quitarla según sea necesario.
             this.ordenesTableAdapter.Fill(this.sistemaDataSet.Ordenes);
 
         }
 
-        private void IdOrdenLabel_Click(object sender, EventArgs e)
+        private void btnprimero_Click(object sender, EventArgs e)
         {
+            ordenesBindingSource.MovePrevious();
+        }
+
+        private void btnanterior_Click(object sender, EventArgs e)
+        {
+            ordenesBindingSource.MoveFirst();
 
         }
 
-        private void IdOrdenTextBox_TextChanged(object sender, EventArgs e)
+        private void btnsiguiente_Click(object sender, EventArgs e)
         {
+            ordenesBindingSource.MoveLast();
 
         }
 
-        private void Btnprimero_Click(object sender, EventArgs e)
+        private void btnultimo_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void Btnultimo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btnsiguiente_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Lblnregistros_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btnanterior_Click(object sender, EventArgs e)
-        {
+            ordenesBindingSource.MoveNext();
 
         }
     }
