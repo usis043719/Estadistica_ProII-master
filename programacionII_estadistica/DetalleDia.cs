@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace programacionII_estadistica
 {
-    public partial class DetalleDeVentas : Form
+    public partial class DetalleDia : Form
     {
-        public DetalleDeVentas()
+        public DetalleDia()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace programacionII_estadistica
         private void DetalleDeVentas_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Factura' Puede moverla o quitarla según sea necesario.
-            this.facturaTableAdapter.Fill(this.sistemaDataSet.Factura);
+            this.facturaTableAdapter.Fill(this.sistemaDataSet.Factura); 
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
             this.clientesTableAdapter.Fill(this.sistemaDataSet.Clientes);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Detalle' Puede moverla o quitarla según sea necesario.
@@ -62,7 +62,7 @@ namespace programacionII_estadistica
 
                 suma += Unidades * Precio_total * (1 - Descuento / 100);
             }
-            iva = int.Parse(idClienteComboBox.SelectedValue.ToString()) == 2 ? suma * 13 / 100 : 0;
+            iva = int.Parse(idClienteComboBox.SelectedValue.ToString()) == 2 ? suma*13/100 : 0;
             total = suma + iva;
             lblSumaVenta.Text = "$" + Math.Round(suma, 2);
             lblIvaVenta.Text = "$" + Math.Round(iva, 2);

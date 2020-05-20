@@ -1,6 +1,6 @@
 ﻿namespace programacionII_estadistica
 {
-    partial class DetalleDeVentas
+    partial class DetalleDia
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             System.Windows.Forms.Label precio_totalLabel;
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label nfacturaLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleDeVentas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleDia));
             this.detalleDeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventaDiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sistemaDataSet = new programacionII_estadistica.SistemaDataSet();

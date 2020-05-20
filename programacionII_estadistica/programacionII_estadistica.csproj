@@ -116,11 +116,11 @@
       <DependentUpon>clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="conexion.cs" />
-    <Compile Include="DetalleDeVentas.cs">
+    <Compile Include="DetalleDia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DetalleDeVentas.Designer.cs">
-      <DependentUpon>DetalleDeVentas.cs</DependentUpon>
+    <Compile Include="DetalleDia.Designer.cs">
+      <DependentUpon>DetalleDia.cs</DependentUpon>
     </Compile>
     <Compile Include="Empleado.cs">
       <SubType>Form</SubType>
@@ -192,8 +192,8 @@
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DetalleDeVentas.resx">
-      <DependentUpon>DetalleDeVentas.cs</DependentUpon>
+    <EmbeddedResource Include="DetalleDia.resx">
+      <DependentUpon>DetalleDia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
