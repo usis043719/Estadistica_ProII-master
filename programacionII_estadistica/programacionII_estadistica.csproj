@@ -128,23 +128,17 @@
     <Compile Include="Empleado.Designer.cs">
       <DependentUpon>Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventario.Designer.cs">
-      <DependentUpon>Inventario.cs</DependentUpon>
-    </Compile>
     <Compile Include="libreria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="libreria.Designer.cs">
       <DependentUpon>libreria.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrdenCompra.cs">
+    <Compile Include="OrdenesCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrdenCompra.Designer.cs">
-      <DependentUpon>OrdenCompra.cs</DependentUpon>
+    <Compile Include="OrdenesCompra.Designer.cs">
+      <DependentUpon>OrdenesCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos.cs">
       <SubType>Form</SubType>
@@ -159,6 +153,9 @@
     </Compile>
     <Compile Include="Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaDataSet.cs">
+      <DependentUpon>SistemaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SistemaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -198,14 +195,11 @@
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario.resx">
-      <DependentUpon>Inventario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="libreria.resx">
       <DependentUpon>libreria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrdenCompra.resx">
-      <DependentUpon>OrdenCompra.cs</DependentUpon>
+    <EmbeddedResource Include="OrdenesCompra.resx">
+      <DependentUpon>OrdenesCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>

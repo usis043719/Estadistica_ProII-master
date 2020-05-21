@@ -76,7 +76,12 @@ namespace programacionII_estadistica
 
         }
 
-     
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DetalleDia DetalleDia = new DetalleDia();
+
+            DetalleDia.Show();
+        }
     }
 }
 //hola mundo.%
