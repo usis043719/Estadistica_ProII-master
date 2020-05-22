@@ -36,21 +36,15 @@
             System.Windows.Forms.Label empresaLabel;
             System.Windows.Forms.Label descripcionLabel;
             System.Windows.Forms.Label unidadesLabel;
-            this.sistemaDataSet = new programacionII_estadistica.SistemaDataSet();
-            this.dataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable2TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable2TableAdapter();
-            this.tableAdapterManager = new programacionII_estadistica.SistemaDataSetTableAdapters.TableAdapterManager();
-            this.ordenesTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.OrdenesTableAdapter();
-            this.ordenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idOrdenComboBox = new System.Windows.Forms.ComboBox();
+            this.ordenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sistemaDataSet = new programacionII_estadistica.SistemaDataSet();
             this.fechaCompraDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.idProveedorTextBox = new System.Windows.Forms.TextBox();
             this.nombreProveedorComboBox = new System.Windows.Forms.ComboBox();
             this.empresaComboBox = new System.Windows.Forms.ComboBox();
             this.descripcionTextBox = new System.Windows.Forms.TextBox();
             this.unidadesComboBox = new System.Windows.Forms.ComboBox();
-            this.descuentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.descuentoTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DescuentoTableAdapter();
             this.dataTable2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lblregistroxden = new System.Windows.Forms.Label();
             this.lblnregistros = new System.Windows.Forms.Label();
@@ -59,11 +53,32 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.grbnavegacion = new System.Windows.Forms.GroupBox();
+            this.dataTable2DataGridView = new System.Windows.Forms.DataGridView();
+            this.dataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable2TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable2TableAdapter();
+            this.tableAdapterManager = new programacionII_estadistica.SistemaDataSetTableAdapters.TableAdapterManager();
+            this.ordenesTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.OrdenesTableAdapter();
+            this.descuentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descuentoTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DescuentoTableAdapter();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedorTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.ProveedorTableAdapter();
             this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inventarioTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.InventarioTableAdapter();
-            this.dataTable2DataGridView = new System.Windows.Forms.DataGridView();
+            this.idOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombredelproveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idproductosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable1TableAdapter();
+            this.detalleDeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.detalleDeVentaTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DetalleDeVentaTableAdapter();
+            this.dataTable2DataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +88,7 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idOrdenLabel = new System.Windows.Forms.Label();
             fechaCompraLabel = new System.Windows.Forms.Label();
             idProveedorLabel = new System.Windows.Forms.Label();
@@ -80,14 +96,17 @@
             empresaLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
             unidadesLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.descuentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descuentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // idOrdenLabel
@@ -153,47 +172,6 @@
             unidadesLabel.TabIndex = 12;
             unidadesLabel.Text = "Unidades:";
             // 
-            // sistemaDataSet
-            // 
-            this.sistemaDataSet.DataSetName = "SistemaDataSet";
-            this.sistemaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTable2BindingSource
-            // 
-            this.dataTable2BindingSource.DataMember = "DataTable2";
-            this.dataTable2BindingSource.DataSource = this.sistemaDataSet;
-            // 
-            // dataTable2TableAdapter
-            // 
-            this.dataTable2TableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CargoTableAdapter = null;
-            this.tableAdapterManager.CategoriaTableAdapter = null;
-            this.tableAdapterManager.ClientesTableAdapter = null;
-            this.tableAdapterManager.DescuentoTableAdapter = null;
-            this.tableAdapterManager.DetalleDeVentaTableAdapter = null;
-            this.tableAdapterManager.DevolucionesTableAdapter = null;
-            this.tableAdapterManager.EmpleadosTableAdapter = null;
-            this.tableAdapterManager.FacturaTableAdapter = null;
-            this.tableAdapterManager.InventarioTableAdapter = null;
-            this.tableAdapterManager.OrdenesTableAdapter = this.ordenesTableAdapter;
-            this.tableAdapterManager.ProductosTableAdapter = null;
-            this.tableAdapterManager.ProveedorTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = programacionII_estadistica.SistemaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VentaDiaTableAdapter = null;
-            // 
-            // ordenesTableAdapter
-            // 
-            this.ordenesTableAdapter.ClearBeforeFill = true;
-            // 
-            // ordenesBindingSource
-            // 
-            this.ordenesBindingSource.DataMember = "Ordenes";
-            this.ordenesBindingSource.DataSource = this.sistemaDataSet;
-            // 
             // idOrdenComboBox
             // 
             this.idOrdenComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenesBindingSource, "IdOrden", true));
@@ -202,6 +180,16 @@
             this.idOrdenComboBox.Name = "idOrdenComboBox";
             this.idOrdenComboBox.Size = new System.Drawing.Size(200, 21);
             this.idOrdenComboBox.TabIndex = 1;
+            // 
+            // ordenesBindingSource
+            // 
+            this.ordenesBindingSource.DataMember = "Ordenes";
+            this.ordenesBindingSource.DataSource = this.sistemaDataSet;
+            // 
+            // sistemaDataSet
+            // 
+            this.sistemaDataSet.DataSetName = "SistemaDataSet";
+            this.sistemaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fechaCompraDateTimePicker
             // 
@@ -253,15 +241,6 @@
             this.unidadesComboBox.Name = "unidadesComboBox";
             this.unidadesComboBox.Size = new System.Drawing.Size(200, 21);
             this.unidadesComboBox.TabIndex = 13;
-            // 
-            // descuentoBindingSource
-            // 
-            this.descuentoBindingSource.DataMember = "Descuento";
-            this.descuentoBindingSource.DataSource = this.sistemaDataSet;
-            // 
-            // descuentoTableAdapter
-            // 
-            this.descuentoTableAdapter.ClearBeforeFill = true;
             // 
             // dataTable2BindingSource1
             // 
@@ -340,6 +319,70 @@
             this.grbnavegacion.TabStop = false;
             this.grbnavegacion.Text = "Navegacion";
             // 
+            // dataTable2DataGridView
+            // 
+            this.dataTable2DataGridView.AllowUserToAddRows = false;
+            this.dataTable2DataGridView.AllowUserToDeleteRows = false;
+            this.dataTable2DataGridView.AutoGenerateColumns = false;
+            this.dataTable2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTable2DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idOrden,
+            this.fechaCompraDataGridViewTextBoxColumn,
+            this.idProveedorDataGridViewTextBoxColumn,
+            this.nombreProveedorDataGridViewTextBoxColumn,
+            this.empresa,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.unidadesDataGridViewTextBoxColumn,
+            this.nombredelproveedorDataGridViewTextBoxColumn,
+            this.marcaDataGridViewTextBoxColumn,
+            this.idproductosDataGridViewTextBoxColumn});
+            this.dataTable2DataGridView.DataSource = this.dataTable2BindingSource1;
+            this.dataTable2DataGridView.Location = new System.Drawing.Point(12, 243);
+            this.dataTable2DataGridView.Name = "dataTable2DataGridView";
+            this.dataTable2DataGridView.ReadOnly = true;
+            this.dataTable2DataGridView.Size = new System.Drawing.Size(947, 220);
+            this.dataTable2DataGridView.TabIndex = 56;
+            // 
+            // dataTable2BindingSource
+            // 
+            this.dataTable2BindingSource.DataMember = "DataTable2";
+            this.dataTable2BindingSource.DataSource = this.sistemaDataSet;
+            // 
+            // dataTable2TableAdapter
+            // 
+            this.dataTable2TableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CargoTableAdapter = null;
+            this.tableAdapterManager.CategoriaTableAdapter = null;
+            this.tableAdapterManager.ClientesTableAdapter = null;
+            this.tableAdapterManager.DescuentoTableAdapter = null;
+            this.tableAdapterManager.DetalleDeVentaTableAdapter = null;
+            this.tableAdapterManager.DevolucionesTableAdapter = null;
+            this.tableAdapterManager.EmpleadosTableAdapter = null;
+            this.tableAdapterManager.FacturaTableAdapter = null;
+            this.tableAdapterManager.InventarioTableAdapter = null;
+            this.tableAdapterManager.OrdenesTableAdapter = this.ordenesTableAdapter;
+            this.tableAdapterManager.ProductosTableAdapter = null;
+            this.tableAdapterManager.ProveedorTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = programacionII_estadistica.SistemaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VentaDiaTableAdapter = null;
+            // 
+            // ordenesTableAdapter
+            // 
+            this.ordenesTableAdapter.ClearBeforeFill = true;
+            // 
+            // descuentoBindingSource
+            // 
+            this.descuentoBindingSource.DataMember = "Descuento";
+            this.descuentoBindingSource.DataSource = this.sistemaDataSet;
+            // 
+            // descuentoTableAdapter
+            // 
+            this.descuentoTableAdapter.ClearBeforeFill = true;
+            // 
             // proveedorBindingSource
             // 
             this.proveedorBindingSource.DataMember = "Proveedor";
@@ -358,11 +401,99 @@
             // 
             this.inventarioTableAdapter.ClearBeforeFill = true;
             // 
-            // dataTable2DataGridView
+            // idOrden
             // 
-            this.dataTable2DataGridView.AutoGenerateColumns = false;
-            this.dataTable2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTable2DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idOrden.DataPropertyName = "IdOrden";
+            this.idOrden.HeaderText = "IdOrden";
+            this.idOrden.Name = "idOrden";
+            this.idOrden.ReadOnly = true;
+            // 
+            // fechaCompraDataGridViewTextBoxColumn
+            // 
+            this.fechaCompraDataGridViewTextBoxColumn.DataPropertyName = "FechaCompra";
+            this.fechaCompraDataGridViewTextBoxColumn.HeaderText = "FechaCompra";
+            this.fechaCompraDataGridViewTextBoxColumn.Name = "fechaCompraDataGridViewTextBoxColumn";
+            this.fechaCompraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idProveedorDataGridViewTextBoxColumn
+            // 
+            this.idProveedorDataGridViewTextBoxColumn.DataPropertyName = "IdProveedor";
+            this.idProveedorDataGridViewTextBoxColumn.HeaderText = "IdProveedor";
+            this.idProveedorDataGridViewTextBoxColumn.Name = "idProveedorDataGridViewTextBoxColumn";
+            this.idProveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreProveedorDataGridViewTextBoxColumn
+            // 
+            this.nombreProveedorDataGridViewTextBoxColumn.DataPropertyName = "NombreProveedor";
+            this.nombreProveedorDataGridViewTextBoxColumn.HeaderText = "NombreProveedor";
+            this.nombreProveedorDataGridViewTextBoxColumn.Name = "nombreProveedorDataGridViewTextBoxColumn";
+            this.nombreProveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // empresa
+            // 
+            this.empresa.DataPropertyName = "Empresa";
+            this.empresa.HeaderText = "Empresa";
+            this.empresa.Name = "empresa";
+            this.empresa.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // unidadesDataGridViewTextBoxColumn
+            // 
+            this.unidadesDataGridViewTextBoxColumn.DataPropertyName = "Unidades";
+            this.unidadesDataGridViewTextBoxColumn.HeaderText = "Unidades";
+            this.unidadesDataGridViewTextBoxColumn.Name = "unidadesDataGridViewTextBoxColumn";
+            this.unidadesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombredelproveedorDataGridViewTextBoxColumn
+            // 
+            this.nombredelproveedorDataGridViewTextBoxColumn.DataPropertyName = "Nombre_del_proveedor";
+            this.nombredelproveedorDataGridViewTextBoxColumn.HeaderText = "Nombre_del_proveedor";
+            this.nombredelproveedorDataGridViewTextBoxColumn.Name = "nombredelproveedorDataGridViewTextBoxColumn";
+            this.nombredelproveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idproductosDataGridViewTextBoxColumn
+            // 
+            this.idproductosDataGridViewTextBoxColumn.DataPropertyName = "Idproductos";
+            this.idproductosDataGridViewTextBoxColumn.HeaderText = "Idproductos";
+            this.idproductosDataGridViewTextBoxColumn.Name = "idproductosDataGridViewTextBoxColumn";
+            this.idproductosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.sistemaDataSet;
+            // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // detalleDeVentaBindingSource
+            // 
+            this.detalleDeVentaBindingSource.DataMember = "DetalleDeVenta";
+            this.detalleDeVentaBindingSource.DataSource = this.sistemaDataSet;
+            // 
+            // detalleDeVentaTableAdapter
+            // 
+            this.detalleDeVentaTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataTable2DataGridView1
+            // 
+            this.dataTable2DataGridView1.AutoGenerateColumns = false;
+            this.dataTable2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTable2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -371,12 +502,13 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.dataTable2DataGridView.DataSource = this.dataTable2BindingSource1;
-            this.dataTable2DataGridView.Location = new System.Drawing.Point(37, 236);
-            this.dataTable2DataGridView.Name = "dataTable2DataGridView";
-            this.dataTable2DataGridView.Size = new System.Drawing.Size(664, 220);
-            this.dataTable2DataGridView.TabIndex = 56;
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dataTable2DataGridView1.DataSource = this.dataTable2BindingSource1;
+            this.dataTable2DataGridView1.Location = new System.Drawing.Point(579, 99);
+            this.dataTable2DataGridView1.Name = "dataTable2DataGridView1";
+            this.dataTable2DataGridView1.Size = new System.Drawing.Size(300, 220);
+            this.dataTable2DataGridView1.TabIndex = 56;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -433,11 +565,18 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Marca";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Idproductos";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Idproductos";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
             // OrdenesCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 622);
+            this.ClientSize = new System.Drawing.Size(1205, 622);
+            this.Controls.Add(this.dataTable2DataGridView1);
             this.Controls.Add(this.dataTable2DataGridView);
             this.Controls.Add(this.lblregistroxden);
             this.Controls.Add(this.lblnregistros);
@@ -463,14 +602,17 @@
             this.Name = "OrdenesCompra";
             this.Text = "OrdenesCompra";
             this.Load += new System.EventHandler(this.OrdenesCompra_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.descuentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descuentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,6 +648,21 @@
         private System.Windows.Forms.BindingSource inventarioBindingSource;
         private SistemaDataSetTableAdapters.InventarioTableAdapter inventarioTableAdapter;
         private System.Windows.Forms.DataGridView dataTable2DataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaCompraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unidadesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombredelproveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idproductosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource;
+        private SistemaDataSetTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private System.Windows.Forms.BindingSource detalleDeVentaBindingSource;
+        private SistemaDataSetTableAdapters.DetalleDeVentaTableAdapter detalleDeVentaTableAdapter;
+        private System.Windows.Forms.DataGridView dataTable2DataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -515,5 +672,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

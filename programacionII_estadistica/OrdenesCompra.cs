@@ -19,6 +19,10 @@ namespace programacionII_estadistica
 
         private void OrdenesCompra_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DetalleDeVenta' Puede moverla o quitarla según sea necesario.
+            this.detalleDeVentaTableAdapter.Fill(this.sistemaDataSet.DetalleDeVenta);
+            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DataTable1' Puede moverla o quitarla según sea necesario.
+            this.dataTable1TableAdapter.FillVentaD(this.sistemaDataSet.DataTable1);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Inventario' Puede moverla o quitarla según sea necesario.
             this.inventarioTableAdapter.Fill(this.sistemaDataSet.Inventario);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Proveedor' Puede moverla o quitarla según sea necesario.
@@ -55,5 +59,7 @@ namespace programacionII_estadistica
             ordenesBindingSource.MoveLast();
 
         }
+
+   
     }
 }

@@ -90,6 +90,8 @@
             this.fKFacturaClientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable1TableAdapter();
+            this.dataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable2TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable2TableAdapter();
             idVentaLabel = new System.Windows.Forms.Label();
             nfacturaLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -111,6 +113,7 @@
             this.grbcliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKFacturaClientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idVentaLabel
@@ -633,11 +636,20 @@
             // 
             this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
+            // dataTable2BindingSource
+            // 
+            this.dataTable2BindingSource.DataMember = "DataTable2";
+            this.dataTable2BindingSource.DataSource = this.sistemaDataSet;
+            // 
+            // dataTable2TableAdapter
+            // 
+            this.dataTable2TableAdapter.ClearBeforeFill = true;
+            // 
             // DetalleDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 449);
+            this.ClientSize = new System.Drawing.Size(782, 452);
             this.Controls.Add(idVentaLabel);
             this.Controls.Add(this.idVentaTextBox);
             this.Controls.Add(nfacturaLabel);
@@ -679,6 +691,7 @@
             this.grbcliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fKFacturaClientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -740,5 +753,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idProductosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dataTable2BindingSource;
+        private SistemaDataSetTableAdapters.DataTable2TableAdapter dataTable2TableAdapter;
     }
 }

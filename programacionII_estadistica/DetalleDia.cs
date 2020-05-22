@@ -27,6 +27,8 @@ namespace programacionII_estadistica
 
         private void DetalleDeVentas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DataTable2' Puede moverla o quitarla según sea necesario.
+            this.dataTable2TableAdapter.FillOrdenesDetalles(this.sistemaDataSet.DataTable2);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DataTable1' Puede moverla o quitarla según sea necesario.
             this.dataTable1TableAdapter.FillVentaD(this.sistemaDataSet.DataTable1);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Detalle' Puede moverla o quitarla según sea necesario.
