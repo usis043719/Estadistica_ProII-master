@@ -35,6 +35,9 @@
             System.Windows.Forms.Label precio_totalLabel;
             System.Windows.Forms.Label idEmpleado_Label;
             System.Windows.Forms.Label idClienteLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleDia));
             this.detalleDeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventaDiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,12 +64,13 @@
             this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechadecomprarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio_total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciototalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idVentasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProductosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTotalVenta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -89,9 +93,11 @@
             this.idClienteComboBox = new System.Windows.Forms.ComboBox();
             this.fKFacturaClientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable1TableAdapter();
             this.dataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable2TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable2TableAdapter();
+            this.dataTable1TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable1TableAdapter();
+            this.detalleDeVentaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.detalleDeVentaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             idVentaLabel = new System.Windows.Forms.Label();
             nfacturaLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -109,66 +115,82 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.grbnavegacion.SuspendLayout();
             this.grbcliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKFacturaClientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // idVentaLabel
             // 
             idVentaLabel.AutoSize = true;
-            idVentaLabel.Location = new System.Drawing.Point(339, 42);
+            idVentaLabel.BackColor = System.Drawing.Color.Transparent;
+            idVentaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idVentaLabel.Location = new System.Drawing.Point(336, 38);
             idVentaLabel.Name = "idVentaLabel";
-            idVentaLabel.Size = new System.Drawing.Size(50, 13);
+            idVentaLabel.Size = new System.Drawing.Size(54, 15);
             idVentaLabel.TabIndex = 50;
             idVentaLabel.Text = "Id Venta:";
             // 
             // nfacturaLabel
             // 
             nfacturaLabel.AutoSize = true;
-            nfacturaLabel.Location = new System.Drawing.Point(548, 39);
+            nfacturaLabel.BackColor = System.Drawing.Color.Transparent;
+            nfacturaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nfacturaLabel.Location = new System.Drawing.Point(548, 80);
             nfacturaLabel.Name = "nfacturaLabel";
-            nfacturaLabel.Size = new System.Drawing.Size(49, 13);
+            nfacturaLabel.Size = new System.Drawing.Size(54, 15);
             nfacturaLabel.TabIndex = 52;
             nfacturaLabel.Text = "nfactura:";
             // 
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
+            fechaLabel.BackColor = System.Drawing.Color.Transparent;
+            fechaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaLabel.Location = new System.Drawing.Point(24, 82);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(37, 13);
+            fechaLabel.Size = new System.Drawing.Size(40, 15);
             fechaLabel.TabIndex = 54;
             fechaLabel.Text = "fecha:";
             // 
             // precio_totalLabel
             // 
             precio_totalLabel.AutoSize = true;
-            precio_totalLabel.Location = new System.Drawing.Point(548, 85);
+            precio_totalLabel.BackColor = System.Drawing.Color.Transparent;
+            precio_totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            precio_totalLabel.Location = new System.Drawing.Point(540, 38);
             precio_totalLabel.Name = "precio_totalLabel";
-            precio_totalLabel.Size = new System.Drawing.Size(62, 13);
+            precio_totalLabel.Size = new System.Drawing.Size(70, 15);
             precio_totalLabel.TabIndex = 56;
             precio_totalLabel.Text = "precio total:";
             // 
             // idEmpleado_Label
             // 
             idEmpleado_Label.AutoSize = true;
-            idEmpleado_Label.Location = new System.Drawing.Point(341, 82);
+            idEmpleado_Label.BackColor = System.Drawing.Color.Transparent;
+            idEmpleado_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idEmpleado_Label.Location = new System.Drawing.Point(330, 79);
             idEmpleado_Label.Name = "idEmpleado_Label";
-            idEmpleado_Label.Size = new System.Drawing.Size(72, 13);
+            idEmpleado_Label.Size = new System.Drawing.Size(83, 15);
             idEmpleado_Label.TabIndex = 58;
             idEmpleado_Label.Text = "Id Empleado :";
             // 
             // idClienteLabel
             // 
             idClienteLabel.AutoSize = true;
+            idClienteLabel.BackColor = System.Drawing.Color.Transparent;
+            idClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idClienteLabel.Location = new System.Drawing.Point(24, 38);
             idClienteLabel.Name = "idClienteLabel";
-            idClienteLabel.Size = new System.Drawing.Size(54, 13);
+            idClienteLabel.Size = new System.Drawing.Size(48, 15);
             idClienteLabel.TabIndex = 60;
-            idClienteLabel.Text = "Id Cliente:";
+            idClienteLabel.Text = "Cliente:";
             // 
             // detalleDeVentaBindingSource
             // 
@@ -228,46 +250,50 @@
             // 
             // btnultimo
             // 
+            this.btnultimo.BackColor = System.Drawing.Color.White;
             this.btnultimo.Location = new System.Drawing.Point(216, 352);
             this.btnultimo.Margin = new System.Windows.Forms.Padding(1);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(40, 33);
             this.btnultimo.TabIndex = 45;
             this.btnultimo.Text = ">|";
-            this.btnultimo.UseVisualStyleBackColor = true;
+            this.btnultimo.UseVisualStyleBackColor = false;
             this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
             // 
             // btnsiguiente
             // 
+            this.btnsiguiente.BackColor = System.Drawing.Color.White;
             this.btnsiguiente.Location = new System.Drawing.Point(177, 352);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(1);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(40, 33);
             this.btnsiguiente.TabIndex = 44;
             this.btnsiguiente.Text = ">";
-            this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.UseVisualStyleBackColor = false;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // btnanterior
             // 
+            this.btnanterior.BackColor = System.Drawing.Color.White;
             this.btnanterior.Location = new System.Drawing.Point(84, 352);
             this.btnanterior.Margin = new System.Windows.Forms.Padding(1);
             this.btnanterior.Name = "btnanterior";
             this.btnanterior.Size = new System.Drawing.Size(40, 33);
             this.btnanterior.TabIndex = 43;
             this.btnanterior.Text = "<";
-            this.btnanterior.UseVisualStyleBackColor = true;
+            this.btnanterior.UseVisualStyleBackColor = false;
             this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
             // 
             // btnprimero
             // 
+            this.btnprimero.BackColor = System.Drawing.Color.White;
             this.btnprimero.Location = new System.Drawing.Point(45, 352);
             this.btnprimero.Margin = new System.Windows.Forms.Padding(1);
             this.btnprimero.Name = "btnprimero";
             this.btnprimero.Size = new System.Drawing.Size(40, 33);
             this.btnprimero.TabIndex = 42;
             this.btnprimero.Text = "|<";
-            this.btnprimero.UseVisualStyleBackColor = true;
+            this.btnprimero.UseVisualStyleBackColor = false;
             this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
             // 
             // ventaDiaTableAdapter
@@ -281,7 +307,9 @@
             this.tableAdapterManager.CategoriaTableAdapter = null;
             this.tableAdapterManager.ClientesTableAdapter = this.clientesTableAdapter;
             this.tableAdapterManager.DescuentoTableAdapter = null;
+            this.tableAdapterManager.DetalleDeFacturaTableAdapter = null;
             this.tableAdapterManager.DetalleDeVentaTableAdapter = this.detalleDeVentaTableAdapter;
+            this.tableAdapterManager.DetalleOrdenesTableAdapter = null;
             this.tableAdapterManager.DevolucionesTableAdapter = null;
             this.tableAdapterManager.EmpleadosTableAdapter = null;
             this.tableAdapterManager.FacturaTableAdapter = this.facturaTableAdapter;
@@ -309,6 +337,18 @@
             this.detalleDeVentaDataGridView1.AllowUserToAddRows = false;
             this.detalleDeVentaDataGridView1.AllowUserToDeleteRows = false;
             this.detalleDeVentaDataGridView1.AutoGenerateColumns = false;
+            this.detalleDeVentaDataGridView1.BackgroundColor = System.Drawing.Color.Orange;
+            this.detalleDeVentaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.detalleDeVentaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.detalleDeVentaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detalleDeVentaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.detalleDeVentaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.detalleDeVentaDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDetalleDataGridViewTextBoxColumn,
@@ -316,16 +356,30 @@
             this.Unidades,
             this.PrecioUnitario,
             this.fechadecomprarDataGridViewTextBoxColumn,
-            this.Precio_total,
+            this.preciototalDataGridViewTextBoxColumn,
             this.idVentasDataGridViewTextBoxColumn,
             this.idProductosDataGridViewTextBoxColumn,
             this.Descuento,
             this.idEmpleadoDataGridViewTextBoxColumn});
             this.detalleDeVentaDataGridView1.DataSource = this.detalleDeVentaBindingSource;
+            this.detalleDeVentaDataGridView1.EnableHeadersVisualStyles = false;
             this.detalleDeVentaDataGridView1.Location = new System.Drawing.Point(27, 141);
             this.detalleDeVentaDataGridView1.Name = "detalleDeVentaDataGridView1";
             this.detalleDeVentaDataGridView1.ReadOnly = true;
-            this.detalleDeVentaDataGridView1.Size = new System.Drawing.Size(734, 169);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detalleDeVentaDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.detalleDeVentaDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.detalleDeVentaDataGridView1.Size = new System.Drawing.Size(734, 168);
             this.detalleDeVentaDataGridView1.TabIndex = 29;
             // 
             // idDetalleDataGridViewTextBoxColumn
@@ -334,7 +388,6 @@
             this.idDetalleDataGridViewTextBoxColumn.HeaderText = "IdDetalle";
             this.idDetalleDataGridViewTextBoxColumn.Name = "idDetalleDataGridViewTextBoxColumn";
             this.idDetalleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDetalleDataGridViewTextBoxColumn.Visible = false;
             // 
             // descripcionDataGridViewTextBoxColumn
             // 
@@ -363,13 +416,14 @@
             this.fechadecomprarDataGridViewTextBoxColumn.HeaderText = "Fecha_de_comprar";
             this.fechadecomprarDataGridViewTextBoxColumn.Name = "fechadecomprarDataGridViewTextBoxColumn";
             this.fechadecomprarDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechadecomprarDataGridViewTextBoxColumn.Visible = false;
             // 
-            // Precio_total
+            // preciototalDataGridViewTextBoxColumn
             // 
-            this.Precio_total.DataPropertyName = "Precio_total";
-            this.Precio_total.HeaderText = "Precio_total";
-            this.Precio_total.Name = "Precio_total";
-            this.Precio_total.ReadOnly = true;
+            this.preciototalDataGridViewTextBoxColumn.DataPropertyName = "Precio_total";
+            this.preciototalDataGridViewTextBoxColumn.HeaderText = "Precio_total";
+            this.preciototalDataGridViewTextBoxColumn.Name = "preciototalDataGridViewTextBoxColumn";
+            this.preciototalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // idVentasDataGridViewTextBoxColumn
             // 
@@ -406,8 +460,14 @@
             this.dataTable1BindingSource.DataMember = "DataTable1";
             this.dataTable1BindingSource.DataSource = this.sistemaDataSet;
             // 
+            // dataTable1BindingSource1
+            // 
+            this.dataTable1BindingSource1.DataMember = "VentaDia_DataTable1";
+            this.dataTable1BindingSource1.DataSource = this.ventaDiaBindingSource;
+            // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lblTotalVenta);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblIvaVenta);
@@ -422,69 +482,79 @@
             // lblTotalVenta
             // 
             this.lblTotalVenta.AutoSize = true;
-            this.lblTotalVenta.Location = new System.Drawing.Point(130, 61);
+            this.lblTotalVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalVenta.Location = new System.Drawing.Point(135, 61);
             this.lblTotalVenta.Name = "lblTotalVenta";
-            this.lblTotalVenta.Size = new System.Drawing.Size(46, 13);
+            this.lblTotalVenta.Size = new System.Drawing.Size(53, 13);
             this.lblTotalVenta.TabIndex = 5;
             this.lblTotalVenta.Text = "0000.00";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "TOTAL:";
             // 
             // lblIvaVenta
             // 
             this.lblIvaVenta.AutoSize = true;
-            this.lblIvaVenta.Location = new System.Drawing.Point(130, 36);
+            this.lblIvaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIvaVenta.Location = new System.Drawing.Point(135, 36);
             this.lblIvaVenta.Name = "lblIvaVenta";
-            this.lblIvaVenta.Size = new System.Drawing.Size(34, 13);
+            this.lblIvaVenta.Size = new System.Drawing.Size(39, 13);
             this.lblIvaVenta.TabIndex = 3;
             this.lblIvaVenta.Text = "00.00";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(29, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "IVA:";
             // 
             // lblSumaVenta
             // 
             this.lblSumaVenta.AutoSize = true;
-            this.lblSumaVenta.Location = new System.Drawing.Point(130, 12);
+            this.lblSumaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSumaVenta.Location = new System.Drawing.Point(135, 12);
             this.lblSumaVenta.Name = "lblSumaVenta";
-            this.lblSumaVenta.Size = new System.Drawing.Size(46, 13);
+            this.lblSumaVenta.Size = new System.Drawing.Size(53, 13);
             this.lblSumaVenta.TabIndex = 1;
             this.lblSumaVenta.Text = "0000.00";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "SUMA:";
             // 
             // lblregistroxden
             // 
             this.lblregistroxden.AutoSize = true;
-            this.lblregistroxden.Location = new System.Drawing.Point(137, 362);
+            this.lblregistroxden.BackColor = System.Drawing.Color.Transparent;
+            this.lblregistroxden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblregistroxden.Location = new System.Drawing.Point(99, 32);
             this.lblregistroxden.Name = "lblregistroxden";
-            this.lblregistroxden.Size = new System.Drawing.Size(36, 13);
+            this.lblregistroxden.Size = new System.Drawing.Size(46, 15);
             this.lblregistroxden.TabIndex = 48;
             this.lblregistroxden.Text = "x de n";
             // 
             // grbnavegacion
             // 
+            this.grbnavegacion.BackColor = System.Drawing.Color.Transparent;
             this.grbnavegacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grbnavegacion.Controls.Add(this.lblregistroxden);
             this.grbnavegacion.Location = new System.Drawing.Point(27, 330);
             this.grbnavegacion.Name = "grbnavegacion";
             this.grbnavegacion.Size = new System.Drawing.Size(243, 78);
@@ -505,7 +575,7 @@
             this.grbcliente.Size = new System.Drawing.Size(269, 104);
             this.grbcliente.TabIndex = 50;
             this.grbcliente.TabStop = false;
-            this.grbcliente.Text = "Edicion de empleado";
+            this.grbcliente.Text = "Edicion de Ventas";
             // 
             // btnbuscar
             // 
@@ -562,6 +632,7 @@
             // idVentaTextBox
             // 
             this.idVentaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventaDiaBindingSource, "IdVenta", true));
+            this.idVentaTextBox.Enabled = false;
             this.idVentaTextBox.Location = new System.Drawing.Point(417, 35);
             this.idVentaTextBox.Name = "idVentaTextBox";
             this.idVentaTextBox.Size = new System.Drawing.Size(117, 20);
@@ -573,8 +644,9 @@
             this.nfacturaComboBox.DataSource = this.ventaDiaBindingSource;
             this.nfacturaComboBox.DisplayMember = "nfactura";
             this.nfacturaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nfacturaComboBox.Enabled = false;
             this.nfacturaComboBox.FormattingEnabled = true;
-            this.nfacturaComboBox.Location = new System.Drawing.Point(614, 35);
+            this.nfacturaComboBox.Location = new System.Drawing.Point(614, 76);
             this.nfacturaComboBox.Name = "nfacturaComboBox";
             this.nfacturaComboBox.Size = new System.Drawing.Size(121, 21);
             this.nfacturaComboBox.TabIndex = 53;
@@ -583,6 +655,7 @@
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.ventaDiaBindingSource, "fecha", true));
+            this.fechaDateTimePicker.Enabled = false;
             this.fechaDateTimePicker.Location = new System.Drawing.Point(84, 76);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(227, 20);
@@ -591,10 +664,12 @@
             // precio_totalTextBox
             // 
             this.precio_totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventaDiaBindingSource, "precio_total", true));
-            this.precio_totalTextBox.Location = new System.Drawing.Point(614, 78);
+            this.precio_totalTextBox.Enabled = false;
+            this.precio_totalTextBox.Location = new System.Drawing.Point(614, 35);
             this.precio_totalTextBox.Name = "precio_totalTextBox";
             this.precio_totalTextBox.Size = new System.Drawing.Size(121, 20);
             this.precio_totalTextBox.TabIndex = 57;
+            this.precio_totalTextBox.TextChanged += new System.EventHandler(this.precio_totalTextBox_TextChanged);
             // 
             // idEmpleado_ComboBox
             // 
@@ -602,8 +677,9 @@
             this.idEmpleado_ComboBox.DataSource = this.ventaDiaBindingSource;
             this.idEmpleado_ComboBox.DisplayMember = "IdEmpleado ";
             this.idEmpleado_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.idEmpleado_ComboBox.Enabled = false;
             this.idEmpleado_ComboBox.FormattingEnabled = true;
-            this.idEmpleado_ComboBox.Location = new System.Drawing.Point(419, 78);
+            this.idEmpleado_ComboBox.Location = new System.Drawing.Point(417, 76);
             this.idEmpleado_ComboBox.Name = "idEmpleado_ComboBox";
             this.idEmpleado_ComboBox.Size = new System.Drawing.Size(117, 21);
             this.idEmpleado_ComboBox.TabIndex = 59;
@@ -611,16 +687,17 @@
             // 
             // idClienteComboBox
             // 
-            this.idClienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventaDiaBindingSource, "IdCliente", true));
-            this.idClienteComboBox.DataSource = this.ventaDiaBindingSource;
-            this.idClienteComboBox.DisplayMember = "IdCliente";
+            this.idClienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clientesBindingSource, "Nombre_cliente", true));
+            this.idClienteComboBox.DataSource = this.clientesBindingSource;
+            this.idClienteComboBox.DisplayMember = "Nombre_cliente";
             this.idClienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.idClienteComboBox.Enabled = false;
             this.idClienteComboBox.FormattingEnabled = true;
-            this.idClienteComboBox.Location = new System.Drawing.Point(83, 35);
+            this.idClienteComboBox.Location = new System.Drawing.Point(83, 32);
             this.idClienteComboBox.Name = "idClienteComboBox";
             this.idClienteComboBox.Size = new System.Drawing.Size(228, 21);
             this.idClienteComboBox.TabIndex = 61;
-            this.idClienteComboBox.ValueMember = "IdCliente";
+            this.idClienteComboBox.ValueMember = "Nombre_cliente";
             // 
             // fKFacturaClientesBindingSource1
             // 
@@ -632,10 +709,6 @@
             this.clientesBindingSource4.DataMember = "Clientes";
             this.clientesBindingSource4.DataSource = this.sistemaDataSet;
             // 
-            // dataTable1TableAdapter
-            // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
-            // 
             // dataTable2BindingSource
             // 
             this.dataTable2BindingSource.DataMember = "DataTable2";
@@ -645,10 +718,26 @@
             // 
             this.dataTable2TableAdapter.ClearBeforeFill = true;
             // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // detalleDeVentaBindingSource1
+            // 
+            this.detalleDeVentaBindingSource1.DataMember = "DataTable1_DetalleDeVenta";
+            this.detalleDeVentaBindingSource1.DataSource = this.dataTable1BindingSource;
+            // 
+            // detalleDeVentaBindingSource2
+            // 
+            this.detalleDeVentaBindingSource2.DataMember = "VentaDia_DetalleDeVenta";
+            this.detalleDeVentaBindingSource2.DataSource = this.ventaDiaBindingSource;
+            // 
             // DetalleDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 452);
             this.Controls.Add(idVentaLabel);
             this.Controls.Add(this.idVentaTextBox);
@@ -663,7 +752,6 @@
             this.Controls.Add(idClienteLabel);
             this.Controls.Add(this.idClienteComboBox);
             this.Controls.Add(this.grbcliente);
-            this.Controls.Add(this.lblregistroxden);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblnregistros);
             this.Controls.Add(this.btnultimo);
@@ -686,12 +774,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.grbnavegacion.ResumeLayout(false);
+            this.grbnavegacion.PerformLayout();
             this.grbcliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fKFacturaClientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,7 +811,6 @@
         private System.Windows.Forms.Button btnsiguiente;
         private System.Windows.Forms.Button btnanterior;
         private System.Windows.Forms.Button btnprimero;
-        private System.Windows.Forms.DataGridView detalleDeVentaDataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTotalVenta;
         private System.Windows.Forms.Label label1;
@@ -742,18 +834,22 @@
         private System.Windows.Forms.BindingSource fKFacturaClientesBindingSource1;
         private System.Windows.Forms.BindingSource clientesBindingSource4;
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
+        private System.Windows.Forms.BindingSource dataTable2BindingSource;
+        private SistemaDataSetTableAdapters.DataTable2TableAdapter dataTable2TableAdapter;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource1;
         private SistemaDataSetTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private System.Windows.Forms.BindingSource detalleDeVentaBindingSource1;
+        private System.Windows.Forms.BindingSource detalleDeVentaBindingSource2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDetalleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidades;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechadecomprarDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preciototalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idVentasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProductosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource dataTable2BindingSource;
-        private SistemaDataSetTableAdapters.DataTable2TableAdapter dataTable2TableAdapter;
+        private System.Windows.Forms.DataGridView detalleDeVentaDataGridView1;
     }
 }

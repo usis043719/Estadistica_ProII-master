@@ -27,10 +27,11 @@ namespace programacionII_estadistica
 
         private void DetalleDeVentas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DataTable1' Puede moverla o quitarla según sea necesario.
+            this.dataTable1TableAdapter.FillDetalleVenta(this.sistemaDataSet.DataTable1);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DataTable2' Puede moverla o quitarla según sea necesario.
             this.dataTable2TableAdapter.FillOrdenesDetalles(this.sistemaDataSet.DataTable2);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DataTable1' Puede moverla o quitarla según sea necesario.
-            this.dataTable1TableAdapter.FillVentaD(this.sistemaDataSet.DataTable1);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Detalle' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Factura' Puede moverla o quitarla según sea necesario.
             this.facturaTableAdapter.Fill(this.sistemaDataSet.Factura); 
@@ -67,7 +68,7 @@ namespace programacionII_estadistica
 
                 suma += Unidades * PrecioUnitario * (1 - Descuento / 100);
             }
-            iva = int.Parse(idClienteComboBox.SelectedValue.ToString()) == 2 ? suma * 13 / 100 : 0;
+            iva = int.Parse(nfacturaComboBox.SelectedValue.ToString()) == 2 ? suma * 13 / 100 : 0;
             total = suma + iva;
             lblSumaVenta.Text = "$" + Math.Round(suma, 2);
             lblIvaVenta.Text = "$" + Math.Round(iva, 2);
@@ -119,6 +120,11 @@ namespace programacionII_estadistica
         }
 
         private void clientesBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void precio_totalTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

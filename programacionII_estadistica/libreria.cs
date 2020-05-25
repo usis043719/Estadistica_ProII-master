@@ -82,6 +82,20 @@ namespace programacionII_estadistica
 
             DetalleDia.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OrdenesCompra OrdenesCompra = new OrdenesCompra();
+
+            OrdenesCompra.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Facturas Facturas = new Facturas();
+
+            Facturas.Show();
+        }
     }
 }
 //hola mundo.%
