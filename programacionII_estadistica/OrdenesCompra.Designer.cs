@@ -34,12 +34,12 @@
             System.Windows.Forms.Label idProveedorLabel;
             System.Windows.Forms.Label nombreProveedorLabel;
             System.Windows.Forms.Label empresaLabel;
-            System.Windows.Forms.Label unidadesLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenesCompra));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.Label idDetalleOrdenLabel;
             this.ordenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sistemaDataSet = new programacionII_estadistica.SistemaDataSet();
             this.idOrdenComboBox = new System.Windows.Forms.ComboBox();
@@ -47,7 +47,6 @@
             this.idProveedorTextBox = new System.Windows.Forms.TextBox();
             this.nombreProveedorComboBox = new System.Windows.Forms.ComboBox();
             this.empresaComboBox = new System.Windows.Forms.ComboBox();
-            this.unidadesComboBox = new System.Windows.Forms.ComboBox();
             this.dataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordenesTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.OrdenesTableAdapter();
             this.tableAdapterManager = new programacionII_estadistica.SistemaDataSetTableAdapters.TableAdapterManager();
@@ -72,27 +71,28 @@
             this.lblnregistros = new System.Windows.Forms.Label();
             this.lblregistroxden = new System.Windows.Forms.Label();
             this.dataTable2DataGridView = new System.Windows.Forms.DataGridView();
-            this.idDetalleOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProductosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalleOrdenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordenesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.detalleOrdenesTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DetalleOrdenesTableAdapter();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProductosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetalleOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetalleOrdenTextBox = new System.Windows.Forms.TextBox();
             idOrdenLabel = new System.Windows.Forms.Label();
             fechaCompraLabel = new System.Windows.Forms.Label();
             idProveedorLabel = new System.Windows.Forms.Label();
             nombreProveedorLabel = new System.Windows.Forms.Label();
             empresaLabel = new System.Windows.Forms.Label();
-            unidadesLabel = new System.Windows.Forms.Label();
+            idDetalleOrdenLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).BeginInit();
@@ -158,17 +158,6 @@
             empresaLabel.Size = new System.Drawing.Size(60, 15);
             empresaLabel.TabIndex = 9;
             empresaLabel.Text = "Empresa:";
-            // 
-            // unidadesLabel
-            // 
-            unidadesLabel.AutoSize = true;
-            unidadesLabel.BackColor = System.Drawing.Color.Transparent;
-            unidadesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            unidadesLabel.Location = new System.Drawing.Point(522, 78);
-            unidadesLabel.Name = "unidadesLabel";
-            unidadesLabel.Size = new System.Drawing.Size(63, 15);
-            unidadesLabel.TabIndex = 13;
-            unidadesLabel.Text = "Unidades:";
             // 
             // ordenesBindingSource
             // 
@@ -239,20 +228,6 @@
             this.empresaComboBox.Size = new System.Drawing.Size(106, 21);
             this.empresaComboBox.TabIndex = 10;
             this.empresaComboBox.ValueMember = "Empresa";
-            // 
-            // unidadesComboBox
-            // 
-            this.unidadesComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ordenesBindingSource, "Unidades", true));
-            this.unidadesComboBox.DataSource = this.ordenesBindingSource;
-            this.unidadesComboBox.DisplayMember = "Unidades";
-            this.unidadesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.unidadesComboBox.Enabled = false;
-            this.unidadesComboBox.FormattingEnabled = true;
-            this.unidadesComboBox.Location = new System.Drawing.Point(591, 75);
-            this.unidadesComboBox.Name = "unidadesComboBox";
-            this.unidadesComboBox.Size = new System.Drawing.Size(105, 21);
-            this.unidadesComboBox.TabIndex = 14;
-            this.unidadesComboBox.ValueMember = "Unidades";
             // 
             // dataTable2BindingSource
             // 
@@ -521,14 +496,14 @@
             this.dataTable2DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataTable2DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataTable2DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTable2DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTable2DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataTable2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTable2DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDetalleOrdenDataGridViewTextBoxColumn,
@@ -544,121 +519,32 @@
             this.PrecioUnitario,
             this.Descuento});
             this.dataTable2DataGridView.DataSource = this.detalleOrdenesBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataTable2DataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataTable2DataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataTable2DataGridView.EnableHeadersVisualStyles = false;
             this.dataTable2DataGridView.Location = new System.Drawing.Point(18, 120);
             this.dataTable2DataGridView.Name = "dataTable2DataGridView";
             this.dataTable2DataGridView.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTable2DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataTable2DataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTable2DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataTable2DataGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataTable2DataGridView.Size = new System.Drawing.Size(707, 188);
             this.dataTable2DataGridView.TabIndex = 76;
-            // 
-            // idDetalleOrdenDataGridViewTextBoxColumn
-            // 
-            this.idDetalleOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdDetalleOrden";
-            this.idDetalleOrdenDataGridViewTextBoxColumn.HeaderText = "IdDetalleOrden";
-            this.idDetalleOrdenDataGridViewTextBoxColumn.Name = "idDetalleOrdenDataGridViewTextBoxColumn";
-            this.idDetalleOrdenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDetalleOrdenDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idOrdenDataGridViewTextBoxColumn
-            // 
-            this.idOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdOrden";
-            this.idOrdenDataGridViewTextBoxColumn.HeaderText = "IdOrden";
-            this.idOrdenDataGridViewTextBoxColumn.Name = "idOrdenDataGridViewTextBoxColumn";
-            this.idOrdenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaCompraDataGridViewTextBoxColumn
-            // 
-            this.fechaCompraDataGridViewTextBoxColumn.DataPropertyName = "FechaCompra ";
-            this.fechaCompraDataGridViewTextBoxColumn.HeaderText = "FechaCompra ";
-            this.fechaCompraDataGridViewTextBoxColumn.Name = "fechaCompraDataGridViewTextBoxColumn";
-            this.fechaCompraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaCompraDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idProveedorDataGridViewTextBoxColumn
-            // 
-            this.idProveedorDataGridViewTextBoxColumn.DataPropertyName = "IdProveedor ";
-            this.idProveedorDataGridViewTextBoxColumn.HeaderText = "IdProveedor ";
-            this.idProveedorDataGridViewTextBoxColumn.Name = "idProveedorDataGridViewTextBoxColumn";
-            this.idProveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idProveedorDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nombreProveedorDataGridViewTextBoxColumn
-            // 
-            this.nombreProveedorDataGridViewTextBoxColumn.DataPropertyName = "NombreProveedor ";
-            this.nombreProveedorDataGridViewTextBoxColumn.HeaderText = "NombreProveedor ";
-            this.nombreProveedorDataGridViewTextBoxColumn.Name = "nombreProveedorDataGridViewTextBoxColumn";
-            this.nombreProveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreProveedorDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // empresaDataGridViewTextBoxColumn
-            // 
-            this.empresaDataGridViewTextBoxColumn.DataPropertyName = "Empresa";
-            this.empresaDataGridViewTextBoxColumn.HeaderText = "Empresa";
-            this.empresaDataGridViewTextBoxColumn.Name = "empresaDataGridViewTextBoxColumn";
-            this.empresaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.empresaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Unidades
-            // 
-            this.Unidades.DataPropertyName = "Unidades";
-            this.Unidades.HeaderText = "Unidades";
-            this.Unidades.Name = "Unidades";
-            this.Unidades.ReadOnly = true;
-            // 
-            // idProductosDataGridViewTextBoxColumn
-            // 
-            this.idProductosDataGridViewTextBoxColumn.DataPropertyName = "IdProductos ";
-            this.idProductosDataGridViewTextBoxColumn.HeaderText = "IdProductos ";
-            this.idProductosDataGridViewTextBoxColumn.Name = "idProductosDataGridViewTextBoxColumn";
-            this.idProductosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.DataPropertyName = "PrecioUnitario";
-            this.PrecioUnitario.HeaderText = "PrecioUnitario";
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            // 
-            // Descuento
-            // 
-            this.Descuento.DataPropertyName = "Descuento";
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            this.Descuento.ReadOnly = true;
             // 
             // detalleOrdenesBindingSource
             // 
@@ -674,13 +560,124 @@
             // 
             this.detalleOrdenesTableAdapter.ClearBeforeFill = true;
             // 
+            // Descuento
+            // 
+            this.Descuento.DataPropertyName = "Descuento";
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.DataPropertyName = "PrecioUnitario";
+            this.PrecioUnitario.HeaderText = "Precio";
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idProductosDataGridViewTextBoxColumn
+            // 
+            this.idProductosDataGridViewTextBoxColumn.DataPropertyName = "IdProductos ";
+            this.idProductosDataGridViewTextBoxColumn.HeaderText = "Codigo producto";
+            this.idProductosDataGridViewTextBoxColumn.Name = "idProductosDataGridViewTextBoxColumn";
+            this.idProductosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Unidades
+            // 
+            this.Unidades.DataPropertyName = "Unidades";
+            this.Unidades.HeaderText = "Cantidad";
+            this.Unidades.Name = "Unidades";
+            this.Unidades.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // empresaDataGridViewTextBoxColumn
+            // 
+            this.empresaDataGridViewTextBoxColumn.DataPropertyName = "Empresa";
+            this.empresaDataGridViewTextBoxColumn.HeaderText = "Empresa";
+            this.empresaDataGridViewTextBoxColumn.Name = "empresaDataGridViewTextBoxColumn";
+            this.empresaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.empresaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombreProveedorDataGridViewTextBoxColumn
+            // 
+            this.nombreProveedorDataGridViewTextBoxColumn.DataPropertyName = "NombreProveedor ";
+            this.nombreProveedorDataGridViewTextBoxColumn.HeaderText = "NombreProveedor ";
+            this.nombreProveedorDataGridViewTextBoxColumn.Name = "nombreProveedorDataGridViewTextBoxColumn";
+            this.nombreProveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreProveedorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idProveedorDataGridViewTextBoxColumn
+            // 
+            this.idProveedorDataGridViewTextBoxColumn.DataPropertyName = "IdProveedor ";
+            this.idProveedorDataGridViewTextBoxColumn.HeaderText = "IdProveedor ";
+            this.idProveedorDataGridViewTextBoxColumn.Name = "idProveedorDataGridViewTextBoxColumn";
+            this.idProveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idProveedorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // fechaCompraDataGridViewTextBoxColumn
+            // 
+            this.fechaCompraDataGridViewTextBoxColumn.DataPropertyName = "FechaCompra ";
+            this.fechaCompraDataGridViewTextBoxColumn.HeaderText = "FechaCompra ";
+            this.fechaCompraDataGridViewTextBoxColumn.Name = "fechaCompraDataGridViewTextBoxColumn";
+            this.fechaCompraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaCompraDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idOrdenDataGridViewTextBoxColumn
+            // 
+            this.idOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdOrden";
+            this.idOrdenDataGridViewTextBoxColumn.HeaderText = "Codigo Orden";
+            this.idOrdenDataGridViewTextBoxColumn.Name = "idOrdenDataGridViewTextBoxColumn";
+            this.idOrdenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDetalleOrdenDataGridViewTextBoxColumn
+            // 
+            this.idDetalleOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdDetalleOrden";
+            this.idDetalleOrdenDataGridViewTextBoxColumn.HeaderText = "IdDetalleOrden";
+            this.idDetalleOrdenDataGridViewTextBoxColumn.Name = "idDetalleOrdenDataGridViewTextBoxColumn";
+            this.idDetalleOrdenDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDetalleOrdenDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idDetalleOrdenLabel
+            // 
+            idDetalleOrdenLabel.AutoSize = true;
+            idDetalleOrdenLabel.BackColor = System.Drawing.Color.Transparent;
+            idDetalleOrdenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idDetalleOrdenLabel.Location = new System.Drawing.Point(527, 81);
+            idDetalleOrdenLabel.Name = "idDetalleOrdenLabel";
+            idDetalleOrdenLabel.Size = new System.Drawing.Size(62, 15);
+            idDetalleOrdenLabel.TabIndex = 90;
+            idDetalleOrdenLabel.Text = "Id Detalle:";
+            // 
+            // idDetalleOrdenTextBox
+            // 
+            this.idDetalleOrdenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenesBindingSource, "IdDetalleOrden", true));
+            this.idDetalleOrdenTextBox.Enabled = false;
+            this.idDetalleOrdenTextBox.Location = new System.Drawing.Point(590, 77);
+            this.idDetalleOrdenTextBox.Name = "idDetalleOrdenTextBox";
+            this.idDetalleOrdenTextBox.Size = new System.Drawing.Size(106, 20);
+            this.idDetalleOrdenTextBox.TabIndex = 91;
+            // 
             // OrdenesCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(743, 462);
+            this.ClientSize = new System.Drawing.Size(753, 469);
+            this.Controls.Add(idDetalleOrdenLabel);
+            this.Controls.Add(this.idDetalleOrdenTextBox);
             this.Controls.Add(this.dataTable2DataGridView);
             this.Controls.Add(this.grbcliente);
             this.Controls.Add(this.panel2);
@@ -695,8 +692,6 @@
             this.Controls.Add(this.nombreProveedorComboBox);
             this.Controls.Add(empresaLabel);
             this.Controls.Add(this.empresaComboBox);
-            this.Controls.Add(unidadesLabel);
-            this.Controls.Add(this.unidadesComboBox);
             this.Name = "OrdenesCompra";
             this.Text = "OrdenesCompra";
             this.Load += new System.EventHandler(this.OrdenesCompra_Load);
@@ -727,7 +722,6 @@
         private System.Windows.Forms.TextBox idProveedorTextBox;
         private System.Windows.Forms.ComboBox nombreProveedorComboBox;
         private System.Windows.Forms.ComboBox empresaComboBox;
-        private System.Windows.Forms.ComboBox unidadesComboBox;
         private System.Windows.Forms.BindingSource dataTable2BindingSource;
         private SistemaDataSetTableAdapters.DataTable2TableAdapter dataTable2TableAdapter;
  
@@ -766,5 +760,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
+        private System.Windows.Forms.TextBox idDetalleOrdenTextBox;
     }
 }
