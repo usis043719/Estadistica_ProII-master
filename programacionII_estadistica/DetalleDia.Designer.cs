@@ -34,11 +34,11 @@
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label idEmpleado_Label;
             System.Windows.Forms.Label idClienteLabel;
+            System.Windows.Forms.Label idDetalleLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleDia));
-            System.Windows.Forms.Label idDetalleLabel;
             this.detalleDeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventaDiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sistemaDataSet = new programacionII_estadistica.SistemaDataSet();
@@ -59,6 +59,7 @@
             this.detalleDeVentaTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DetalleDeVentaTableAdapter();
             this.facturaTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.FacturaTableAdapter();
             this.detalleDeVentaDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataTable1BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -87,17 +88,17 @@
             this.dataTable1TableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DataTable1TableAdapter();
             this.detalleDeVentaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.detalleDeVentaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProductosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idVentasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciototalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechadecomprarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDetalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDetalleTextBox = new System.Windows.Forms.TextBox();
+            this.idDetalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechadecomprarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciototalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idVentasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProductosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idVentaLabel = new System.Windows.Forms.Label();
             nfacturaLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -114,6 +115,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -180,6 +182,17 @@
             idClienteLabel.Size = new System.Drawing.Size(48, 15);
             idClienteLabel.TabIndex = 60;
             idClienteLabel.Text = "Cliente:";
+            // 
+            // idDetalleLabel
+            // 
+            idDetalleLabel.AutoSize = true;
+            idDetalleLabel.BackColor = System.Drawing.Color.Transparent;
+            idDetalleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idDetalleLabel.Location = new System.Drawing.Point(548, 38);
+            idDetalleLabel.Name = "idDetalleLabel";
+            idDetalleLabel.Size = new System.Drawing.Size(62, 15);
+            idDetalleLabel.TabIndex = 75;
+            idDetalleLabel.Text = "Id Detalle:";
             // 
             // detalleDeVentaBindingSource
             // 
@@ -296,6 +309,8 @@
             this.tableAdapterManager.CategoriaTableAdapter = null;
             this.tableAdapterManager.ClientesTableAdapter = this.clientesTableAdapter;
             this.tableAdapterManager.DescuentoTableAdapter = null;
+            this.tableAdapterManager.DetalleDeDevolucionesTableAdapter = null;
+            this.tableAdapterManager.DetalleDeFactura1TableAdapter = null;
             this.tableAdapterManager.DetalleDeFacturaTableAdapter = null;
             this.tableAdapterManager.DetalleDeVentaTableAdapter = this.detalleDeVentaTableAdapter;
             this.tableAdapterManager.DetalleOrdenesTableAdapter = null;
@@ -370,6 +385,11 @@
             this.detalleDeVentaDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.detalleDeVentaDataGridView1.Size = new System.Drawing.Size(734, 168);
             this.detalleDeVentaDataGridView1.TabIndex = 29;
+            // 
+            // dataTable1BindingSource2
+            // 
+            this.dataTable1BindingSource2.DataMember = "VentaDia_DataTable11";
+            this.dataTable1BindingSource2.DataSource = this.ventaDiaBindingSource;
             // 
             // dataTable1BindingSource
             // 
@@ -593,7 +613,7 @@
             // 
             // idClienteComboBox
             // 
-            this.idClienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clientesBindingSource, "Nombre_cliente", true));
+            this.idClienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ventaDiaBindingSource, "IdCliente", true));
             this.idClienteComboBox.DataSource = this.clientesBindingSource;
             this.idClienteComboBox.DisplayMember = "Nombre_cliente";
             this.idClienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -638,42 +658,42 @@
             this.detalleDeVentaBindingSource2.DataMember = "VentaDia_DetalleDeVenta";
             this.detalleDeVentaBindingSource2.DataSource = this.ventaDiaBindingSource;
             // 
-            // idEmpleadoDataGridViewTextBoxColumn
+            // idDetalleTextBox
             // 
-            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "IdEmpleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
-            this.idEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idEmpleadoDataGridViewTextBoxColumn.Visible = false;
+            this.idDetalleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventaDiaBindingSource, "IdDetalle", true));
+            this.idDetalleTextBox.Enabled = false;
+            this.idDetalleTextBox.Location = new System.Drawing.Point(614, 33);
+            this.idDetalleTextBox.Name = "idDetalleTextBox";
+            this.idDetalleTextBox.Size = new System.Drawing.Size(121, 20);
+            this.idDetalleTextBox.TabIndex = 76;
             // 
-            // Descuento
+            // idDetalleDataGridViewTextBoxColumn
             // 
-            this.Descuento.DataPropertyName = "Descuento";
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            this.Descuento.ReadOnly = true;
+            this.idDetalleDataGridViewTextBoxColumn.DataPropertyName = "IdDetalle";
+            this.idDetalleDataGridViewTextBoxColumn.HeaderText = "IdDetalle";
+            this.idDetalleDataGridViewTextBoxColumn.Name = "idDetalleDataGridViewTextBoxColumn";
+            this.idDetalleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // idProductosDataGridViewTextBoxColumn
+            // descripcionDataGridViewTextBoxColumn
             // 
-            this.idProductosDataGridViewTextBoxColumn.DataPropertyName = "IdProductos";
-            this.idProductosDataGridViewTextBoxColumn.HeaderText = "CodigoProducto";
-            this.idProductosDataGridViewTextBoxColumn.Name = "idProductosDataGridViewTextBoxColumn";
-            this.idProductosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // idVentasDataGridViewTextBoxColumn
+            // Unidades
             // 
-            this.idVentasDataGridViewTextBoxColumn.DataPropertyName = "IdVentas";
-            this.idVentasDataGridViewTextBoxColumn.HeaderText = "IdVentas";
-            this.idVentasDataGridViewTextBoxColumn.Name = "idVentasDataGridViewTextBoxColumn";
-            this.idVentasDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idVentasDataGridViewTextBoxColumn.Visible = false;
+            this.Unidades.DataPropertyName = "Unidades";
+            this.Unidades.HeaderText = "Cantidad";
+            this.Unidades.Name = "Unidades";
+            this.Unidades.ReadOnly = true;
             // 
-            // preciototalDataGridViewTextBoxColumn
+            // PrecioUnitario
             // 
-            this.preciototalDataGridViewTextBoxColumn.DataPropertyName = "Precio_total";
-            this.preciototalDataGridViewTextBoxColumn.HeaderText = "Precio_total";
-            this.preciototalDataGridViewTextBoxColumn.Name = "preciototalDataGridViewTextBoxColumn";
-            this.preciototalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.PrecioUnitario.DataPropertyName = "PrecioUnitario";
+            this.PrecioUnitario.HeaderText = "Precio";
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
             // 
             // fechadecomprarDataGridViewTextBoxColumn
             // 
@@ -683,53 +703,42 @@
             this.fechadecomprarDataGridViewTextBoxColumn.ReadOnly = true;
             this.fechadecomprarDataGridViewTextBoxColumn.Visible = false;
             // 
-            // PrecioUnitario
+            // preciototalDataGridViewTextBoxColumn
             // 
-            this.PrecioUnitario.DataPropertyName = "PrecioUnitario";
-            this.PrecioUnitario.HeaderText = "Precio";
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
+            this.preciototalDataGridViewTextBoxColumn.DataPropertyName = "Precio_total";
+            this.preciototalDataGridViewTextBoxColumn.HeaderText = "Precio_total";
+            this.preciototalDataGridViewTextBoxColumn.Name = "preciototalDataGridViewTextBoxColumn";
+            this.preciototalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Unidades
+            // idVentasDataGridViewTextBoxColumn
             // 
-            this.Unidades.DataPropertyName = "Unidades";
-            this.Unidades.HeaderText = "Cantidad";
-            this.Unidades.Name = "Unidades";
-            this.Unidades.ReadOnly = true;
+            this.idVentasDataGridViewTextBoxColumn.DataPropertyName = "IdVentas";
+            this.idVentasDataGridViewTextBoxColumn.HeaderText = "IdVentas";
+            this.idVentasDataGridViewTextBoxColumn.Name = "idVentasDataGridViewTextBoxColumn";
+            this.idVentasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idVentasDataGridViewTextBoxColumn.Visible = false;
             // 
-            // descripcionDataGridViewTextBoxColumn
+            // idProductosDataGridViewTextBoxColumn
             // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idProductosDataGridViewTextBoxColumn.DataPropertyName = "IdProductos";
+            this.idProductosDataGridViewTextBoxColumn.HeaderText = "IdProductos";
+            this.idProductosDataGridViewTextBoxColumn.Name = "idProductosDataGridViewTextBoxColumn";
+            this.idProductosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // idDetalleDataGridViewTextBoxColumn
+            // Descuento
             // 
-            this.idDetalleDataGridViewTextBoxColumn.DataPropertyName = "IdDetalle";
-            this.idDetalleDataGridViewTextBoxColumn.HeaderText = "Codigo Detalle";
-            this.idDetalleDataGridViewTextBoxColumn.Name = "idDetalleDataGridViewTextBoxColumn";
-            this.idDetalleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Descuento.DataPropertyName = "Descuento";
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
             // 
-            // idDetalleLabel
+            // idEmpleadoDataGridViewTextBoxColumn
             // 
-            idDetalleLabel.AutoSize = true;
-            idDetalleLabel.BackColor = System.Drawing.Color.Transparent;
-            idDetalleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idDetalleLabel.Location = new System.Drawing.Point(548, 38);
-            idDetalleLabel.Name = "idDetalleLabel";
-            idDetalleLabel.Size = new System.Drawing.Size(62, 15);
-            idDetalleLabel.TabIndex = 75;
-            idDetalleLabel.Text = "Id Detalle:";
-            // 
-            // idDetalleTextBox
-            // 
-            this.idDetalleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventaDiaBindingSource, "IdDetalle", true));
-            this.idDetalleTextBox.Enabled = false;
-            this.idDetalleTextBox.Location = new System.Drawing.Point(614, 33);
-            this.idDetalleTextBox.Name = "idDetalleTextBox";
-            this.idDetalleTextBox.Size = new System.Drawing.Size(121, 20);
-            this.idDetalleTextBox.TabIndex = 76;
+            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "IdEmpleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            this.idEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idEmpleadoDataGridViewTextBoxColumn.Visible = false;
             // 
             // DetalleDia
             // 
@@ -772,6 +781,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleDeVentaDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -839,6 +849,8 @@
         private System.Windows.Forms.BindingSource detalleDeVentaBindingSource1;
         private System.Windows.Forms.BindingSource detalleDeVentaBindingSource2;
         private System.Windows.Forms.DataGridView detalleDeVentaDataGridView1;
+        private System.Windows.Forms.TextBox idDetalleTextBox;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDetalleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidades;
@@ -849,6 +861,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idProductosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox idDetalleTextBox;
     }
 }

@@ -96,6 +96,13 @@ namespace programacionII_estadistica
 
             Facturas.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Devoluciones Devoluciones = new Devoluciones();
+
+            Devoluciones.Show();
+        }
     }
 }
 //hola mundo.%
