@@ -181,7 +181,7 @@
             // 
             // grbdatosCargo
             // 
-            this.grbdatosCargo.BackColor = System.Drawing.Color.Transparent;
+            this.grbdatosCargo.BackColor = System.Drawing.Color.White;
             this.grbdatosCargo.Controls.Add(this.txtcargo);
             this.grbdatosCargo.Controls.Add(this.lblncargo);
             this.grbdatosCargo.Controls.Add(this.lblidproduc);

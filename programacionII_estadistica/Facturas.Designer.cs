@@ -33,12 +33,12 @@
             System.Windows.Forms.Label idClienteLabel;
             System.Windows.Forms.Label fecha_de_ventaLabel;
             System.Windows.Forms.Label nombre_del_clienteLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facturas));
             System.Windows.Forms.Label idProductosDvLabel;
             System.Windows.Forms.Label idDetalleFacturaLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facturas));
             this.sistemaDataSet = new programacionII_estadistica.SistemaDataSet();
             this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturaTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.FacturaTableAdapter();
@@ -69,6 +69,8 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.grbnavegacion = new System.Windows.Forms.GroupBox();
+            this.idProductosDvTextBox = new System.Windows.Forms.TextBox();
+            this.idDetalleFacturaTextBox = new System.Windows.Forms.TextBox();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nfacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expr1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,8 +93,6 @@
             this.expr7DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombredelclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expr8DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProductosDvTextBox = new System.Windows.Forms.TextBox();
-            this.idDetalleFacturaTextBox = new System.Windows.Forms.TextBox();
             nfacturaLabel = new System.Windows.Forms.Label();
             idClienteLabel = new System.Windows.Forms.Label();
             fecha_de_ventaLabel = new System.Windows.Forms.Label();
@@ -158,6 +158,28 @@
             nombre_del_clienteLabel.Text = "Cliente:";
             nombre_del_clienteLabel.Click += new System.EventHandler(this.nombre_del_clienteLabel_Click);
             // 
+            // idProductosDvLabel
+            // 
+            idProductosDvLabel.AutoSize = true;
+            idProductosDvLabel.BackColor = System.Drawing.Color.Transparent;
+            idProductosDvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idProductosDvLabel.Location = new System.Drawing.Point(532, 33);
+            idProductosDvLabel.Name = "idProductosDvLabel";
+            idProductosDvLabel.Size = new System.Drawing.Size(95, 15);
+            idProductosDvLabel.TabIndex = 63;
+            idProductosDvLabel.Text = "Id Productos Dv:";
+            // 
+            // idDetalleFacturaLabel
+            // 
+            idDetalleFacturaLabel.AutoSize = true;
+            idDetalleFacturaLabel.BackColor = System.Drawing.Color.Transparent;
+            idDetalleFacturaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idDetalleFacturaLabel.Location = new System.Drawing.Point(525, 91);
+            idDetalleFacturaLabel.Name = "idDetalleFacturaLabel";
+            idDetalleFacturaLabel.Size = new System.Drawing.Size(62, 15);
+            idDetalleFacturaLabel.TabIndex = 75;
+            idDetalleFacturaLabel.Text = "Id Detalle:";
+            // 
             // sistemaDataSet
             // 
             this.sistemaDataSet.DataSetName = "SistemaDataSet";
@@ -179,6 +201,8 @@
             this.tableAdapterManager.CategoriaTableAdapter = null;
             this.tableAdapterManager.ClientesTableAdapter = null;
             this.tableAdapterManager.DescuentoTableAdapter = null;
+            this.tableAdapterManager.DetalleDeDevolucionesTableAdapter = null;
+            this.tableAdapterManager.DetalleDeFactura1TableAdapter = null;
             this.tableAdapterManager.DetalleDeFacturaTableAdapter = null;
             this.tableAdapterManager.DetalleDeVentaTableAdapter = null;
             this.tableAdapterManager.DetalleOrdenesTableAdapter = null;
@@ -266,14 +290,14 @@
             this.dataTable3DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataTable3DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataTable3DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTable3DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTable3DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataTable3DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTable3DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.marcaDataGridViewTextBoxColumn,
@@ -303,21 +327,22 @@
             this.dataTable3DataGridView.Location = new System.Drawing.Point(22, 146);
             this.dataTable3DataGridView.Name = "dataTable3DataGridView";
             this.dataTable3DataGridView.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTable3DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataTable3DataGridView.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTable3DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataTable3DataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataTable3DataGridView.Size = new System.Drawing.Size(731, 149);
             this.dataTable3DataGridView.TabIndex = 19;
+            this.dataTable3DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable3DataGridView_CellContentClick);
             // 
             // grbcliente
             // 
@@ -539,6 +564,24 @@
             this.grbnavegacion.TabStop = false;
             this.grbnavegacion.Text = "Navegacion";
             // 
+            // idProductosDvTextBox
+            // 
+            this.idProductosDvTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "IdProductosDv", true));
+            this.idProductosDvTextBox.Enabled = false;
+            this.idProductosDvTextBox.Location = new System.Drawing.Point(633, 28);
+            this.idProductosDvTextBox.Name = "idProductosDvTextBox";
+            this.idProductosDvTextBox.Size = new System.Drawing.Size(102, 20);
+            this.idProductosDvTextBox.TabIndex = 64;
+            // 
+            // idDetalleFacturaTextBox
+            // 
+            this.idDetalleFacturaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "IdDetalleFactura", true));
+            this.idDetalleFacturaTextBox.Enabled = false;
+            this.idDetalleFacturaTextBox.Location = new System.Drawing.Point(633, 89);
+            this.idDetalleFacturaTextBox.Name = "idDetalleFacturaTextBox";
+            this.idDetalleFacturaTextBox.Size = new System.Drawing.Size(102, 20);
+            this.idDetalleFacturaTextBox.TabIndex = 76;
+            // 
             // marcaDataGridViewTextBoxColumn
             // 
             this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
@@ -617,7 +660,7 @@
             // idProductosDataGridViewTextBoxColumn
             // 
             this.idProductosDataGridViewTextBoxColumn.DataPropertyName = "IdProductos";
-            this.idProductosDataGridViewTextBoxColumn.HeaderText = "Codigo Producto";
+            this.idProductosDataGridViewTextBoxColumn.HeaderText = "ID Producto";
             this.idProductosDataGridViewTextBoxColumn.Name = "idProductosDataGridViewTextBoxColumn";
             this.idProductosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -708,46 +751,6 @@
             this.expr8DataGridViewTextBoxColumn.ReadOnly = true;
             this.expr8DataGridViewTextBoxColumn.Visible = false;
             // 
-            // idProductosDvLabel
-            // 
-            idProductosDvLabel.AutoSize = true;
-            idProductosDvLabel.BackColor = System.Drawing.Color.Transparent;
-            idProductosDvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idProductosDvLabel.Location = new System.Drawing.Point(532, 33);
-            idProductosDvLabel.Name = "idProductosDvLabel";
-            idProductosDvLabel.Size = new System.Drawing.Size(95, 15);
-            idProductosDvLabel.TabIndex = 63;
-            idProductosDvLabel.Text = "Id Productos Dv:";
-            // 
-            // idProductosDvTextBox
-            // 
-            this.idProductosDvTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "IdProductosDv", true));
-            this.idProductosDvTextBox.Enabled = false;
-            this.idProductosDvTextBox.Location = new System.Drawing.Point(633, 28);
-            this.idProductosDvTextBox.Name = "idProductosDvTextBox";
-            this.idProductosDvTextBox.Size = new System.Drawing.Size(102, 20);
-            this.idProductosDvTextBox.TabIndex = 64;
-            // 
-            // idDetalleFacturaLabel
-            // 
-            idDetalleFacturaLabel.AutoSize = true;
-            idDetalleFacturaLabel.BackColor = System.Drawing.Color.Transparent;
-            idDetalleFacturaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idDetalleFacturaLabel.Location = new System.Drawing.Point(525, 91);
-            idDetalleFacturaLabel.Name = "idDetalleFacturaLabel";
-            idDetalleFacturaLabel.Size = new System.Drawing.Size(62, 15);
-            idDetalleFacturaLabel.TabIndex = 75;
-            idDetalleFacturaLabel.Text = "Id Detalle:";
-            // 
-            // idDetalleFacturaTextBox
-            // 
-            this.idDetalleFacturaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "IdDetalleFactura", true));
-            this.idDetalleFacturaTextBox.Enabled = false;
-            this.idDetalleFacturaTextBox.Location = new System.Drawing.Point(633, 89);
-            this.idDetalleFacturaTextBox.Name = "idDetalleFacturaTextBox";
-            this.idDetalleFacturaTextBox.Size = new System.Drawing.Size(102, 20);
-            this.idDetalleFacturaTextBox.TabIndex = 76;
-            // 
             // Facturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -825,6 +828,8 @@
         private System.Windows.Forms.Button btnanterior;
         private System.Windows.Forms.Button btnprimero;
         private System.Windows.Forms.GroupBox grbnavegacion;
+        private System.Windows.Forms.TextBox idProductosDvTextBox;
+        private System.Windows.Forms.TextBox idDetalleFacturaTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nfacturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expr1DataGridViewTextBoxColumn;
@@ -847,7 +852,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn expr7DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombredelclienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expr8DataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox idProductosDvTextBox;
-        private System.Windows.Forms.TextBox idDetalleFacturaTextBox;
     }
 }

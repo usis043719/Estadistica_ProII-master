@@ -35,10 +35,10 @@
             this.btnregistroanterior = new System.Windows.Forms.Button();
             this.btn1registro = new System.Windows.Forms.Button();
             this.grbedicioncargo = new System.Windows.Forms.GroupBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.grbdatos = new System.Windows.Forms.GroupBox();
             this.txtcategoria = new System.Windows.Forms.TextBox();
             this.lblncategoria = new System.Windows.Forms.Label();
@@ -70,9 +70,9 @@
             this.btnultimoregistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnultimoregistro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnultimoregistro.BackgroundImage")));
             this.btnultimoregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnultimoregistro.Location = new System.Drawing.Point(270, 19);
+            this.btnultimoregistro.Location = new System.Drawing.Point(282, 19);
             this.btnultimoregistro.Name = "btnultimoregistro";
-            this.btnultimoregistro.Size = new System.Drawing.Size(75, 55);
+            this.btnultimoregistro.Size = new System.Drawing.Size(60, 55);
             this.btnultimoregistro.TabIndex = 12;
             this.btnultimoregistro.UseVisualStyleBackColor = false;
             this.btnultimoregistro.Click += new System.EventHandler(this.btnultimoregistro_Click);
@@ -82,9 +82,9 @@
             this.btnregistrosiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnregistrosiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnregistrosiguiente.BackgroundImage")));
             this.btnregistrosiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnregistrosiguiente.Location = new System.Drawing.Point(87, 19);
+            this.btnregistrosiguiente.Location = new System.Drawing.Point(81, 19);
             this.btnregistrosiguiente.Name = "btnregistrosiguiente";
-            this.btnregistrosiguiente.Size = new System.Drawing.Size(75, 55);
+            this.btnregistrosiguiente.Size = new System.Drawing.Size(60, 55);
             this.btnregistrosiguiente.TabIndex = 11;
             this.btnregistrosiguiente.UseVisualStyleBackColor = false;
             this.btnregistrosiguiente.Click += new System.EventHandler(this.btnregistrosiguiente_Click);
@@ -94,9 +94,9 @@
             this.btnregistroanterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnregistroanterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnregistroanterior.BackgroundImage")));
             this.btnregistroanterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnregistroanterior.Location = new System.Drawing.Point(189, 19);
+            this.btnregistroanterior.Location = new System.Drawing.Point(220, 19);
             this.btnregistroanterior.Name = "btnregistroanterior";
-            this.btnregistroanterior.Size = new System.Drawing.Size(75, 55);
+            this.btnregistroanterior.Size = new System.Drawing.Size(56, 55);
             this.btnregistroanterior.TabIndex = 10;
             this.btnregistroanterior.UseVisualStyleBackColor = false;
             this.btnregistroanterior.Click += new System.EventHandler(this.btnregistroanterior_Click);
@@ -106,9 +106,9 @@
             this.btn1registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn1registro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn1registro.BackgroundImage")));
             this.btn1registro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn1registro.Location = new System.Drawing.Point(6, 20);
+            this.btn1registro.Location = new System.Drawing.Point(18, 20);
             this.btn1registro.Name = "btn1registro";
-            this.btn1registro.Size = new System.Drawing.Size(75, 54);
+            this.btn1registro.Size = new System.Drawing.Size(57, 54);
             this.btn1registro.TabIndex = 9;
             this.btn1registro.UseVisualStyleBackColor = false;
             this.btn1registro.Click += new System.EventHandler(this.btn1registro_Click);
@@ -126,6 +126,18 @@
             this.grbedicioncargo.TabIndex = 9;
             this.grbedicioncargo.TabStop = false;
             this.grbedicioncargo.Text = "Edicion de categoria";
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnbuscar.BackgroundImage")));
+            this.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnbuscar.Location = new System.Drawing.Point(11, 197);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(172, 46);
+            this.btnbuscar.TabIndex = 9;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btneliminar
             // 
@@ -163,21 +175,9 @@
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // btnbuscar
-            // 
-            this.btnbuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnbuscar.BackgroundImage")));
-            this.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnbuscar.Location = new System.Drawing.Point(11, 197);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(172, 46);
-            this.btnbuscar.TabIndex = 9;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
-            // 
             // grbdatos
             // 
-            this.grbdatos.BackColor = System.Drawing.Color.Transparent;
+            this.grbdatos.BackColor = System.Drawing.Color.White;
             this.grbdatos.Controls.Add(this.txtcategoria);
             this.grbdatos.Controls.Add(this.lblncategoria);
             this.grbdatos.Controls.Add(this.lblidproduc);

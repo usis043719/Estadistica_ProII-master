@@ -35,6 +35,7 @@
             this.btnsiguienteregistropro = new System.Windows.Forms.Button();
             this.Registro1pro = new System.Windows.Forms.Button();
             this.grbproveedor = new System.Windows.Forms.GroupBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.btnbuscarproveedor = new System.Windows.Forms.Button();
             this.btneliminarproveedor = new System.Windows.Forms.Button();
             this.btnmodificarproveedor = new System.Windows.Forms.Button();
@@ -57,6 +58,7 @@
             this.lblproveedor = new System.Windows.Forms.Label();
             this.grbnavegacion.SuspendLayout();
             this.grbproveedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.grbdatosProveedor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,9 +81,9 @@
             this.btnultimoregistropro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnultimoregistropro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnultimoregistropro.BackgroundImage")));
             this.btnultimoregistropro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnultimoregistropro.Location = new System.Drawing.Point(258, 19);
+            this.btnultimoregistropro.Location = new System.Drawing.Point(266, 19);
             this.btnultimoregistropro.Name = "btnultimoregistropro";
-            this.btnultimoregistropro.Size = new System.Drawing.Size(81, 60);
+            this.btnultimoregistropro.Size = new System.Drawing.Size(58, 60);
             this.btnultimoregistropro.TabIndex = 8;
             this.btnultimoregistropro.UseVisualStyleBackColor = false;
             this.btnultimoregistropro.Click += new System.EventHandler(this.btnultimoregistropro_Click);
@@ -91,9 +93,9 @@
             this.btnregistroanteriorpro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnregistroanteriorpro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnregistroanteriorpro.BackgroundImage")));
             this.btnregistroanteriorpro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnregistroanteriorpro.Location = new System.Drawing.Point(174, 19);
+            this.btnregistroanteriorpro.Location = new System.Drawing.Point(202, 19);
             this.btnregistroanteriorpro.Name = "btnregistroanteriorpro";
-            this.btnregistroanteriorpro.Size = new System.Drawing.Size(78, 60);
+            this.btnregistroanteriorpro.Size = new System.Drawing.Size(58, 60);
             this.btnregistroanteriorpro.TabIndex = 7;
             this.btnregistroanteriorpro.UseVisualStyleBackColor = false;
             this.btnregistroanteriorpro.Click += new System.EventHandler(this.btnregistroanteriorpro_Click);
@@ -103,9 +105,9 @@
             this.btnsiguienteregistropro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnsiguienteregistropro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsiguienteregistropro.BackgroundImage")));
             this.btnsiguienteregistropro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsiguienteregistropro.Location = new System.Drawing.Point(89, 20);
+            this.btnsiguienteregistropro.Location = new System.Drawing.Point(84, 20);
             this.btnsiguienteregistropro.Name = "btnsiguienteregistropro";
-            this.btnsiguienteregistropro.Size = new System.Drawing.Size(77, 59);
+            this.btnsiguienteregistropro.Size = new System.Drawing.Size(61, 59);
             this.btnsiguienteregistropro.TabIndex = 6;
             this.btnsiguienteregistropro.UseVisualStyleBackColor = false;
             this.btnsiguienteregistropro.Click += new System.EventHandler(this.btnsiguienteregistropro_Click);
@@ -115,9 +117,9 @@
             this.Registro1pro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Registro1pro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Registro1pro.BackgroundImage")));
             this.Registro1pro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Registro1pro.Location = new System.Drawing.Point(8, 20);
+            this.Registro1pro.Location = new System.Drawing.Point(16, 20);
             this.Registro1pro.Name = "Registro1pro";
-            this.Registro1pro.Size = new System.Drawing.Size(80, 59);
+            this.Registro1pro.Size = new System.Drawing.Size(62, 59);
             this.Registro1pro.TabIndex = 5;
             this.Registro1pro.UseVisualStyleBackColor = false;
             this.Registro1pro.Click += new System.EventHandler(this.Registro1pro_Click);
@@ -125,6 +127,7 @@
             // grbproveedor
             // 
             this.grbproveedor.BackColor = System.Drawing.Color.Transparent;
+            this.grbproveedor.Controls.Add(this.pictureBox16);
             this.grbproveedor.Controls.Add(this.btnbuscarproveedor);
             this.grbproveedor.Controls.Add(this.btneliminarproveedor);
             this.grbproveedor.Controls.Add(this.btnmodificarproveedor);
@@ -136,15 +139,26 @@
             this.grbproveedor.TabStop = false;
             this.grbproveedor.Text = "Edicion de Proveedor";
             // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Location = new System.Drawing.Point(14, 207);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(178, 99);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 31;
+            this.pictureBox16.TabStop = false;
+            // 
             // btnbuscarproveedor
             // 
             this.btnbuscarproveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnbuscarproveedor.BackgroundImage")));
             this.btnbuscarproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnbuscarproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscarproveedor.ForeColor = System.Drawing.Color.Black;
-            this.btnbuscarproveedor.Location = new System.Drawing.Point(10, 326);
+            this.btnbuscarproveedor.Location = new System.Drawing.Point(10, 337);
             this.btnbuscarproveedor.Name = "btnbuscarproveedor";
-            this.btnbuscarproveedor.Size = new System.Drawing.Size(195, 54);
+            this.btnbuscarproveedor.Size = new System.Drawing.Size(195, 43);
             this.btnbuscarproveedor.TabIndex = 5;
             this.btnbuscarproveedor.Text = "Buscar";
             this.btnbuscarproveedor.UseVisualStyleBackColor = true;
@@ -156,9 +170,9 @@
             this.btneliminarproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btneliminarproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminarproveedor.ForeColor = System.Drawing.Color.Black;
-            this.btneliminarproveedor.Location = new System.Drawing.Point(10, 162);
+            this.btneliminarproveedor.Location = new System.Drawing.Point(10, 123);
             this.btneliminarproveedor.Name = "btneliminarproveedor";
-            this.btneliminarproveedor.Size = new System.Drawing.Size(195, 61);
+            this.btneliminarproveedor.Size = new System.Drawing.Size(195, 46);
             this.btneliminarproveedor.TabIndex = 4;
             this.btneliminarproveedor.Text = "Eliminar";
             this.btneliminarproveedor.UseVisualStyleBackColor = true;
@@ -170,9 +184,9 @@
             this.btnmodificarproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnmodificarproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificarproveedor.ForeColor = System.Drawing.Color.Black;
-            this.btnmodificarproveedor.Location = new System.Drawing.Point(8, 101);
+            this.btnmodificarproveedor.Location = new System.Drawing.Point(8, 71);
             this.btnmodificarproveedor.Name = "btnmodificarproveedor";
-            this.btnmodificarproveedor.Size = new System.Drawing.Size(197, 55);
+            this.btnmodificarproveedor.Size = new System.Drawing.Size(197, 45);
             this.btnmodificarproveedor.TabIndex = 3;
             this.btnmodificarproveedor.Text = "Modificar";
             this.btnmodificarproveedor.UseVisualStyleBackColor = true;
@@ -185,9 +199,9 @@
             this.btnnuevoproveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnnuevoproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevoproveedor.ForeColor = System.Drawing.Color.Black;
-            this.btnnuevoproveedor.Location = new System.Drawing.Point(10, 39);
+            this.btnnuevoproveedor.Location = new System.Drawing.Point(10, 20);
             this.btnnuevoproveedor.Name = "btnnuevoproveedor";
-            this.btnnuevoproveedor.Size = new System.Drawing.Size(195, 56);
+            this.btnnuevoproveedor.Size = new System.Drawing.Size(195, 45);
             this.btnnuevoproveedor.TabIndex = 2;
             this.btnnuevoproveedor.Text = "Nuevo";
             this.btnnuevoproveedor.UseVisualStyleBackColor = false;
@@ -195,7 +209,7 @@
             // 
             // grbdatosProveedor
             // 
-            this.grbdatosProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.grbdatosProveedor.BackColor = System.Drawing.Color.White;
             this.grbdatosProveedor.Controls.Add(this.lblejemplo);
             this.grbdatosProveedor.Controls.Add(this.txtempresa);
             this.grbdatosProveedor.Controls.Add(this.lblcompañiaprovee);
@@ -377,6 +391,7 @@
             this.Load += new System.EventHandler(this.Proveedor_Load);
             this.grbnavegacion.ResumeLayout(false);
             this.grbproveedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.grbdatosProveedor.ResumeLayout(false);
             this.grbdatosProveedor.PerformLayout();
             this.ResumeLayout(false);
@@ -411,5 +426,6 @@
         private System.Windows.Forms.TextBox txtempresa;
         private System.Windows.Forms.Label lblcompañiaprovee;
         private System.Windows.Forms.Label lblejemplo;
+        private System.Windows.Forms.PictureBox pictureBox16;
     }
 }

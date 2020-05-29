@@ -186,5 +186,10 @@ namespace programacionII_estadistica
             facturaBindingSource.MoveLast();
             totalizar();
         }
+
+        private void dataTable3DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

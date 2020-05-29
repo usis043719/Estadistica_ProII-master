@@ -78,9 +78,9 @@ namespace programacionII_estadistica
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DetalleDia DetalleDia = new DetalleDia();
+            Ventas Ventas = new Ventas();
 
-            DetalleDia.Show();
+            Ventas.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
