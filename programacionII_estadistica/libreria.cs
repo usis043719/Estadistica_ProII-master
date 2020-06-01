@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//creacion de hilos para el login
+using System.Threading;
 
 namespace programacionII_estadistica
 {
@@ -14,8 +16,15 @@ namespace programacionII_estadistica
     {
         public libreria()
         {
+            //login
+            Thread inicio = new Thread(new ThreadStart(barra_de_progreso));
+            inicio.Start();
+            Thread.Sleep(8000);
             InitializeComponent();
+            inicio.Abort();
         }
+        //creacion de un metodo para el login
+        private void barra_de_progreso() { Application.Run(new Login()); }
 
         private void btnbusquedaclientes_Click(object sender, EventArgs e)
         {
