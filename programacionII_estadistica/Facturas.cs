@@ -350,6 +350,21 @@ namespace programacionII_estadistica
                 //
             }
         }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            Busquedaproductos frmBusquedaproducto = new Busquedaproductos();
+            frmBusquedaproducto.ShowDialog();
+            if (frmBusquedaproducto._IdProductos > 0)
+            {
+                dataTable3BindingSource.AddNew();
+
+                dataTable3DataGridView.CurrentRow.Cells["IdProductos"].Value = frmBusquedaproducto._IdProductos;
+                dataTable3DataGridView.CurrentRow.Cells["Marca"].Value = frmBusquedaproducto._MarcaProductos;
+                dataTable3DataGridView.CurrentRow.Cells["Descripcion"].Value = frmBusquedaproducto._DescripcionProductos;
+                dataTable3DataGridView.CurrentRow.Cells["Unidades"].Value = 1;
+
+            }
+        }
     }
 }
-   
