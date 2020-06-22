@@ -73,7 +73,6 @@
             this.nombredelclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expr8DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbcliente = new System.Windows.Forms.GroupBox();
-            this.btnimprimir = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
@@ -97,6 +96,7 @@
             this.pnlProductosGrid = new System.Windows.Forms.Panel();
             this.btnQuitarProductosGrid = new System.Windows.Forms.Button();
             this.btnAgregarProductosGrid = new System.Windows.Forms.Button();
+            this.btnimprimir = new System.Windows.Forms.Button();
             nfacturaLabel = new System.Windows.Forms.Label();
             idClienteLabel = new System.Windows.Forms.Label();
             fecha_de_ventaLabel = new System.Windows.Forms.Label();
@@ -535,20 +535,6 @@
             this.grbcliente.TabStop = false;
             this.grbcliente.Text = "Edicion de Factura";
             // 
-            // btnimprimir
-            // 
-            this.btnimprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnimprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnimprimir.BackgroundImage")));
-            this.btnimprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnimprimir.Location = new System.Drawing.Point(80, 102);
-            this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(107, 39);
-            this.btnimprimir.TabIndex = 7;
-            this.btnimprimir.Text = "Imprimir";
-            this.btnimprimir.UseVisualStyleBackColor = false;
-            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
-            // 
             // btnbuscar
             // 
             this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -805,6 +791,19 @@
             this.btnAgregarProductosGrid.Text = "+";
             this.btnAgregarProductosGrid.UseVisualStyleBackColor = true;
             this.btnAgregarProductosGrid.Click += new System.EventHandler(this.btnAgregarProductosGrid_Click);
+            // 
+            // btnimprimir
+            // 
+            this.btnimprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnimprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnimprimir.BackgroundImage")));
+            this.btnimprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnimprimir.Location = new System.Drawing.Point(80, 102);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Size = new System.Drawing.Size(107, 39);
+            this.btnimprimir.TabIndex = 7;
+            this.btnimprimir.Text = "Imprimir";
+            this.btnimprimir.UseVisualStyleBackColor = false;
             // 
             // Facturas
             // 

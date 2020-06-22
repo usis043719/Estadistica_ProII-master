@@ -350,13 +350,6 @@ namespace programacionII_estadistica
                 //
             }
         }
-
-        private void btnimprimir_Click(object sender, EventArgs e)
-        {
-            ImpresionFactura imprimir = new ImpresionFactura(int.Parse(idClienteComboBox.Text));
-            imprimir.ShowDialog();
-
-        }
     }
 }
    

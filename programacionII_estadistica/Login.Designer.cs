@@ -45,18 +45,18 @@
             // 
             this.prueba.BackColor = System.Drawing.Color.White;
             this.prueba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.prueba.Location = new System.Drawing.Point(24, 282);
+            this.prueba.Location = new System.Drawing.Point(0, 184);
             this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(348, 41);
+            this.prueba.Size = new System.Drawing.Size(397, 28);
             this.prueba.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::programacionII_estadistica.Properties.Resources.logito;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(93, 86);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 157);
+            this.pictureBox1.Size = new System.Drawing.Size(397, 178);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -66,7 +66,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::programacionII_estadistica.Properties.Resources.degrado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(398, 368);
+            this.ClientSize = new System.Drawing.Size(398, 226);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.prueba);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

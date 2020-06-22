@@ -265,10 +265,7 @@ namespace programacionII_estadistica
 
         private void btnimprimir_Click(object sender, EventArgs e)
         {
-              ImpresionVentaR imprimir = new ImpresionVentaR(int.Parse(idClienteComboBox.Text));
-              imprimir.ShowDialog();
-
-        }
+    }
     }
 }
         
