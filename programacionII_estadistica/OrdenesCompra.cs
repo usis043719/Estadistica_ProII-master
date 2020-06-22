@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace programacionII_estadistica
 {
     public partial class OrdenesCompra : Form
     {
+        private int _IdOrden = 0;
+
         public OrdenesCompra()
         {
             InitializeComponent();
@@ -27,26 +31,32 @@ namespace programacionII_estadistica
 
         private void OrdenesCompra_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DetalleOrdenes' Puede moverla o quitarla según sea necesario.
-            this.detalleOrdenesTableAdapter.Fill(this.sistemaDataSet.DetalleOrdenes);
+
+            actualziarDs();
+        }
+        private void actualziarDs()
+        {
+            try
+            {
+                // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DetalleOrdenes' Puede moverla o quitarla según sea necesario.
+                this.detalleOrdenesTableAdapter.Fill(this.sistemaDataSet.DetalleOrdenes);
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DataTable3' Puede moverla o quitarla según sea necesario.
             this.ordenesTableAdapter.Fill(this.sistemaDataSet.Ordenes);
 
             this.dataTable2TableAdapter.FillOrdenesDetalles(this.sistemaDataSet.DataTable2);
 
             //this.detalleOrdenesTableAdapter.FillDetalleOrdenes(this.sistemaDataSet.DetalleOrdenes);
-            try
-            {
+           
                 // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Ordenes' Puede moverla o quitarla según sea necesario.
                 this.ordenesTableAdapter.Fill(this.sistemaDataSet.Ordenes);
+                totalizar();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            totalizar();
-        }
 
+        }
         private void totalizar()
         {
             int Descuento = 0, nfilas = 0;
@@ -99,5 +109,154 @@ namespace programacionII_estadistica
             totalizar();
 
         }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            if (btnagregar.Text == "Nuevo")
+            {//nuevo
+                btnagregar.Text = "Guardar";
+                btnmodificar.Text = "Cancelar";
+
+                habdes_controles(false);//habilitar los controles...
+                ordenesBindingSource.AddNew();//agregamos un registro nuevo...
+            }
+            else
+            {//guardar
+                _IdOrden = int.Parse(idOrdenComboBox.Text);
+                this.Validate();
+                this.ordenesBindingSource.EndEdit();
+
+                /**
+                 * Abrimos la conexion a la BD
+                 */
+                ordenesTableAdapter.Connection.Open();
+                SqlCommand sqlCmd = new SqlCommand();
+                sqlCmd.Connection = ordenesTableAdapter.Connection;
+
+                if (_IdOrden > 0)
+                {//modificando...
+                    sqlCmd.CommandText = "delete from DetalleOrdenes where IdOrden=" + _IdOrden;
+                    sqlCmd.ExecuteNonQuery();
+                }
+                else
+                {//nuevo....
+                    sqlCmd.CommandText = "select ident_current('Ordenes') + 1 AS IdOrden";
+                    _IdOrden = int.Parse(sqlCmd.ExecuteScalar().ToString());
+
+                }
+                int nfilas = dataTable2DataGridView.RowCount;
+                string[,] DetalleDeVenta = new string[nfilas, 4];
+                DataGridViewRow fila = new DataGridViewRow();
+                for (int i = 0; i < nfilas; i++)
+                {
+                    fila = dataTable2DataGridView.Rows[i];
+
+                    DetalleDeVenta[i, 0] = fila.Cells["IdProductos"].Value.ToString();
+                    DetalleDeVenta[i, 1] = fila.Cells["Unidades"].Value.ToString();
+                    DetalleDeVenta[i, 2] = fila.Cells["PrecioUnitario"].Value.ToString();
+                    DetalleDeVenta[i, 3] = fila.Cells["Descuento"].Value.ToString();
+                
+                }
+                this.tableAdapterManager.UpdateAll(this.sistemaDataSet);
+                // for (int i = 0; i < nfilas; i++)
+                // {
+                // ventaDiaTableAdapter.Insert(
+                // _IdVenta,
+                // int.Parse(DetalleDeVenta[i, 0]),
+                // int.Parse(DetalleDeVenta[i, 1]),
+                // char.Parse(DetalleDeVenta[i, 2]),
+                // char.Parse(DetalleDeVenta[i, 3]),
+               
+                // );
+                //}
+                //ventaDiaTableAdapter.Connection.Close();
+                // actualziarDs();
+                // ventaDiaBindingSource.MoveLast();
+
+
+                //habdes_controles(true);
+                // btnagregar.Text = "Nuevo";
+                // btnmodificar.Text = "Modificar";
+
+            }
+        }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            if (btnmodificar.Text == "Modificar")
+            {//modificar
+                btnagregar.Text = "Guardar";
+                btnmodificar.Text = "Cancelar";
+
+                habdes_controles(false);//habilitar los controles...
+
+            }
+            else
+            {//cancelar
+                ordenesBindingSource.CancelEdit();
+                dataTable2BindingSource.CancelEdit();
+
+                habdes_controles(true);//deshabilitar los controles...
+                btnagregar.Text = "Nuevo";
+                btnmodificar.Text = "Modificar";
+            }
+        }
+        private void habdes_controles(Boolean estado)
+        {
+            nombreProveedorComboBox.Enabled = !estado;
+            fechaCompraDateTimePicker.Enabled = !estado;
+            idOrdenComboBox.Enabled = !estado;
+            empresaComboBox.Enabled = !estado;
+
+            idProveedorTextBox.ReadOnly = estado;
+            dataTable2DataGridView.ReadOnly = estado;
+            pnlProductosGrid.Visible = !estado;
+
+            grbnavegacion.Visible = estado;
+            btneliminar.Enabled = estado;
+            btnbuscar.Enabled = estado;
+        }
+
+
+        private void btnAgregarProductosGrid_Click(object sender, EventArgs e)
+        {
+            Busquedaproductos frmBusquedaproducto = new Busquedaproductos();
+            frmBusquedaproducto.ShowDialog();
+            if (frmBusquedaproducto._IdProductos > 0)
+            {
+                dataTable2BindingSource.AddNew();
+
+                dataTable2DataGridView.CurrentRow.Cells["idProductos"].Value = frmBusquedaproducto._IdProductos;
+                dataTable2DataGridView.CurrentRow.Cells["Marca"].Value = frmBusquedaproducto._MarcaProductos;
+                dataTable2DataGridView.CurrentRow.Cells["Descripcion"].Value = frmBusquedaproducto._DescripcionProductos;
+                dataTable2DataGridView.CurrentRow.Cells["Unidades"].Value = 1;
+
+
+
+            }
+        }
+
+        private void btnQuitarProductosGrid_Click(object sender, EventArgs e)
+        {
+            {
+                if (dataTable2DataGridView.RowCount > 0)
+                {
+                    dataTable2DataGridView.Rows.Remove(dataTable2DataGridView.CurrentRow);
+                }
+            }
+        }
+
+        private void dataTable2DataGridView_RowLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //totalizar();
+            }
+            catch (Exception)
+            {
+                //
+            }
+        }
     }
 }
+      

@@ -14,6 +14,7 @@ namespace programacionII_estadistica
     {
         conexion objConexion = new conexion();
         public int _IdProductos;
+        public String _DescripcionProductos, _MarcaProductos;
         public Busquedaproductos()
         {
             InitializeComponent();
@@ -24,6 +25,9 @@ namespace programacionII_estadistica
             if (grdBusquedaProductos.RowCount > 0)
             {
                 _IdProductos = int.Parse(grdBusquedaProductos.CurrentRow.Cells["IdProductos"].Value.ToString());
+                _MarcaProductos = grdBusquedaProductos.CurrentRow.Cells["Marca"].Value.ToString();
+                _DescripcionProductos = grdBusquedaProductos.CurrentRow.Cells["Descripcion"].Value.ToString();
+
                 Close();
             }
             else

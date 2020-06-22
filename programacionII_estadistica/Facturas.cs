@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace programacionII_estadistica
 {
     public partial class Facturas : Form
     {
+        private int _nfactura = 0;
+
         public Facturas()
         {
             InitializeComponent();
@@ -27,23 +31,30 @@ namespace programacionII_estadistica
 
         private void Facturas_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Ordenes' Puede moverla o quitarla según sea necesario.
-            this.facturaTableAdapter.Fill(this.sistemaDataSet.Factura);
+            
+
+                actualziarDs();
+            }
+            private void actualziarDs()
+            {
+                try
+                {
+                    // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Ordenes' Puede moverla o quitarla según sea necesario.
+                    this.facturaTableAdapter.Fill(this.sistemaDataSet.Factura);
 
             // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.DataTable3' Puede moverla o quitarla según sea necesario.
             this.dataTable3TableAdapter.FillDetalleFactura(this.sistemaDataSet.DataTable3);
-            try
-            {
+            
                 // TODO: esta línea de código carga datos en la tabla 'sistemaDataSet.Factura' Puede moverla o quitarla según sea necesario.
                 this.facturaTableAdapter.Fill(this.sistemaDataSet.Factura);
+                totalizar();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            totalizar();
-        }
 
+        }
         private void totalizar()
         {
             int Descuento = 0, nfilas = 0;
@@ -191,5 +202,161 @@ namespace programacionII_estadistica
         {
 
         }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            if (btnagregar.Text == "Nuevo")
+            {//nuevo
+                btnagregar.Text = "Guardar";
+                btnmodificar.Text = "Cancelar";
+
+                habdes_controles(false);//habilitar los controles...
+                facturaBindingSource.AddNew();//agregamos un registro nuevo...
+            }
+            else
+            {//guardar
+                _nfactura = int.Parse(idClienteComboBox.Text);
+                this.Validate();
+                this.facturaBindingSource.EndEdit();
+
+                /**
+                 * Abrimos la conexion a la BD
+                 */
+                facturaTableAdapter.Connection.Open();
+                SqlCommand sqlCmd = new SqlCommand();
+                sqlCmd.Connection = facturaTableAdapter.Connection;
+
+                if (_nfactura > 0)
+                {//modificando...
+                    sqlCmd.CommandText = "delete from DetalleDeFactura where nfactura=" + _nfactura;
+                    sqlCmd.ExecuteNonQuery();
+                }
+                else
+                {//nuevo....
+                    sqlCmd.CommandText = "select ident_current('Factura') + 1 AS nfactura";
+                    _nfactura = int.Parse(sqlCmd.ExecuteScalar().ToString());
+
+                }
+                int nfilas = dataTable3DataGridView.RowCount;
+                string[,] DetalleDeVenta = new string[nfilas, 6];
+                DataGridViewRow fila = new DataGridViewRow();
+                for (int i = 0; i < nfilas; i++)
+                {
+                    fila = dataTable3DataGridView.Rows[i];
+
+                    DetalleDeVenta[i, 0] = fila.Cells["IdProductos"].Value.ToString();
+                    DetalleDeVenta[i, 1] = fila.Cells["Unidades"].Value.ToString();
+                    DetalleDeVenta[i, 2] = fila.Cells["PrecioUnitario"].Value.ToString();
+                    DetalleDeVenta[i, 3] = fila.Cells["Precio_total"].Value.ToString();
+                    DetalleDeVenta[i, 4] = fila.Cells["Descuento"].Value.ToString();
+                    DetalleDeVenta[i, 5] = fila.Cells["Marca"].Value.ToString();
+                }
+                this.tableAdapterManager.UpdateAll(this.sistemaDataSet);
+                // for (int i = 0; i < nfilas; i++)
+                // {
+                // ventaDiaTableAdapter.Insert(
+                // _IdVenta,
+                // int.Parse(DetalleDeVenta[i, 0]),
+                // int.Parse(DetalleDeVenta[i, 1]),
+                // char.Parse(DetalleDeVenta[i, 2]),
+                // char.Parse(DetalleDeVenta[i, 3]),
+                // int.Parse(DetalleDeVenta[i, 4])
+                // );
+                //}
+                //ventaDiaTableAdapter.Connection.Close();
+                // actualziarDs();
+                // ventaDiaBindingSource.MoveLast();
+
+
+                //habdes_controles(true);
+                // btnagregar.Text = "Nuevo";
+                // btnmodificar.Text = "Modificar";
+
+            }
+        }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            if (btnmodificar.Text == "Modificar")
+            {//modificar
+                btnagregar.Text = "Guardar";
+                btnmodificar.Text = "Cancelar";
+
+                habdes_controles(false);//habilitar los controles...
+
+            }
+            else
+            {//cancelar
+                facturaBindingSource.CancelEdit();
+                dataTable3BindingSource.CancelEdit();
+
+                habdes_controles(true);//deshabilitar los controles...
+                btnagregar.Text = "Nuevo";
+                btnmodificar.Text = "Modificar";
+            }
+        }
+        private void habdes_controles(Boolean estado)
+        {
+            nombre_del_clienteComboBox.Enabled = !estado;
+            fecha_de_ventaDateTimePicker.Enabled = !estado;
+            idClienteComboBox.Enabled = !estado;
+            nfacturaComboBox.Enabled = !estado;
+
+            idProductosDvTextBox.ReadOnly = estado;
+            dataTable3DataGridView.ReadOnly = estado;
+            pnlProductosGrid.Visible = !estado;
+
+            grbnavegacion.Visible = estado;
+            btneliminar.Enabled = estado;
+            btnbuscar.Enabled = estado;
+        }
+
+        private void btnAgregarProductosGrid_Click(object sender, EventArgs e)
+        {
+            Busquedaproductos frmBusquedaproducto = new Busquedaproductos();
+            frmBusquedaproducto.ShowDialog();
+            if (frmBusquedaproducto._IdProductos > 0)
+            {
+                dataTable3BindingSource.AddNew();
+
+                dataTable3DataGridView.CurrentRow.Cells["IdProductos"].Value = frmBusquedaproducto._IdProductos;
+                dataTable3DataGridView.CurrentRow.Cells["Marca"].Value = frmBusquedaproducto._MarcaProductos;
+                dataTable3DataGridView.CurrentRow.Cells["Descripcion"].Value = frmBusquedaproducto._DescripcionProductos;
+                dataTable3DataGridView.CurrentRow.Cells["Unidades"].Value = 1;
+
+
+
+            }
+        }
+
+        private void btnQuitarProductosGrid_Click(object sender, EventArgs e)
+        {
+            {
+                if (dataTable3DataGridView.RowCount > 0)
+                {
+                    dataTable3DataGridView.Rows.Remove(dataTable3DataGridView.CurrentRow);
+                }
+            }
+        }
+
+        private void dataTable3DataGridView_RowLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //totalizar();
+            }
+            catch (Exception)
+            {
+                //
+            }
+        }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+            ImpresionFactura imprimir = new ImpresionFactura(int.Parse(idClienteComboBox.Text));
+            imprimir.ShowDialog();
+
+        }
     }
 }
+   
