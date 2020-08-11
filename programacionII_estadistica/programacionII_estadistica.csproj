@@ -77,7 +77,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -165,18 +164,6 @@
     <Compile Include="Facturas.Designer.cs">
       <DependentUpon>Facturas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImpresionFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImpresionFactura.Designer.cs">
-      <DependentUpon>ImpresionFactura.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ImpresionVentaR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImpresionVentaR.Designer.cs">
-      <DependentUpon>ImpresionVentaR.cs</DependentUpon>
-    </Compile>
     <Compile Include="libreria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,12 +247,6 @@
     <EmbeddedResource Include="Facturas.resx">
       <DependentUpon>Facturas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImpresionFactura.resx">
-      <DependentUpon>ImpresionFactura.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ImpresionVentaR.resx">
-      <DependentUpon>ImpresionVentaR.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="libreria.resx">
       <DependentUpon>libreria.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,8 +272,6 @@
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RepFacturas.rdlc" />
-    <EmbeddedResource Include="RepVentas.rdlc" />
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>

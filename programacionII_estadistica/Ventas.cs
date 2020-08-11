@@ -265,17 +265,30 @@ namespace programacionII_estadistica
 
         private void btnimprimir_Click(object sender, EventArgs e)
         {
-              ImpresionVentaR imprimir = new ImpresionVentaR(int.Parse(idClienteComboBox.Text));
-              imprimir.ShowDialog();
+    }
 
-        }
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            Busquedaproductos frmBusquedaproducto = new Busquedaproductos();
+            frmBusquedaproducto.ShowDialog();
+            if (frmBusquedaproducto._IdProductos > 0)
+            {
+                dataTable1BindingSource.AddNew();
+
+                dataTable1DataGridView.CurrentRow.Cells["IdProductos"].Value = frmBusquedaproducto._IdProductos;
+                dataTable1DataGridView.CurrentRow.Cells["Marca"].Value = frmBusquedaproducto._MarcaProductos;
+                dataTable1DataGridView.CurrentRow.Cells["Descripcion"].Value = frmBusquedaproducto._DescripcionProductos;
+                dataTable1DataGridView.CurrentRow.Cells["Unidades"].Value = 1;
+            }
+    }
     }
 }
-        
-        
-    
-    
-    
+
+
+
+
+
+
 
 
 

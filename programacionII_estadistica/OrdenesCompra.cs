@@ -226,7 +226,7 @@ namespace programacionII_estadistica
             {
                 dataTable2BindingSource.AddNew();
 
-                dataTable2DataGridView.CurrentRow.Cells["idProductos"].Value = frmBusquedaproducto._IdProductos;
+                dataTable2DataGridView.CurrentRow.Cells["IdProductos"].Value = frmBusquedaproducto._IdProductos;
                 dataTable2DataGridView.CurrentRow.Cells["Marca"].Value = frmBusquedaproducto._MarcaProductos;
                 dataTable2DataGridView.CurrentRow.Cells["Descripcion"].Value = frmBusquedaproducto._DescripcionProductos;
                 dataTable2DataGridView.CurrentRow.Cells["Unidades"].Value = 1;

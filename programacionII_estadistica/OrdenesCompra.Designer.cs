@@ -71,13 +71,6 @@
             this.lblnregistros = new System.Windows.Forms.Label();
             this.lblregistroxden = new System.Windows.Forms.Label();
             this.dataTable2DataGridView = new System.Windows.Forms.DataGridView();
-            this.detalleOrdenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordenesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.detalleOrdenesTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DetalleOrdenesTableAdapter();
-            this.idDetalleOrdenTextBox = new System.Windows.Forms.TextBox();
-            this.pnlProductosGrid = new System.Windows.Forms.Panel();
-            this.btnQuitarProductosGrid = new System.Windows.Forms.Button();
-            this.btnAgregarProductosGrid = new System.Windows.Forms.Button();
             this.idDetalleOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +83,13 @@
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalleOrdenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordenesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.detalleOrdenesTableAdapter = new programacionII_estadistica.SistemaDataSetTableAdapters.DetalleOrdenesTableAdapter();
+            this.idDetalleOrdenTextBox = new System.Windows.Forms.TextBox();
+            this.pnlProductosGrid = new System.Windows.Forms.Panel();
+            this.btnQuitarProductosGrid = new System.Windows.Forms.Button();
+            this.btnAgregarProductosGrid = new System.Windows.Forms.Button();
             idOrdenLabel = new System.Windows.Forms.Label();
             fechaCompraLabel = new System.Windows.Forms.Label();
             idProveedorLabel = new System.Windows.Forms.Label();
@@ -566,61 +566,6 @@
             this.dataTable2DataGridView.TabIndex = 76;
             this.dataTable2DataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable2DataGridView_RowLeave);
             // 
-            // detalleOrdenesBindingSource
-            // 
-            this.detalleOrdenesBindingSource.DataMember = "Ordenes_DetalleOrdenes";
-            this.detalleOrdenesBindingSource.DataSource = this.ordenesBindingSource;
-            // 
-            // ordenesBindingSource1
-            // 
-            this.ordenesBindingSource1.DataMember = "Ordenes_DataTable2";
-            this.ordenesBindingSource1.DataSource = this.dataTable2BindingSource;
-            // 
-            // detalleOrdenesTableAdapter
-            // 
-            this.detalleOrdenesTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDetalleOrdenTextBox
-            // 
-            this.idDetalleOrdenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenesBindingSource, "IdDetalleOrden", true));
-            this.idDetalleOrdenTextBox.Enabled = false;
-            this.idDetalleOrdenTextBox.Location = new System.Drawing.Point(590, 77);
-            this.idDetalleOrdenTextBox.Name = "idDetalleOrdenTextBox";
-            this.idDetalleOrdenTextBox.Size = new System.Drawing.Size(106, 20);
-            this.idDetalleOrdenTextBox.TabIndex = 91;
-            // 
-            // pnlProductosGrid
-            // 
-            this.pnlProductosGrid.Controls.Add(this.btnQuitarProductosGrid);
-            this.pnlProductosGrid.Controls.Add(this.btnAgregarProductosGrid);
-            this.pnlProductosGrid.Location = new System.Drawing.Point(20, 288);
-            this.pnlProductosGrid.Name = "pnlProductosGrid";
-            this.pnlProductosGrid.Size = new System.Drawing.Size(94, 49);
-            this.pnlProductosGrid.TabIndex = 72;
-            this.pnlProductosGrid.Visible = false;
-            // 
-            // btnQuitarProductosGrid
-            // 
-            this.btnQuitarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarProductosGrid.Location = new System.Drawing.Point(52, 4);
-            this.btnQuitarProductosGrid.Name = "btnQuitarProductosGrid";
-            this.btnQuitarProductosGrid.Size = new System.Drawing.Size(31, 38);
-            this.btnQuitarProductosGrid.TabIndex = 1;
-            this.btnQuitarProductosGrid.Text = "-";
-            this.btnQuitarProductosGrid.UseVisualStyleBackColor = true;
-            this.btnQuitarProductosGrid.Click += new System.EventHandler(this.btnQuitarProductosGrid_Click);
-            // 
-            // btnAgregarProductosGrid
-            // 
-            this.btnAgregarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProductosGrid.Location = new System.Drawing.Point(5, 4);
-            this.btnAgregarProductosGrid.Name = "btnAgregarProductosGrid";
-            this.btnAgregarProductosGrid.Size = new System.Drawing.Size(47, 38);
-            this.btnAgregarProductosGrid.TabIndex = 0;
-            this.btnAgregarProductosGrid.Text = "+";
-            this.btnAgregarProductosGrid.UseVisualStyleBackColor = true;
-            this.btnAgregarProductosGrid.Click += new System.EventHandler(this.btnAgregarProductosGrid_Click);
-            // 
             // idDetalleOrdenDataGridViewTextBoxColumn
             // 
             this.idDetalleOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdDetalleOrden";
@@ -709,6 +654,64 @@
             this.Descuento.HeaderText = "Descuento";
             this.Descuento.Name = "Descuento";
             this.Descuento.ReadOnly = true;
+            // 
+            // detalleOrdenesBindingSource
+            // 
+            this.detalleOrdenesBindingSource.DataMember = "Ordenes_DetalleOrdenes";
+            this.detalleOrdenesBindingSource.DataSource = this.ordenesBindingSource;
+            // 
+            // ordenesBindingSource1
+            // 
+            this.ordenesBindingSource1.DataMember = "Ordenes_DataTable2";
+            this.ordenesBindingSource1.DataSource = this.dataTable2BindingSource;
+            // 
+            // detalleOrdenesTableAdapter
+            // 
+            this.detalleOrdenesTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDetalleOrdenTextBox
+            // 
+            this.idDetalleOrdenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenesBindingSource, "IdDetalleOrden", true));
+            this.idDetalleOrdenTextBox.Enabled = false;
+            this.idDetalleOrdenTextBox.Location = new System.Drawing.Point(590, 77);
+            this.idDetalleOrdenTextBox.Name = "idDetalleOrdenTextBox";
+            this.idDetalleOrdenTextBox.Size = new System.Drawing.Size(106, 20);
+            this.idDetalleOrdenTextBox.TabIndex = 91;
+            // 
+            // pnlProductosGrid
+            // 
+            this.pnlProductosGrid.BackColor = System.Drawing.Color.Transparent;
+            this.pnlProductosGrid.Controls.Add(this.btnQuitarProductosGrid);
+            this.pnlProductosGrid.Controls.Add(this.btnAgregarProductosGrid);
+            this.pnlProductosGrid.Location = new System.Drawing.Point(20, 288);
+            this.pnlProductosGrid.Name = "pnlProductosGrid";
+            this.pnlProductosGrid.Size = new System.Drawing.Size(106, 49);
+            this.pnlProductosGrid.TabIndex = 72;
+            this.pnlProductosGrid.Visible = false;
+            // 
+            // btnQuitarProductosGrid
+            // 
+            this.btnQuitarProductosGrid.BackColor = System.Drawing.Color.White;
+            this.btnQuitarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarProductosGrid.Location = new System.Drawing.Point(52, 4);
+            this.btnQuitarProductosGrid.Name = "btnQuitarProductosGrid";
+            this.btnQuitarProductosGrid.Size = new System.Drawing.Size(51, 38);
+            this.btnQuitarProductosGrid.TabIndex = 1;
+            this.btnQuitarProductosGrid.Text = "-";
+            this.btnQuitarProductosGrid.UseVisualStyleBackColor = false;
+            this.btnQuitarProductosGrid.Click += new System.EventHandler(this.btnQuitarProductosGrid_Click);
+            // 
+            // btnAgregarProductosGrid
+            // 
+            this.btnAgregarProductosGrid.BackColor = System.Drawing.Color.White;
+            this.btnAgregarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProductosGrid.Location = new System.Drawing.Point(5, 4);
+            this.btnAgregarProductosGrid.Name = "btnAgregarProductosGrid";
+            this.btnAgregarProductosGrid.Size = new System.Drawing.Size(47, 38);
+            this.btnAgregarProductosGrid.TabIndex = 0;
+            this.btnAgregarProductosGrid.Text = "+";
+            this.btnAgregarProductosGrid.UseVisualStyleBackColor = false;
+            this.btnAgregarProductosGrid.Click += new System.EventHandler(this.btnAgregarProductosGrid_Click);
             // 
             // OrdenesCompra
             // 

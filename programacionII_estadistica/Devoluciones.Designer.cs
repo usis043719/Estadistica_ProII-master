@@ -54,6 +54,7 @@
             this.fecha_DevolucionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dataTable4DataGridView = new System.Windows.Forms.DataGridView();
             this.grbcliente = new System.Windows.Forms.GroupBox();
+            this.btnimprimir = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
@@ -90,7 +91,7 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -331,7 +332,7 @@
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
+            this.Marca,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19,
@@ -362,16 +363,30 @@
             // 
             this.grbcliente.BackColor = System.Drawing.Color.Transparent;
             this.grbcliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grbcliente.Controls.Add(this.btnimprimir);
             this.grbcliente.Controls.Add(this.btnbuscar);
             this.grbcliente.Controls.Add(this.btneliminar);
             this.grbcliente.Controls.Add(this.btnmodificar);
             this.grbcliente.Controls.Add(this.btnagregar);
-            this.grbcliente.Location = new System.Drawing.Point(317, 333);
+            this.grbcliente.Location = new System.Drawing.Point(314, 308);
             this.grbcliente.Name = "grbcliente";
-            this.grbcliente.Size = new System.Drawing.Size(269, 104);
+            this.grbcliente.Size = new System.Drawing.Size(269, 141);
             this.grbcliente.TabIndex = 58;
             this.grbcliente.TabStop = false;
             this.grbcliente.Text = "Edicion Devoluciones";
+            // 
+            // btnimprimir
+            // 
+            this.btnimprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnimprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnimprimir.BackgroundImage")));
+            this.btnimprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnimprimir.Location = new System.Drawing.Point(78, 102);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Size = new System.Drawing.Size(107, 39);
+            this.btnimprimir.TabIndex = 8;
+            this.btnimprimir.Text = "Imprimir";
+            this.btnimprimir.UseVisualStyleBackColor = false;
             // 
             // btnbuscar
             // 
@@ -385,6 +400,7 @@
             this.btnbuscar.TabIndex = 5;
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btneliminar
             // 
@@ -583,34 +599,37 @@
             // 
             // pnlProductosGrid
             // 
+            this.pnlProductosGrid.BackColor = System.Drawing.Color.Transparent;
             this.pnlProductosGrid.Controls.Add(this.btnQuitarProductosGrid);
             this.pnlProductosGrid.Controls.Add(this.btnAgregarProductosGrid);
             this.pnlProductosGrid.Location = new System.Drawing.Point(22, 290);
             this.pnlProductosGrid.Name = "pnlProductosGrid";
-            this.pnlProductosGrid.Size = new System.Drawing.Size(94, 49);
+            this.pnlProductosGrid.Size = new System.Drawing.Size(105, 49);
             this.pnlProductosGrid.TabIndex = 72;
             this.pnlProductosGrid.Visible = false;
             // 
             // btnQuitarProductosGrid
             // 
+            this.btnQuitarProductosGrid.BackColor = System.Drawing.Color.White;
             this.btnQuitarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarProductosGrid.Location = new System.Drawing.Point(52, 4);
             this.btnQuitarProductosGrid.Name = "btnQuitarProductosGrid";
-            this.btnQuitarProductosGrid.Size = new System.Drawing.Size(31, 38);
+            this.btnQuitarProductosGrid.Size = new System.Drawing.Size(50, 38);
             this.btnQuitarProductosGrid.TabIndex = 1;
             this.btnQuitarProductosGrid.Text = "-";
-            this.btnQuitarProductosGrid.UseVisualStyleBackColor = true;
+            this.btnQuitarProductosGrid.UseVisualStyleBackColor = false;
             this.btnQuitarProductosGrid.Click += new System.EventHandler(this.btnQuitarProductosGrid_Click);
             // 
             // btnAgregarProductosGrid
             // 
+            this.btnAgregarProductosGrid.BackColor = System.Drawing.Color.White;
             this.btnAgregarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProductosGrid.Location = new System.Drawing.Point(5, 4);
             this.btnAgregarProductosGrid.Name = "btnAgregarProductosGrid";
             this.btnAgregarProductosGrid.Size = new System.Drawing.Size(47, 38);
             this.btnAgregarProductosGrid.TabIndex = 0;
             this.btnAgregarProductosGrid.Text = "+";
-            this.btnAgregarProductosGrid.UseVisualStyleBackColor = true;
+            this.btnAgregarProductosGrid.UseVisualStyleBackColor = false;
             this.btnAgregarProductosGrid.Click += new System.EventHandler(this.btnAgregarProductosGrid_Click);
             // 
             // dataGridViewTextBoxColumn1
@@ -727,12 +746,12 @@
             this.dataGridViewTextBoxColumn15.ReadOnly = true;
             this.dataGridViewTextBoxColumn15.Visible = false;
             // 
-            // dataGridViewTextBoxColumn16
+            // Marca
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Marca";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Marca";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.Marca.DataPropertyName = "Marca";
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -851,6 +870,7 @@
         private System.Windows.Forms.Panel pnlProductosGrid;
         private System.Windows.Forms.Button btnQuitarProductosGrid;
         private System.Windows.Forms.Button btnAgregarProductosGrid;
+        private System.Windows.Forms.Button btnimprimir;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProductosDv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
@@ -866,7 +886,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
